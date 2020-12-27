@@ -13,7 +13,7 @@
       <pubDate>Fri, 19 Aug 2016 15:31:30 +0900</pubDate>
       
       <guid>https://squeuei.github.io/post/2016-08-19/make-avr-programming-pt.04/</guid>
-      <description>http://squeuei.hatenablog.com/entry/2016/08/18/152509
+      <description>前回
 Chapter 10 タイマを使うときのチェックリスト  どのタイマを使うか決める。8bitでよければTimer 0か2、16bitが必要ならTimer 1。 どのモードが必要なのかを決める。TCCRnAのWGMn0とWGMn1、TCCRnBのWGMn2をセットする。 a. 数えたかったりタイミングを作りたいのならNormalモード（設定の必要なし） b. 時間の基準や周波数を作りたいのならCTCモードを使う。WGMn1をセットする。 c. PWMを使いたいならfast PWMモード。WGMn0とWGMn1をセットする。PWM周波数を変えなくてもいいならWGMn2もセットする。 直接出力するならTCCRnAのCOMxAとCOMxBをセットする。 分周を決めたらTCCRnBのCSnxビットをセットする。 比較する数値を使うならOCRnAやOCRnBにデフォルトの値を設定する。PWMを使うならDDRの出力設定も忘れないこと。 タイマで割り込みを使う？ a. Normalモードならカウンタオーバフロー割り込みを有効にするため、TIMSKnのTOIEnをセットする。 b. PWMやCTCモードなら比較での割り込みを有効にするため、TIMSKnのOCIEnAとOCIEnBをセットする。 c. sei()するのを忘れないように。  Chapter 11 　サーボのようなデバイスとAVRの電源はなるべく分けた方がいい。AVRの動作が不安定になる恐れがあるから。
 Chapter 12 　高い電圧を高分解能で取得したいときは、分圧とオーバーサンプリングを使う。 また、AVRの場合はADC以外のクロックを停止することでノイズを低減するADCノイズリダクションスリープモードがあるので、活用すると良い。
 オーバーサンプリング 　オーバーサンプリングは中心極限定理に基づいていて、たとえば10ビットADCで16個のサンプルを取得した後、4で割る（=2ビットシフトする）ことで12ビットの結果が得られる。 nビット余計に欲しいときは、$2^{2^n}$回のサンプリングと$2^n$回の割り算（=n回のビットシフト）が必要。
@@ -28,7 +28,7 @@ EWMA(Exponentially Weighted Moving Averages) 　ふつうの移動平均では�
       <pubDate>Thu, 18 Aug 2016 15:25:09 +0900</pubDate>
       
       <guid>https://squeuei.github.io/post/2016-08-18/make-avr-programming-pt.03/</guid>
-      <description>http://squeuei.hatenablog.com/entry/2016/08/16/201654
+      <description>前回
 Chapter 8 　割り込みを扱うときはISR()を使う。厳密に言うところは関数じゃなくてマクロ。 引数として割り込みベクタを与える。割り込みベクタの定義はio.hに書いてある。
 外部割り込み 　外部割り込みを有効化するときは、2段階ある事を忘れないようにする。
  使いたい割り込みベクタを有効化する 割り込みシステム全体をsei()で有効化する。  　普通は割り込みに入るときにglobal interrupt enableがオフになるので、割り込み中に更なる割り込みが発生することは無い。それを許可したい場合は、ISRのなかでsei()を呼ぶか、ISR_NOBLOCKでISRを定義するかのどっちかにする。
@@ -51,7 +51,7 @@ CPUスピード 　CPUスピードを変える方法には“ヒューズ”を�
       
       <guid>https://squeuei.github.io/post/2016-08-16/make-avr-programming-pt.02/</guid>
       <description>　まだまだ続く。けど夏休み中に終わらせるのは無理っぽい。
-http://squeuei.hatenablog.com/entry/2016/08/15/001834
+前回
 Chapter 6 　ボタンスイッチをマイコンのデジタルIOに接続する時は、プルアップ抵抗を使うこと。プルアップ抵抗はボタンがオープンの時にレベルを確実にハイにするために必要な抵抗。ただし、AVRの場合は全てのピンにプルアップ抵抗が組み込まれていて、設定で有効化できる。
 　Chapter 2で言及したように、DDRxが0（入力）のとき、PORTxはプルアップの設定になる。
 プッシュボタンを使うときのチェックリスト  DDRxレジスタを入力にする。 プルアップのために抵抗素子を使わない時は、PORTxで内蔵のプルアップを有効にする。 コードの中でボタンの電圧を読む。 ボタンが押されてる間に何かをしたいのか、ボタンが押されたときに何かをしたいのかをヨーク考える。 ボタンが押された時に何かをしたいのなら、デバウンシングすることを考える。たとえば一度押されたことを確認して、さらに一定時間後にも押されてたら、そのとき初めて何かを実行する、のような。  Chapter 7 LDRについて 　LDRを使う際、組み合わせる抵抗は
@@ -73,7 +73,7 @@ ADMUX = (0xf0 &amp;amp; ADMUX) | channel;  </description>
       
       <guid>https://squeuei.github.io/post/2016-08-15/make-avr-programming-pt.01/</guid>
       <description>買ってから優に一年間放置していた“Make: AVR Programming”を夏休みに読んでしまおう計画。
-http://squeuei.hatenablog.com/entry/2015/08/11/212000
+前回
 Chapter 1 　AVRISPmk2を入手しておいたのだけど、こいつは自分で+5Vを供給してくれないので、ACアダプタでブレッドボードに5Vを給電するとかしないといけない。かつ、私の環境ではavrdudeでうまくmake flashしてくれないので、Arduino ISPを活用することにする。ISP買った意味がない。
 　システムやユーザの環境変数を通すのが嫌だったので、PATHを通すバッチファイルを書いて、そこから操作することにする。
 PATH=%PATH%;foo\bar\avr8-gnu-toolchain\bin;hoge\fuga\avrdude_utilities; cd mado\homu\AVR-Programming  といった内容の.batファイル（ここでは安易にavr.batとした）を作成した後、エクスプローラから

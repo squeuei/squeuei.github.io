@@ -43,7 +43,7 @@
 />
 <meta
   name="twitter:description"
-  content="http://squeuei.hatenablog.com/entry/2016/08/16/201654
+  content="前回
 Chapter 8 　割り込みを扱うときはISR()を使う。厳密に言うところは関数じゃなくてマクロ。 引数として割り込みベクタを与える。割り込みベクタの定義はio.hに書いてある。
 外部割り込み 　外部割り込みを有効化するときは、2段階ある事を忘れないようにする。
  使いたい割り込みベクタを有効化する 割り込みシステム全体をsei()で有効化する。  　普通は割り込みに入るときにglobal interrupt enableがオフになるので、割り込み中に更なる割り込みが発生することは無い。それを許可したい場合は、ISRのなかでsei()を呼ぶか、ISR_NOBLOCKでISRを定義するかのどっちかにする。
@@ -103,7 +103,7 @@ CPUスピード 　CPUスピードを変える方法には“ヒューズ”を�
     <span class="f6 gray">August 18, 2016</span>
 
       <article itemprop="articleBody" id="content" class="w-90 lh-copy">
-        <p><a href="http://squeuei.hatenablog.com/entry/2016/08/16/201654">http://squeuei.hatenablog.com/entry/2016/08/16/201654</a></p>
+        <p><a href="/post/2016-08-16/make-avr-programming-pt.02/">前回</a></p>
 <h3 id="chapter-8">Chapter 8</h3>
 <p>　割り込みを扱うときは<code>ISR()</code>を使う。厳密に言うところは関数じゃなくてマクロ。
 引数として割り込みベクタを与える。割り込みベクタの定義はio.hに書いてある。</p>

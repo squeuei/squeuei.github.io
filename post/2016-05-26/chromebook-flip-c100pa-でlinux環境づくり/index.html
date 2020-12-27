@@ -45,12 +45,11 @@
   name="twitter:description"
   content="amazon.comからchromebook flip C100PAのメモリ4GBモデルを購入したので、小型軽量ファンレスlinuxマシンとして使わんとする人々に有用と思われるTipsを以下に示す。
 UPDATE 2017-06-06
-mainline kernelを用いたArch Linux ARMの環境構築については下記記事を参照のこと。
-http://squeuei.hatenablog.com/entry/2017/06/06/174048
+mainline kernelを用いたArch Linux ARMの環境構築についてはこの記事を参照のこと。
 各種テスト このあたり参考に。
  Ctrl-Alt-t でcroshを起動 memory_test、battery_testなどがある。  shortcut keys  Reset : Reflesh &#43; 電源ボタン PgUp : Alt-up PgDn : Alt-down Home : Ctrl-Alt-up End : Ctrl-Alt-down Delete : Alt-backspace IME on/off : C-space （US配列）  Developer Modeに入る  電源OFFの状態でEsc &#43; Reflesh &#43; 電源ボタン 白い画面でCtrl-dを押す スペースキーを押さずに待っているとデータの消去が始まる。 再起動したらCtrl-dを押すか、30秒待つことでChrome OSが起動する。  USBメモリへcroutonをインストール（sid編） 下記エントリを参考にインストール。-mオプションで国内ミラーを選んでおく。
 http://chrome.hatenablog.jp/entry/2015/05/03/020205
- Ctrl-Alt-tでshellを起動 sudo umount /media/removable/hogefuga sudo cfdiskでLinuxのパーテションを作る sudo mkfs.|"
+ Ctrl-Alt-tでshellを起動 sudo umount /media/removable/hogefuga sudo cfdiskでLinuxのパーテションを作る sudo mkfs.ext4 -L chromebook /dev/sda1 USB stickを抜き差しする GitHubからcroutonをダウンロードする。 sudo mkdir /media/removable/chromebook/crouton sudo sh ~/Downloads/crouton -r sid -t xfce -p /media/removable/chromebook/crouton -m http://ftp.|"
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="https://squeuei.github.io/post/2016-05-26/chromebook-flip-c100pa-%E3%81%A7linux%E7%92%B0%E5%A2%83%E3%81%A5%E3%81%8F%E3%82%8A/" />
@@ -99,8 +98,7 @@ http://chrome.hatenablog.jp/entry/2015/05/03/020205
       <article itemprop="articleBody" id="content" class="w-90 lh-copy">
         <p>amazon.comからchromebook flip C100PAのメモリ4GBモデルを購入したので、小型軽量ファンレスlinuxマシンとして使わんとする人々に有用と思われるTipsを以下に示す。</p>
 <p><strong>UPDATE 2017-06-06</strong></p>
-<p>mainline kernelを用いたArch Linux ARMの環境構築については下記記事を参照のこと。</p>
-<p><a href="http://squeuei.hatenablog.com/entry/2017/06/06/174048">http://squeuei.hatenablog.com/entry/2017/06/06/174048</a></p>
+<p>mainline kernelを用いたArch Linux ARMの環境構築については<a href="/post/2017-06-06/chromebook-flip-c100pa%E3%81%A7arch-linux-arm-mainline-kernel%E7%B7%A8/">この記事</a>を参照のこと。</p>
 <h3 id="各種テスト">各種テスト</h3>
 <p><a href="http://www.dell.com/support/article/us/en/19/SLN293879/EN">このあたり</a>参考に。</p>
 <ol>

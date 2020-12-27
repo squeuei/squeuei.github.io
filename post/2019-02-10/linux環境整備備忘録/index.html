@@ -52,8 +52,7 @@ $ su # apt install sudo vim # gpasswd -a hogefuga sudo  してsudoできるよ�
 インフラ系 なにはともあれaptのソースを編集。
 $ sudo apt vim /etc/apt/sources.list  私は邪道なので%s/main/main non-free contrib/gしてしまいます。stretch-backportsも入れる。stable-backportsみたいな指定ができたら良かったのにね。
 $ sudo apt install network-manager network-manager-gnome task-lxqt-desktop tlp-rdw xsensors  このPCにはIntelのWi-Fiが入っているのでドライバをインストール。上でmainだけにしたときはこの手は使えないので自由人のためのWi-Fiドングルを使うかおとなしく有線接続してください。あとmicrocodeも。
-$ sudo apt insatll firmware-iwlwifi intel-microcode  http://squeuei.hatenablog.com/entry/2018/10/20/203613
-素のままだとトラックパッドのタップクリックが効かないし、LXQt上からは設定できないのでファイルを編集。
+$ sudo apt insatll firmware-iwlwifi intel-microcode  素のままだとトラックパッドのタップクリックが効かないし、LXQt上からは設定できないのでファイルを編集。
 $ sudo mkdir /etc/X11/xorg.conf.d/ $ sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf  30-touchpad.confの中身はこんな感じ。というかArchwikiのほぼまんまですねこれ。
 Section &quot;InputClass&quot; Identifier &quot;touchpad&quot; Driver &quot;libinput&quot; MatchIsTouchpad &quot;on&quot; Option &quot;Tapping&quot; &quot;on&quot; Option &quot;TappingButtonMap&quot; &quot;lrm&quot; Option &quot;NaturalScrolling&quot; &quot;true&quot; Option &quot;ClickMethod&quot; &quot;clickfinger&quot; EndSection  NTPとかssh鍵とかもやっておく。NTP鯖はNICTに。|"
 />
@@ -122,10 +121,9 @@ Section &quot;InputClass&quot; Identifier &quot;touchpad&quot; Driver &quot;libi
 <p>私は邪道なので<code>%s/main/main non-free contrib/g</code>してしまいます。<code>stretch-backports</code>も入れる。<code>stable-backports</code>みたいな指定ができたら良かったのにね。</p>
 <pre><code>$ sudo apt install network-manager network-manager-gnome task-lxqt-desktop tlp-rdw xsensors 
 </code></pre>
-<p>このPCにはIntelのWi-Fiが入っているのでドライバをインストール。上で<code>main</code>だけにしたときはこの手は使えないので自由人のためのWi-Fiドングルを使うかおとなしく有線接続してください。あとmicrocodeも。</p>
+<p>このPCにはIntelのWi-Fiが入っているのでドライバをインストール。上で<code>main</code>だけにしたときはこの手は使えないので<a href="/post/2018-10-20/%E8%87%AA%E7%94%B1%E4%BA%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEwi-fi%E3%83%89%E3%83%B3%E3%82%B0%E3%83%AB/">自由人のためのWi-Fiドングル</a>を使うかおとなしく有線接続してください。あとmicrocodeも。</p>
 <pre><code>$ sudo apt insatll firmware-iwlwifi intel-microcode
 </code></pre>
-<p><a href="http://squeuei.hatenablog.com/entry/2018/10/20/203613">http://squeuei.hatenablog.com/entry/2018/10/20/203613</a></p>
 <p>素のままだとトラックパッドのタップクリックが効かないし、LXQt上からは設定できないのでファイルを編集。</p>
 <pre><code>$ sudo mkdir /etc/X11/xorg.conf.d/
 $ sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf

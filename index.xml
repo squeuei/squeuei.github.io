@@ -13,7 +13,7 @@
       <pubDate>Sun, 27 Dec 2020 23:12:59 +0900</pubDate>
       
       <guid>https://squeuei.github.io/about/</guid>
-      <description> twitter flickr`  </description>
+      <description> twitter flickr gist 小説家になろう カクヨム  </description>
     </item>
     
     <item>
@@ -24,7 +24,6 @@
       <guid>https://squeuei.github.io/post/2020-12-23/%E7%8F%BE%E4%BB%A3%E6%96%87%E6%9B%B8%E3%81%AE%E6%A7%8B%E9%80%A0-la-structure-des-documents-modernes/</guid>
       <description>文書を記述する際に、構造――ここでは見出しなどを指す――を機械が可読な形で行うことに意味はあるだろうか。
 前回の続きといえば続き。
-https://squeuei.hatenablog.com/entry/2020/12/20/151628
 前提 https://scrapbox.io/shokai/markdown%E3%81%AF%E3%83%87%E3%82%AB%E3%82%A4%E6%96%87%E5%AD%97%E3%82%92%E6%9B%B8%E3%81%8F%E3%81%AE%E3%81%AB%E4%BE%BF%E5%88%A9
  使わない文書構造の宣言に意味があるのか？
    「文字が大きくなって格好いい」以上の意味がない 使わないのにせっせと構造を宣言しているの、マジで意味わからん     markdownはとにかくデカイ文字が簡単に書ける事が便利なだけなのでは？ 宣言した文書構造を有意義に使う方法がスクリーンリーダーと索引生成以外に何かあれば教えて欲しい    #で&amp;lt;h1&amp;gt;や&amp;lt;h2&amp;gt;になる文書構造化がしたいと言いつつ、実はデカイ文字を書きたいだけ   反論 markdownが万能でも素晴らしい完全無欠のものでもないというのは理解する。
@@ -64,7 +63,8 @@ https://scrapbox.io/shokai/%E3%83%95%E3%83%AD%E3%83%BC%E6%83%85%E5%A0%B1%E3%81%A
 お前らの感覚が麻痺しちゃってるんだよ、文書構造化厨に洗脳されてその思想を刷り込まれてさあ！
 ではなぜ構造化文書ファイル形式がここまで世にはばかることとなったのかについては想像することしかできないが、おそらくはかつてはたくさんのスタイルを作っておくことが計算機資源の制約上不可能だったのではないか。
 用意できるスタイルの数が少ないから、それらに見出しなどの名前を付けた。
-だからきっと、どこかでメンタルモデルの変更が必要だった。</description>
+だからきっと、どこかでメンタルモデルの変更が必要だった。
+文字のスタイルと、構造的な意味とをごっちゃにすべきではなった。十分な数のスタイルを設定できればそれで十分だった。</description>
     </item>
     
     <item>
@@ -469,7 +469,7 @@ https://dangerdrop.tumblr.com/djn
       
       <guid>https://squeuei.github.io/post/2020-02-23/expasa%E5%AF%8C%E5%A3%AB%E5%B7%9D%E5%AF%8C%E5%A3%AB%E5%B7%9D%E6%A5%BD%E5%BA%A7fuji-sky-view-2020%E5%A4%A7%E6%84%9F%E8%AC%9D%E7%A5%ADsupported-by-%E5%AF%8C%E5%A3%AB%E5%B8%82%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA%E3%83%A9%E3%82%B8%E3%82%AA%E3%83%87%E3%82%A4%E3%82%BA/</guid>
       <description>TL;DR https://www.flickr.com/photos/squeuei/49571885436/in/album-72157713217989271/
-Overview  http://squeuei.hatenablog.com/entry/2019/08/22/231128 https://www.c-nexco.co.jp/corporate/pressroom/news_release/4721.html https://garuradi.jp/news147/  Photos https://www.flickr.com/photos/squeuei/49571374763/in/album-72157713217989271/
+Overview  過去記事 https://www.c-nexco.co.jp/corporate/pressroom/news_release/4721.html https://garuradi.jp/news147/  Photos https://www.flickr.com/photos/squeuei/49571374763/in/album-72157713217989271/
 https://www.flickr.com/photos/squeuei/49571886631/in/album-72157713217989271/
 https://www.flickr.com/photos/squeuei/49572112772/in/album-72157713217989271/
 https://www.flickr.com/photos/squeuei/49571887191/in/album-72157713217989271/
@@ -972,8 +972,7 @@ $ su # apt install sudo vim # gpasswd -a hogefuga sudo  してsudoできるよ�
 インフラ系 なにはともあれaptのソースを編集。
 $ sudo apt vim /etc/apt/sources.list  私は邪道なので%s/main/main non-free contrib/gしてしまいます。stretch-backportsも入れる。stable-backportsみたいな指定ができたら良かったのにね。
 $ sudo apt install network-manager network-manager-gnome task-lxqt-desktop tlp-rdw xsensors  このPCにはIntelのWi-Fiが入っているのでドライバをインストール。上でmainだけにしたときはこの手は使えないので自由人のためのWi-Fiドングルを使うかおとなしく有線接続してください。あとmicrocodeも。
-$ sudo apt insatll firmware-iwlwifi intel-microcode  http://squeuei.hatenablog.com/entry/2018/10/20/203613
-素のままだとトラックパッドのタップクリックが効かないし、LXQt上からは設定できないのでファイルを編集。
+$ sudo apt insatll firmware-iwlwifi intel-microcode  素のままだとトラックパッドのタップクリックが効かないし、LXQt上からは設定できないのでファイルを編集。
 $ sudo mkdir /etc/X11/xorg.conf.d/ $ sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf  30-touchpad.confの中身はこんな感じ。というかArchwikiのほぼまんまですねこれ。
 Section &amp;quot;InputClass&amp;quot; Identifier &amp;quot;touchpad&amp;quot; Driver &amp;quot;libinput&amp;quot; MatchIsTouchpad &amp;quot;on&amp;quot; Option &amp;quot;Tapping&amp;quot; &amp;quot;on&amp;quot; Option &amp;quot;TappingButtonMap&amp;quot; &amp;quot;lrm&amp;quot; Option &amp;quot;NaturalScrolling&amp;quot; &amp;quot;true&amp;quot; Option &amp;quot;ClickMethod&amp;quot; &amp;quot;clickfinger&amp;quot; EndSection  NTPとかssh鍵とかもやっておく。NTP鯖はNICTに。</description>
     </item>
@@ -1238,7 +1237,6 @@ http://sukerasparo.com/
       <guid>https://squeuei.github.io/post/2017-11-16/%E8%A6%8F%E7%B4%84%E3%81%A8%E6%B4%BB%E5%AD%97/</guid>
       <description>告知事項 私は法律家ではない/これは法的な助言ではない
 tl;dr  myFontsやfonts.comで買ったり月額課金したりした欧文書体の大半は、フォントを埋め込んだPDFを商用利用することができない。 OSやOffice添付のフォントは個別フォントのEULAが公開されておらず曖昧にぼかされているけど、厳密に言えばおそらく駄目 TypeKitや一太郎プレミアム、Designcuts、TrueTypeフォントパーフェクトコレクション で買ったフォントはライセンス上安全。 SIL OFLでライセンスされたフォントもたぶん安全。 LaTeXのライセンスもきっとだいじょうぶ。  はじめに 過去に、入手しやすいフォントについての記事を書きましたが、フォントのライセンスに関する理解と記述が不足していたため、この記事を書きました。
-http://squeuei.hatenablog.com/entry/2017/05/17/205731
 が、告知事項の通り、私は知財法令どころか法律の素養もないため、この内容は無保証です。
 ちゃんと調査するための足がかり程度にとらえていただければ幸いです。
 問題に近づかない 問題の多くは
@@ -1276,7 +1274,7 @@ pacman-key --init &amp;amp;&amp;amp; pacman-key --populate archlinuxarm pacman -
 https://gist.github.com/squeuei/e64cdcd2f17f659e3508bb0c20907b46
 要するにTypeKitに入って『TrueTypeフォントパーフェクトコレクション』をどうにか手に入れれば商用PDFへの埋め込みだろうと大丈夫という話です。あとは足りないものがあったらFrutiger-&amp;gt;MyriadやFF Meta-&amp;gt;Fira Sansで雰囲気だけ真似したり。
 macを買うこともかなりの問題を解決するけど、PDF埋め込みに関しては微妙な問題が残りそう。
-http://squeuei.hatenablog.com/entry/2017/11/16/193009
+この記事を参照のこと。
 続きに元記事も残しておきます。
 はじめに 　あればあったで嬉しいけれど、しかしプロでもない身分で、業務に使うわけでもない、1ファミリー揃えれば計算機が買えてしまうような値段の製品を購入する、その支出を正当化できるほどの用途があるわけでもないフォントたち。
 　本稿は、欧文フォントに関し、それっぽい見た目のものを合法的、かつフリーまたは格安で入手する方法について述べるものです。必ずしもメトリック互換や同一の書体ではない旨、予めご承知おきください。
@@ -1328,7 +1326,7 @@ PDF出力時の見開き方向 　Acrobat Readerで見開き表示をすると�
       <pubDate>Fri, 19 Aug 2016 15:31:30 +0900</pubDate>
       
       <guid>https://squeuei.github.io/post/2016-08-19/make-avr-programming-pt.04/</guid>
-      <description>http://squeuei.hatenablog.com/entry/2016/08/18/152509
+      <description>前回
 Chapter 10 タイマを使うときのチェックリスト  どのタイマを使うか決める。8bitでよければTimer 0か2、16bitが必要ならTimer 1。 どのモードが必要なのかを決める。TCCRnAのWGMn0とWGMn1、TCCRnBのWGMn2をセットする。 a. 数えたかったりタイミングを作りたいのならNormalモード（設定の必要なし） b. 時間の基準や周波数を作りたいのならCTCモードを使う。WGMn1をセットする。 c. PWMを使いたいならfast PWMモード。WGMn0とWGMn1をセットする。PWM周波数を変えなくてもいいならWGMn2もセットする。 直接出力するならTCCRnAのCOMxAとCOMxBをセットする。 分周を決めたらTCCRnBのCSnxビットをセットする。 比較する数値を使うならOCRnAやOCRnBにデフォルトの値を設定する。PWMを使うならDDRの出力設定も忘れないこと。 タイマで割り込みを使う？ a. Normalモードならカウンタオーバフロー割り込みを有効にするため、TIMSKnのTOIEnをセットする。 b. PWMやCTCモードなら比較での割り込みを有効にするため、TIMSKnのOCIEnAとOCIEnBをセットする。 c. sei()するのを忘れないように。  Chapter 11 　サーボのようなデバイスとAVRの電源はなるべく分けた方がいい。AVRの動作が不安定になる恐れがあるから。
 Chapter 12 　高い電圧を高分解能で取得したいときは、分圧とオーバーサンプリングを使う。 また、AVRの場合はADC以外のクロックを停止することでノイズを低減するADCノイズリダクションスリープモードがあるので、活用すると良い。
 オーバーサンプリング 　オーバーサンプリングは中心極限定理に基づいていて、たとえば10ビットADCで16個のサンプルを取得した後、4で割る（=2ビットシフトする）ことで12ビットの結果が得られる。 nビット余計に欲しいときは、$2^{2^n}$回のサンプリングと$2^n$回の割り算（=n回のビットシフト）が必要。
@@ -1343,7 +1341,7 @@ EWMA(Exponentially Weighted Moving Averages) 　ふつうの移動平均では�
       <pubDate>Thu, 18 Aug 2016 15:25:09 +0900</pubDate>
       
       <guid>https://squeuei.github.io/post/2016-08-18/make-avr-programming-pt.03/</guid>
-      <description>http://squeuei.hatenablog.com/entry/2016/08/16/201654
+      <description>前回
 Chapter 8 　割り込みを扱うときはISR()を使う。厳密に言うところは関数じゃなくてマクロ。 引数として割り込みベクタを与える。割り込みベクタの定義はio.hに書いてある。
 外部割り込み 　外部割り込みを有効化するときは、2段階ある事を忘れないようにする。
  使いたい割り込みベクタを有効化する 割り込みシステム全体をsei()で有効化する。  　普通は割り込みに入るときにglobal interrupt enableがオフになるので、割り込み中に更なる割り込みが発生することは無い。それを許可したい場合は、ISRのなかでsei()を呼ぶか、ISR_NOBLOCKでISRを定義するかのどっちかにする。
@@ -1366,7 +1364,7 @@ CPUスピード 　CPUスピードを変える方法には“ヒューズ”を�
       
       <guid>https://squeuei.github.io/post/2016-08-16/make-avr-programming-pt.02/</guid>
       <description>　まだまだ続く。けど夏休み中に終わらせるのは無理っぽい。
-http://squeuei.hatenablog.com/entry/2016/08/15/001834
+前回
 Chapter 6 　ボタンスイッチをマイコンのデジタルIOに接続する時は、プルアップ抵抗を使うこと。プルアップ抵抗はボタンがオープンの時にレベルを確実にハイにするために必要な抵抗。ただし、AVRの場合は全てのピンにプルアップ抵抗が組み込まれていて、設定で有効化できる。
 　Chapter 2で言及したように、DDRxが0（入力）のとき、PORTxはプルアップの設定になる。
 プッシュボタンを使うときのチェックリスト  DDRxレジスタを入力にする。 プルアップのために抵抗素子を使わない時は、PORTxで内蔵のプルアップを有効にする。 コードの中でボタンの電圧を読む。 ボタンが押されてる間に何かをしたいのか、ボタンが押されたときに何かをしたいのかをヨーク考える。 ボタンが押された時に何かをしたいのなら、デバウンシングすることを考える。たとえば一度押されたことを確認して、さらに一定時間後にも押されてたら、そのとき初めて何かを実行する、のような。  Chapter 7 LDRについて 　LDRを使う際、組み合わせる抵抗は
@@ -1388,7 +1386,7 @@ ADMUX = (0xf0 &amp;amp; ADMUX) | channel;  </description>
       
       <guid>https://squeuei.github.io/post/2016-08-15/make-avr-programming-pt.01/</guid>
       <description>買ってから優に一年間放置していた“Make: AVR Programming”を夏休みに読んでしまおう計画。
-http://squeuei.hatenablog.com/entry/2015/08/11/212000
+前回
 Chapter 1 　AVRISPmk2を入手しておいたのだけど、こいつは自分で+5Vを供給してくれないので、ACアダプタでブレッドボードに5Vを給電するとかしないといけない。かつ、私の環境ではavrdudeでうまくmake flashしてくれないので、Arduino ISPを活用することにする。ISP買った意味がない。
 　システムやユーザの環境変数を通すのが嫌だったので、PATHを通すバッチファイルを書いて、そこから操作することにする。
 PATH=%PATH%;foo\bar\avr8-gnu-toolchain\bin;hoge\fuga\avrdude_utilities; cd mado\homu\AVR-Programming  といった内容の.batファイル（ここでは安易にavr.batとした）を作成した後、エクスプローラから
@@ -1434,12 +1432,11 @@ foreach やるべきことのリスト: if 行動すべき？: if 所要時間 &
       <guid>https://squeuei.github.io/post/2016-05-26/chromebook-flip-c100pa-%E3%81%A7linux%E7%92%B0%E5%A2%83%E3%81%A5%E3%81%8F%E3%82%8A/</guid>
       <description>amazon.comからchromebook flip C100PAのメモリ4GBモデルを購入したので、小型軽量ファンレスlinuxマシンとして使わんとする人々に有用と思われるTipsを以下に示す。
 UPDATE 2017-06-06
-mainline kernelを用いたArch Linux ARMの環境構築については下記記事を参照のこと。
-http://squeuei.hatenablog.com/entry/2017/06/06/174048
+mainline kernelを用いたArch Linux ARMの環境構築についてはこの記事を参照のこと。
 各種テスト このあたり参考に。
  Ctrl-Alt-t でcroshを起動 memory_test、battery_testなどがある。  shortcut keys  Reset : Reflesh + 電源ボタン PgUp : Alt-up PgDn : Alt-down Home : Ctrl-Alt-up End : Ctrl-Alt-down Delete : Alt-backspace IME on/off : C-space （US配列）  Developer Modeに入る  電源OFFの状態でEsc + Reflesh + 電源ボタン 白い画面でCtrl-dを押す スペースキーを押さずに待っているとデータの消去が始まる。 再起動したらCtrl-dを押すか、30秒待つことでChrome OSが起動する。  USBメモリへcroutonをインストール（sid編） 下記エントリを参考にインストール。-mオプションで国内ミラーを選んでおく。
 http://chrome.hatenablog.jp/entry/2015/05/03/020205
- Ctrl-Alt-tでshellを起動 sudo umount /media/removable/hogefuga sudo cfdiskでLinuxのパーテションを作る sudo mkfs.</description>
+ Ctrl-Alt-tでshellを起動 sudo umount /media/removable/hogefuga sudo cfdiskでLinuxのパーテションを作る sudo mkfs.ext4 -L chromebook /dev/sda1 USB stickを抜き差しする GitHubからcroutonをダウンロードする。 sudo mkdir /media/removable/chromebook/crouton sudo sh ~/Downloads/crouton -r sid -t xfce -p /media/removable/chromebook/crouton -m http://ftp.</description>
     </item>
     
     <item>
