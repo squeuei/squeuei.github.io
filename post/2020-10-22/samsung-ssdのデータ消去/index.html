@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="ja-jp"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="Samsung SSDのデータ消去" />
+<meta property="og:site_name" content="Constellation" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://squeuei.github.io/post/2020-10-22/samsung-ssd%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E6%B6%88%E5%8E%BB/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2020-10-22
+" /> <meta property="article:modified_time" content="2020-10-22
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@squeuei" />
+<meta name="twitter:creator" content="@squeuei" />
+<meta
+  name="twitter:title"
+  content="Samsung SSDのデータ消去 | Constellation"
+/>
+<meta
+  name="twitter:description"
+  content="TL;DR  SSDのつながったPCをGPartedで起動して、hdparmを使ってsecurity eraseすると公式アプリのSecure Eraseと同等になる模様 USB変換を使わないこと。使ってもできるときはできるが、ペーパーウェイトになっても文句は言えない  動機 SSDを手放すのでセキュアにデータを削除したいが不自由で邪悪な公式ソフトを使いたくない！
+公式サイトの記載 https://www.samsung.com/semiconductor/minisite/jp/support/faqs-03/
+ OS 環境で Secure Erase を実行するにはどうすれば良いですか?
+Linux : DOS モードに進むか、 以下に示す hdparm コマンドを使用します。
+ デバイスを確認します。(今テストするデバイスを確認します。)
+$ sudo fdisk -l デバイスのステータスを確認します。(手順 1 でテスト デバイスが /dev/sdb であると仮定します。)
+=&gt; &ldquo;not frozen&rdquo; でないと、Secure Erase を実行できません。
+$ sudo hdparm –I /dev/sdb パスワードを設定します。(次に示す例では、パスワードに NULL を使用することを推奨しているため、NULL に設定されます。)
+$ sudo hdparm &ndash;security-set-pass NULL /dev/sdb Secure Erase を実行します。
+$ sudo hdparm &ndash;security-erase NULL /dev/sdb  [ 参考資料 ]|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://squeuei.github.io/post/2020-10-22/samsung-ssd%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E6%B6%88%E5%8E%BB/" />
+
+
+
+    <title>Samsung SSDのデータ消去</title>
+    <link rel="canonical" href="https://squeuei.github.io/post/2020-10-22/samsung-ssd%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E6%B6%88%E5%8E%BB/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://squeuei.github.io/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="ja-jp"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://squeuei.github.io/" class="b bb bw1 pb1 no-underline black">Constellation</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">Samsung SSDのデータ消去</h1>
+    <span class="f6 gray">October 22, 2020</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <h3 id="tldr">TL;DR</h3>
+<ul>
+<li>SSDのつながったPCをGPartedで起動して、hdparmを使ってsecurity eraseすると公式アプリのSecure Eraseと同等になる模様</li>
+<li>USB変換を使わないこと。使ってもできるときはできるが、ペーパーウェイトになっても文句は言えない</li>
+</ul>
+<h3 id="動機">動機</h3>
+<p>SSDを手放すのでセキュアにデータを削除したいが不自由で邪悪な公式ソフトを使いたくない！</p>
+<h3 id="公式サイトの記載">公式サイトの記載</h3>
+<p><a href="https://www.samsung.com/semiconductor/minisite/jp/support/faqs-03/">https://www.samsung.com/semiconductor/minisite/jp/support/faqs-03/</a></p>
+<blockquote>
+<p>OS 環境で Secure Erase を実行するにはどうすれば良いですか?</p>
+<p>Linux :
+DOS モードに進むか、 以下に示す hdparm コマンドを使用します。</p>
+<ol>
+<li>デバイスを確認します。(今テストするデバイスを確認します。)<br>
+$ sudo fdisk -l</li>
+<li>デバイスのステータスを確認します。(手順 1 でテスト デバイスが /dev/sdb であると仮定します。)<br>
+=&gt; &ldquo;not frozen&rdquo; でないと、Secure Erase を実行できません。<br>
+$ sudo hdparm –I /dev/sdb</li>
+<li>パスワードを設定します。(次に示す例では、パスワードに NULL を使用することを推奨しているため、NULL に設定されます。)<br>
+$ sudo hdparm &ndash;security-set-pass NULL /dev/sdb</li>
+<li>Secure Erase を実行します。<br>
+$ sudo hdparm &ndash;security-erase NULL /dev/sdb</li>
+</ol>
+<p>[ 参考資料 ]</p>
+<ul>
+<li><a href="http://linux.die.net/man/8/hdparm">http://linux.die.net/man/8/hdparm</a></li>
+<li><a href="http://tinyapps.org/docs/wipe_drives_hdparm.html">http://tinyapps.org/docs/wipe_drives_hdparm.html</a></li>
+</ul>
+</blockquote>
+<h3 id="やったこと">やったこと</h3>
+<p>LinuxマシンにSSDを接続して上記の手段を実行した。アーキテクチャ依存のコマンドではないのでARMのマシンなどでも実行可能。</p>
+<p>Linuxマシンが手元にない場合はGPartedを使うとよいだろう。データ救出にも使えるのでUSBメモリを一つ作っておくと便利。</p>
+<p><a href="https://gparted.org/">https://gparted.org/</a></p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: October 22, 2020. Published at: 2020-10-22.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>

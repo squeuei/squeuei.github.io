@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="ja-jp"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="Lavie Direct PMのセットアップ" />
+<meta property="og:site_name" content="Constellation" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://squeuei.github.io/post/2020-11-25/lavie-direct-pm%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2020-11-25
+" /> <meta property="article:modified_time" content="2020-11-25
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@squeuei" />
+<meta name="twitter:creator" content="@squeuei" />
+<meta
+  name="twitter:title"
+  content="Lavie Direct PMのセットアップ | Constellation"
+/>
+<meta
+  name="twitter:description"
+  content="前記事の続き
+UEFIでの設定項目 UEFIには起動直後にF2キーを押すことで入ることができる。
+FnとCtrlはUEFI上で入れ替えることが可能である。
+一時的なブートデバイス選択はF2のUEFI設定画面の中で行うことができる。
+Windows 10 のインストール ソフトウェア的な観点において、デフォルトのセットアップは許容しがたい。そのため、OSのクリーンインストールを試みた。
+まず、OSについてはMSから提供されているツールを用いて、Windows 10の起動デバイスを作成した。必要なのはWindowsが動くPCとUSBメモリである。isoイメージをダウンロードすることもできるが、たとえばLinuxなどからこのイメージをddしても、なぜかうまく起動できないことがあった。Media Creation Toolを使う方が無難である。
+インストールおよびOS自体のセットアップは、ふつうのクリーンインストールと何ら変わらない。オフラインアカウント（MSのいうところの制限付きエクスペリエンスというやつだ）を作成することにこだわること。
+Windows 10のライセンスは自動的に認証されるため、問題は生じない。
+ドライバのインストール 基本的なドライバについてはWindows Updateを通して入手できる。これはうれしい誤算であった。
+デバイスマネージャ基準でドライバが当たらなかった物は3つ。LTEモデム、オーディオ、そして照度センサである。
+正常に動作しているか、あるいは省電力設定が適切に行われているか、などには疑問があるが、少なくともデバイスマネージャ上で認識されていないデバイスはなくなった。
+Sierra EM7565 LTE Modem ユーザ登録を行うことで、LTEモデムの製造元サイトからダウンロードできる。
+https://source.sierrawireless.com/resources/airprime/software/airprime-em_mc-series-windows-drivers-qmi-build-latest-release/
+Realtek Audio 下記リンクからダウンロードできる。
+https://www.realtek.com/en/component/zoo/category/pc-audio-codecs-high-definition-audio-codecs-software
+intel_sensor (Intel integrated sensor solution. ISS Dynamic bus Enumerator) 照度センサ これはIntelのサイトからダウンロードできなかった。 Dellのサイトからダウンロードしたドライバを使用することで、少なくともデバイスマネージャ上ではドライバが当たった。照度自動調整も正常に動作している。
+https://www.dell.com/support/home/ja-jp/drivers/driversdetails?driverid=wkrmx
+バッテリの持続時間について 上記した通り、比較的Genericなドライバのみが当たった状態である。これはつまり、PCメーカが提供する最適化が適用されていない可能性があるということである。 この状態でのバッテリ持続時間（Wi-Fi ON、軽作業）は10時間程度と推定される。私にとっては十分だし、なによりソフトウェアに問題が少ない（と感じていられる）状態の方がよほど重要だ。なので、私はこのトレードオフを受け入れている。
+Linuxに関する参考情報 現状、USBメモリでの確認ではあるが、Ubuntu18.04LTSおよびFedora 33のライブセッションは動作した。WWANも認識されている。問題なく動作できるのではないだろうか。これはうれしい誤算である。
+Lavie Direct PMをLinuxで使った場合、システムからバッテリが認識されない。Fedora 33とUbuntu20.10で確認。モバイル用途としての使用は困難であると思われる。
+再セットアップディスクに関する参考情報 一度作成した再セットアップディスクは、その内容を単純にコピーしても、少なくとも再セットアップメニューの起動までは行うことができた。|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://squeuei.github.io/post/2020-11-25/lavie-direct-pm%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/" />
+
+
+
+    <title>Lavie Direct PMのセットアップ</title>
+    <link rel="canonical" href="https://squeuei.github.io/post/2020-11-25/lavie-direct-pm%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://squeuei.github.io/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="ja-jp"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://squeuei.github.io/" class="b bb bw1 pb1 no-underline black">Constellation</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">Lavie Direct PMのセットアップ</h1>
+    <span class="f6 gray">November 25, 2020</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <p>前記事の続き</p>
+<h3 id="uefiでの設定項目">UEFIでの設定項目</h3>
+<p>UEFIには起動直後にF2キーを押すことで入ることができる。</p>
+<p>FnとCtrlはUEFI上で入れ替えることが可能である。</p>
+<p>一時的なブートデバイス選択はF2のUEFI設定画面の中で行うことができる。</p>
+<h3 id="windows-10-のインストール">Windows 10 のインストール</h3>
+<p>ソフトウェア的な観点において、デフォルトのセットアップは許容しがたい。そのため、OSのクリーンインストールを試みた。</p>
+<p>まず、OSについてはMSから提供されているツールを用いて、Windows 10の起動デバイスを作成した。必要なのはWindowsが動くPCとUSBメモリである。isoイメージをダウンロードすることもできるが、たとえばLinuxなどからこのイメージを<code>dd</code>しても、なぜかうまく起動できないことがあった。Media Creation Toolを使う方が無難である。</p>
+<p>インストールおよびOS自体のセットアップは、ふつうのクリーンインストールと何ら変わらない。オフラインアカウント（MSのいうところの制限付きエクスペリエンスというやつだ）を作成することにこだわること。</p>
+<p>Windows 10のライセンスは自動的に認証されるため、問題は生じない。</p>
+<h3 id="ドライバのインストール">ドライバのインストール</h3>
+<p>基本的なドライバについてはWindows Updateを通して入手できる。これはうれしい誤算であった。</p>
+<p>デバイスマネージャ基準でドライバが当たらなかった物は3つ。LTEモデム、オーディオ、そして照度センサである。</p>
+<p>正常に動作しているか、あるいは省電力設定が適切に行われているか、などには疑問があるが、少なくともデバイスマネージャ上で認識されていないデバイスはなくなった。</p>
+<h4 id="sierra-em7565-lte-modem">Sierra EM7565 LTE Modem</h4>
+<p>ユーザ登録を行うことで、LTEモデムの製造元サイトからダウンロードできる。</p>
+<p><a href="https://source.sierrawireless.com/resources/airprime/software/airprime-em_mc-series-windows-drivers-qmi-build-latest-release/">https://source.sierrawireless.com/resources/airprime/software/airprime-em_mc-series-windows-drivers-qmi-build-latest-release/</a></p>
+<h4 id="realtek-audio">Realtek Audio</h4>
+<p>下記リンクからダウンロードできる。</p>
+<p><a href="https://www.realtek.com/en/component/zoo/category/pc-audio-codecs-high-definition-audio-codecs-software">https://www.realtek.com/en/component/zoo/category/pc-audio-codecs-high-definition-audio-codecs-software</a></p>
+<h4 id="intel_sensor-intel-integrated-sensor-solution-iss-dynamic-bus-enumerator-照度センサ">intel_sensor (Intel integrated sensor solution. ISS Dynamic bus Enumerator) 照度センサ</h4>
+<p>これはIntelのサイトからダウンロードできなかった。
+Dellのサイトからダウンロードしたドライバを使用することで、少なくともデバイスマネージャ上ではドライバが当たった。照度自動調整も正常に動作している。</p>
+<p><a href="https://www.dell.com/support/home/ja-jp/drivers/driversdetails?driverid=wkrmx">https://www.dell.com/support/home/ja-jp/drivers/driversdetails?driverid=wkrmx</a></p>
+<h4 id="バッテリの持続時間について">バッテリの持続時間について</h4>
+<p>上記した通り、比較的Genericなドライバのみが当たった状態である。これはつまり、PCメーカが提供する最適化が適用されていない可能性があるということである。
+この状態でのバッテリ持続時間（Wi-Fi ON、軽作業）は10時間程度と推定される。私にとっては十分だし、なによりソフトウェアに問題が少ない（と感じていられる）状態の方がよほど重要だ。なので、私はこのトレードオフを受け入れている。</p>
+<h3 id="linuxに関する参考情報">Linuxに関する参考情報</h3>
+<p><s>現状、USBメモリでの確認ではあるが、Ubuntu18.04LTSおよびFedora 33のライブセッションは動作した。WWANも認識されている。問題なく動作できるのではないだろうか。これはうれしい誤算である。</s></p>
+<p>Lavie Direct PMをLinuxで使った場合、システムからバッテリが認識されない。Fedora 33とUbuntu20.10で確認。モバイル用途としての使用は困難であると思われる。</p>
+<h3 id="再セットアップディスクに関する参考情報">再セットアップディスクに関する参考情報</h3>
+<p>一度作成した再セットアップディスクは、その内容を単純にコピーしても、少なくとも再セットアップメニューの起動までは行うことができた。</p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: November 25, 2020. Published at: 2020-11-25.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>

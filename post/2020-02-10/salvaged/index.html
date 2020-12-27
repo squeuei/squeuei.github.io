@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="ja-jp"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="Salvaged" />
+<meta property="og:site_name" content="Constellation" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://squeuei.github.io/post/2020-02-10/salvaged/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2020-02-10
+" /> <meta property="article:modified_time" content="2020-02-10
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@squeuei" />
+<meta name="twitter:creator" content="@squeuei" />
+<meta
+  name="twitter:title"
+  content="Salvaged | Constellation"
+/>
+<meta
+  name="twitter:description"
+  content="TL;DR 2年前突然死して文鎮化したNexus 5Xからデータを救出した。
+Sudden Death Nexus 5Xは突然死するタイプの端末である。突然電源が切れ、起動途中でフリーズしたり再起動ループに陥ったりする症状が現れる。
+これは、当該機種の電子基板へ熱サイクルが印可されることによって、SoCの接合部ではんだクラックが生じるためだと考えられている。
+https://en.wikipedia.org/wiki/Nexus_5X#Problems
+ブートループが発生した個体に対して、中長期的に信頼性のある修理を施すことは、少なくとも素人の手には負えない仕事であると思われる。 しかしながら、ごく短期間――たとえばバックアップを取っていなかったデータをサルベージする間――だけであれば、 相応の準備と多少の幸運によってこれを達成することができるかもしれない。
+Preparation ケータイ修理キット 私はiFixit Pro Tech Toolkitを持っていたのでそれを使った。
+Pro Tech Toolkit - iFixit
+が、実質的にはピックと精密ドライバーくらいしか使わなかったのでもっと適当な安いやつでよろしい。 私が持っているわけではないけどこういうのとか。
+https://www.amazon.co.jp/dp/B017W00U1Y/
+https://www.amazon.co.jp/dp/B01FU0URFW/
+Y型ドライバー ドコモ版の場合、インナフレームを取り外す際にY型ドライバが必要になる。残念ながらPro Tech Toolkitに含まれるビットでは回らなかったので、専用品を別途購入した。
+https://www.amazon.co.jp/dp/B00E7NRFQI/
+ヒートガン ある程度信頼できるメーカのものならなんでもいいはず。Amazon.co.jpが販売してないよくわからんメーカのやつはやめよう。
+有名メーカ製で小さいという基準でSUREのプラジェットミニを購入した。
+http://www.sure-ishizaki.co.jp/tool/plajet/handy/pj-m50/
+ヨドバシ.com - 石崎電機製作所 SURE シュアー PJ-M50 [小型ヒートガン プラジェット・ミニ] 通販【全品無料配達】
+Operation だいたいこの動画の通り。分解して、基板を取り出して、SoCのあたりをヒートガンで加熱する。 方法論としては焼きGPUに近い。
+https://www.youtube.com/watch?v=6HlqfB7VD1E
+裏蓋を外すのはSIMスロットを外してそこに三角形のピックをいれればやりやすい。
+電池は危険なので熱や衝撃、物理的ダメージを与えないよう注意して。
+SoCは基板の画面側に実装されている。
+Nexus 5X Teardown - iFixit
+電子基板のシールドを外したりフラックスを落としたりするのは省略してよい。
+インナフレームまで組むと電源ボタンが押せるようになるのでそこまで組み立てたら充電して電源供給してみる。 運が良ければ数分間は動作してデータを吸い出すくらいのことはできるだろう。 だめなら同じことを繰り返してみる。 パワードUSBハブがあると充電しながらPC接続ができるのでやや有利。
+Afterword 元よりどうせ死んでいる機体である。データを救出できれば儲け物、くらいの気持ちで挑戦してみるのが良いだろう。 あまり期待しすぎないように。失敗してとどめを刺してしまっても仕方ないと諦めるように。あと、火事や怪我をしないように。ヒートガンの熱風が向かう先に常に注意を向けること。
+グッドラック。|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://squeuei.github.io/post/2020-02-10/salvaged/" />
+
+
+
+    <title>Salvaged</title>
+    <link rel="canonical" href="https://squeuei.github.io/post/2020-02-10/salvaged/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://squeuei.github.io/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="ja-jp"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://squeuei.github.io/" class="b bb bw1 pb1 no-underline black">Constellation</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">Salvaged</h1>
+    <span class="f6 gray">February 10, 2020</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <h3 id="tldr">TL;DR</h3>
+<p>2年前突然死して文鎮化したNexus 5Xからデータを救出した。</p>
+<h3 id="sudden-death">Sudden Death</h3>
+<p>Nexus 5Xは突然死するタイプの端末である。突然電源が切れ、起動途中でフリーズしたり再起動ループに陥ったりする症状が現れる。</p>
+<p>これは、当該機種の電子基板へ熱サイクルが印可されることによって、SoCの接合部ではんだクラックが生じるためだと考えられている。</p>
+<p><a href="https://en.wikipedia.org/wiki/Nexus_5X#Problems">https://en.wikipedia.org/wiki/Nexus_5X#Problems</a></p>
+<p>ブートループが発生した個体に対して、中長期的に信頼性のある修理を施すことは、少なくとも素人の手には負えない仕事であると思われる。
+しかしながら、ごく短期間――たとえばバックアップを取っていなかったデータをサルベージする間――だけであれば、
+相応の準備と多少の幸運によってこれを達成することができるかもしれない。</p>
+<h3 id="preparation">Preparation</h3>
+<h4 id="ケータイ修理キット">ケータイ修理キット</h4>
+<p>私はiFixit Pro Tech Toolkitを持っていたのでそれを使った。</p>
+<p><a href="https://www.ifixit.com/Store/Tools/Pro-Tech-Toolkit/IF145-307">Pro Tech Toolkit - iFixit</a></p>
+<p>が、実質的にはピックと精密ドライバーくらいしか使わなかったのでもっと適当な安いやつでよろしい。
+私が持っているわけではないけどこういうのとか。</p>
+<p><a href="https://www.amazon.co.jp/dp/B017W00U1Y/">https://www.amazon.co.jp/dp/B017W00U1Y/</a></p>
+<p><a href="https://www.amazon.co.jp/dp/B01FU0URFW/">https://www.amazon.co.jp/dp/B01FU0URFW/</a></p>
+<h4 id="y型ドライバー">Y型ドライバー</h4>
+<p>ドコモ版の場合、インナフレームを取り外す際にY型ドライバが必要になる。残念ながらPro Tech Toolkitに含まれるビットでは回らなかったので、専用品を別途購入した。</p>
+<p><a href="https://www.amazon.co.jp/dp/B00E7NRFQI/">https://www.amazon.co.jp/dp/B00E7NRFQI/</a></p>
+<h4 id="ヒートガン">ヒートガン</h4>
+<p>ある程度信頼できるメーカのものならなんでもいいはず。Amazon.co.jpが販売してないよくわからんメーカのやつはやめよう。</p>
+<p>有名メーカ製で小さいという基準でSUREのプラジェットミニを購入した。</p>
+<p><a href="http://www.sure-ishizaki.co.jp/tool/plajet/handy/pj-m50/">http://www.sure-ishizaki.co.jp/tool/plajet/handy/pj-m50/</a></p>
+<p><a href="https://www.yodobashi.com/product/100000001004681219/">ヨドバシ.com - 石崎電機製作所 SURE シュアー PJ-M50 [小型ヒートガン プラジェット・ミニ] 通販【全品無料配達】</a></p>
+<h3 id="operation">Operation</h3>
+<p>だいたいこの動画の通り。分解して、基板を取り出して、SoCのあたりをヒートガンで加熱する。
+方法論としては焼きGPUに近い。</p>
+<p><a href="https://www.youtube.com/watch?v=6HlqfB7VD1E">https://www.youtube.com/watch?v=6HlqfB7VD1E</a></p>
+<p>裏蓋を外すのはSIMスロットを外してそこに三角形のピックをいれればやりやすい。</p>
+<p>電池は危険なので熱や衝撃、物理的ダメージを与えないよう注意して。</p>
+<p>SoCは基板の画面側に実装されている。</p>
+<p><a href="https://www.ifixit.com/Teardown/Nexus+5X+Teardown/51318">Nexus 5X Teardown - iFixit</a></p>
+<p>電子基板のシールドを外したりフラックスを落としたりするのは省略してよい。</p>
+<p>インナフレームまで組むと電源ボタンが押せるようになるのでそこまで組み立てたら充電して電源供給してみる。
+運が良ければ数分間は動作してデータを吸い出すくらいのことはできるだろう。
+だめなら同じことを繰り返してみる。
+パワードUSBハブがあると充電しながらPC接続ができるのでやや有利。</p>
+<h3 id="afterword">Afterword</h3>
+<p>元よりどうせ死んでいる機体である。データを救出できれば儲け物、くらいの気持ちで挑戦してみるのが良いだろう。
+あまり期待しすぎないように。失敗してとどめを刺してしまっても仕方ないと諦めるように。あと、火事や怪我をしないように。ヒートガンの熱風が向かう先に常に注意を向けること。</p>
+<p>グッドラック。</p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: February 10, 2020. Published at: 2020-02-10.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>

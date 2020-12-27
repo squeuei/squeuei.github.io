@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="ja-jp"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="あるいは武器でいっぱいの箱" />
+<meta property="og:site_name" content="Constellation" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://squeuei.github.io/post/2018-05-18/%E3%81%82%E3%82%8B%E3%81%84%E3%81%AF%E6%AD%A6%E5%99%A8%E3%81%A7%E3%81%84%E3%81%A3%E3%81%B1%E3%81%84%E3%81%AE%E7%AE%B1/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2018-05-18
+" /> <meta property="article:modified_time" content="2018-05-18
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@squeuei" />
+<meta name="twitter:creator" content="@squeuei" />
+<meta
+  name="twitter:title"
+  content="あるいは武器でいっぱいの箱 | Constellation"
+/>
+<meta
+  name="twitter:description"
+  content="(Update 2020-07-08)
+はじめに 工具はMakerの武器。
+こんにちは、ぬるくてにわかな電子工作エアプガチ勢です。今日は私の妄想ツールボックスを紹介します。妄想なので全部持ってるわけじゃないです。
+あくまで私が持っている/手に入れたい工具の紹介なので、プロの選択みたいなの読みたい人は専門の方の記事を参照のほど。
+一般論 アマゾンで買い物をするとき、基本的にはAmazon.co.jpが販売している商品の中から選ぶこと 。失敗するリスクが下がる。工具や測定器は信頼できるものをそろえた方がいいので特に。
+ただし、この記事で言えば、USBasp、部品マルチテスタ、安ロジアナなんかは、中国製のコピー製品、_ジェネリック_製品が便利に使える。Pro MicroやBlue Pill (STM32F103C8T6搭載のマイコンボード)なども似た状況だ。
+https://ht-deko.com/arduino/promicro.html
+https://www.aitendo.com/product/12196
+https://ht-deko.com/arduino/stm32f103c8t6.html
+https://www.aitendo.com/product/13348
+サクラチェッカーを片手に立ち向かうのもいいだろう。 ただし、Arduinoの基板などは、USB-シリアル変換ICなどが公式から変更されていて、そのせいでうまく動かないなどあるので、基本的には公式か、SainSmartあたりから買うのがよさそう。
+どちらにせよ、安さには理由があり、基本的には純正品が確保している何らかのマージンを削っている、みんながみんなブランドで殿様商売できるほどうまい世の中じゃない、ということを意識したい。 その上で、自分の技量に基づいて、どこまで自分で問題に対応できるか、リスクを許容できるか、マージンを削って安価に仕上げるか、という戦いに挑んでいこう。 我々はアマチュアなので。
+工具 雑に使う安物が別にあるとよいが、やはりそれなりの品質があるものを揃えると作業が気持ちいい、ような気がする。
+スクリュードライバはPB SWISS TOOLSだ、いやWERAだ。ニッパはフジ矢がいい、いやケイバだ、とか、諸説ある。とりあえずホーザンというのもアリだと思う。
+https://www.amazon.co.jp/dp/B002TKATOQ
+個人的にはスクリュードライバはベッセル、はんだ関連は白光。ピンセットはガチ勢がたくさんいて怖いので言及しません。
+ドライバ関連   https://www.amazon.co.jp/dp/B003BIAOKO
+これでもいいんだけど、グリップが滑って空回りするので。
+  https://www.amazon.co.jp/dp/B000TG8OTY
+基本このメガドラシリーズで揃えている。検索性が悪い名前。
+  https://www.amazon.co.jp/dp/B000CED25O
+マイナスドライバをタガネ代わりにしてはダメなので、タガネ用に作られたドライバ（？？？）を使おう。
+  他にも、時々ヘックスローブが必要になったりするので、スマートフォン修理用の特殊精密工具セットなどを持っておくと意外なほど役に立つ。
+ https://www.amazon.co.jp/dp/B017W00U1Y  iFixit製品は高価だけどその分品質は良い、のだろうか。詳しくは知らない。少なくとも日本価格は割高。
+はんだ関連   https://www.amazon.co.jp/dp/B006MQD7M4
+  https://www.amazon.co.jp/dp/B000TGNWCS
+  https://www.amazon.co.jp/dp/B000AQOEVU
+  https://www.amazon.co.jp/dp/B004OCUO3I
+健康のためにも。
+  https://www.amazon.co.jp/dp/B07ZGLWRMX
+ジェネリックてだすけ君。なんで今まで出てこなかったのか、知財的に大丈夫なのかとかいろいろ疑問はあるけど、まあgootだし大丈夫なのでしょう。ありがたみ。
+  他にははんだ、フラックス、フラックスクリーナ、吸い取り線（ウィック）、吸取器、用途別のこて先などを適宜揃えていきましょう。|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://squeuei.github.io/post/2018-05-18/%E3%81%82%E3%82%8B%E3%81%84%E3%81%AF%E6%AD%A6%E5%99%A8%E3%81%A7%E3%81%84%E3%81%A3%E3%81%B1%E3%81%84%E3%81%AE%E7%AE%B1/" />
+
+
+
+    <title>あるいは武器でいっぱいの箱</title>
+    <link rel="canonical" href="https://squeuei.github.io/post/2018-05-18/%E3%81%82%E3%82%8B%E3%81%84%E3%81%AF%E6%AD%A6%E5%99%A8%E3%81%A7%E3%81%84%E3%81%A3%E3%81%B1%E3%81%84%E3%81%AE%E7%AE%B1/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://squeuei.github.io/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="ja-jp"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://squeuei.github.io/" class="b bb bw1 pb1 no-underline black">Constellation</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">あるいは武器でいっぱいの箱</h1>
+    <span class="f6 gray">May 18, 2018</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <p>(Update 2020-07-08)</p>
+<h3 id="はじめに">はじめに</h3>
+<p>工具はMakerの武器。</p>
+<p>こんにちは、ぬるくてにわかな電子工作エアプガチ勢です。今日は私の妄想ツールボックスを紹介します。妄想なので全部持ってるわけじゃないです。</p>
+<p>あくまで私が持っている/手に入れたい工具の紹介なので、プロの選択みたいなの読みたい人は専門の方の記事を参照のほど。</p>
+<h3 id="一般論">一般論</h3>
+<p>アマゾンで買い物をするとき、<strong>基本的にはAmazon.co.jpが販売している商品の中から選ぶこと</strong> 。失敗するリスクが下がる。工具や測定器は信頼できるものをそろえた方がいいので特に。</p>
+<p>ただし、この記事で言えば、USBasp、部品マルチテスタ、安ロジアナなんかは、中国製のコピー製品、_ジェネリック_製品が便利に使える。Pro MicroやBlue Pill (STM32F103C8T6搭載のマイコンボード)なども似た状況だ。</p>
+<p><a href="https://ht-deko.com/arduino/promicro.html">https://ht-deko.com/arduino/promicro.html</a></p>
+<p><a href="https://www.aitendo.com/product/12196">https://www.aitendo.com/product/12196</a></p>
+<p><a href="https://ht-deko.com/arduino/stm32f103c8t6.html">https://ht-deko.com/arduino/stm32f103c8t6.html</a></p>
+<p><a href="https://www.aitendo.com/product/13348">https://www.aitendo.com/product/13348</a></p>
+<p>サクラチェッカーを片手に立ち向かうのもいいだろう。
+ただし、Arduinoの基板などは、USB-シリアル変換ICなどが公式から変更されていて、そのせいでうまく動かないなどあるので、基本的には公式か、SainSmartあたりから買うのがよさそう。</p>
+<p>どちらにせよ、<strong>安さには理由があり、基本的には純正品が確保している何らかのマージンを削っている</strong>、みんながみんなブランドで殿様商売できるほどうまい世の中じゃない、ということを意識したい。
+その上で、自分の技量に基づいて、どこまで自分で問題に対応できるか、リスクを許容できるか、マージンを削って安価に仕上げるか、という戦いに挑んでいこう。
+我々はアマチュアなので。</p>
+<h3 id="工具">工具</h3>
+<p>雑に使う安物が別にあるとよいが、やはりそれなりの品質があるものを揃えると作業が気持ちいい、ような気がする。</p>
+<p>スクリュードライバはPB SWISS TOOLSだ、いやWERAだ。ニッパはフジ矢がいい、いやケイバだ、とか、諸説ある。とりあえずホーザンというのもアリだと思う。</p>
+<p><a href="https://www.amazon.co.jp/dp/B002TKATOQ">https://www.amazon.co.jp/dp/B002TKATOQ</a></p>
+<p>個人的にはスクリュードライバはベッセル、はんだ関連は白光。ピンセットはガチ勢がたくさんいて怖いので言及しません。</p>
+<h4 id="ドライバ関連">ドライバ関連</h4>
+<ul>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B003BIAOKO">https://www.amazon.co.jp/dp/B003BIAOKO</a></p>
+<p><a href="https://www.amazon.co.jp/dp/B07MWHXPVF/">これ</a>でもいいんだけど、グリップが滑って空回りするので。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B000TG8OTY">https://www.amazon.co.jp/dp/B000TG8OTY</a></p>
+<p>基本このメガドラシリーズで揃えている。検索性が悪い名前。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B000CED25O">https://www.amazon.co.jp/dp/B000CED25O</a></p>
+<p>マイナスドライバをタガネ代わりにしてはダメなので、タガネ用に作られたドライバ（？？？）を使おう。</p>
+</li>
+</ul>
+<p>他にも、時々ヘックスローブが必要になったりするので、スマートフォン修理用の特殊精密工具セットなどを持っておくと意外なほど役に立つ。</p>
+<ul>
+<li><a href="https://www.amazon.co.jp/dp/B017W00U1Y">https://www.amazon.co.jp/dp/B017W00U1Y</a></li>
+</ul>
+<p><a href="https://jp.ifixit.com/Store/Tools/Pro-Tech-Toolkit/IF145-307">iFixit製品</a>は高価だけどその分品質は良い、のだろうか。詳しくは知らない。少なくとも日本価格は割高。</p>
+<h4 id="はんだ関連">はんだ関連</h4>
+<ul>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B006MQD7M4">https://www.amazon.co.jp/dp/B006MQD7M4</a></p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B000TGNWCS">https://www.amazon.co.jp/dp/B000TGNWCS</a></p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B000AQOEVU">https://www.amazon.co.jp/dp/B000AQOEVU</a></p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B004OCUO3I">https://www.amazon.co.jp/dp/B004OCUO3I</a></p>
+<p>健康のためにも。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B07ZGLWRMX">https://www.amazon.co.jp/dp/B07ZGLWRMX</a></p>
+<p><em>ジェネリック</em><a href="https://www.orb.co.jp/tew/pdf/tk.pdf">てだすけ君</a>。なんで今まで出てこなかったのか、知財的に大丈夫なのかとかいろいろ疑問はあるけど、まあgootだし大丈夫なのでしょう。ありがたみ。</p>
+</li>
+</ul>
+<p>他にははんだ、フラックス、フラックスクリーナ、吸い取り線（ウィック）、吸取器、用途別のこて先などを適宜揃えていきましょう。</p>
+<p>ゴッドはんだのセットは参考になる。</p>
+<p><a href="https://handatsuke.com/SHOP/1108090/1107516/list.html">https://handatsuke.com/SHOP/1108090/1107516/list.html</a></p>
+<p><a href="https://handatsuke.com/SHOP/1108090/1107513/list.html">https://handatsuke.com/SHOP/1108090/1107513/list.html</a></p>
+<h4 id="その他">その他</h4>
+<ul>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B07HFMC9ZR">https://www.amazon.co.jp/dp/B07HFMC9ZR</a></p>
+<p>ちゃんと身体を守ろう。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B002L6HJ9Q">https://www.amazon.co.jp/dp/B002L6HJ9Q</a></p>
+<p>机も守ろう。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B004OR5PQE">https://www.amazon.co.jp/dp/B004OR5PQE</a></p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B00IF3Y898">https://www.amazon.co.jp/dp/B00IF3Y898</a></p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B082M9C2KR">https://www.amazon.co.jp/dp/B082M9C2KR</a></p>
+<p>ちゃんとしたメーカが出してる小型ヒートガン。似た形でもっと安い商品は無数にあるけど、どこまで製造者を信用するかという話になる。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B004OCLQI0">https://www.amazon.co.jp/dp/B004OCLQI0</a></p>
+<p>絶縁被覆付圧着端子の工具ではこれが良いと思う。なぜなら全サイズに対応しているので。</p>
+</li>
+</ul>
+<p>あとはラジオペンチとかニッパとかそういうもの。先に挙げたような相応の品を使うとバチッと決まって気分がいい。</p>
+<p>電子工作ではないけど、ショックレスハンマやネジザウルス、ボールポイントレンチなんか持っとくと家具の組み立てで役立つ。</p>
+<h3 id="ディジタルマルチメータ">ディジタルマルチメータ</h3>
+<p>個人の使用経験に基づいて三和、日置、フルークから例を挙げたが、他にも例えば共立や横河も良い選択肢だろう。</p>
+<h4 id="カードテスタ">カードテスタ</h4>
+<p>メインのテスタがあっても、これはこれで便利に使えるので、持っていてもよい。導通チェックのためにはハンドヘルドを引っ張り出すだけでも手間。手頃なので壊してもへーき。</p>
+<p>三和のPM3がいいのではないだろうか。</p>
+<p><a href="https://www.amazon.co.jp/dp/B000JQHB6G">https://www.amazon.co.jp/dp/B000JQHB6G</a></p>
+<p>他の選択肢としては三和のPM300や日置のDT4222などがある。確かに反応が高速なのだが、その速度がカードテスタに必要だろうか。</p>
+<ul>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B076ZYL2T1">https://www.amazon.co.jp/dp/B076ZYL2T1</a></p>
+<p>EEVBlogのDaveがおすすめしてたけど、自分のストアで扱ってるからかもしれない。もちろん、よいものだから自分のストアで扱うようにしたと好意的に捉えることもできるが。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B00KIISBB4">https://www.amazon.co.jp/dp/B00KIISBB4</a></p>
+<p>安全装置つきのDT4224は導通チェックの反応がかなり遅いので少なくとも電子工作向けにはおすすめしない。</p>
+</li>
+</ul>
+<h4 id="ハンドヘルドテスタ">ハンドヘルドテスタ</h4>
+<ul>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B0017S13YQ">https://www.amazon.co.jp/dp/B0017S13YQ</a></p>
+<p>三和のいいところは値段の割に機能が優れているところ。CD772なら、機能的にはTrueRMS、μAレンジ、熱電対温度測定と一通り揃ってる。中身の出来がとかいろいろあると思うけど、素人の電子工作でどこまで必要よ、という話にしかならない。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B00CPGRFZ0">https://www.amazon.co.jp/dp/B00CPGRFZ0</a></p>
+<p>全部載せのハイエンド機。誤挿入防止シャッターに萌える。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B00XJE4HDU">https://www.amazon.co.jp/dp/B00XJE4HDU</a></p>
+<p>μAレンジと温度測定はないけど作りはいいし反応も早い。レンジが切り替わる時にピコピコうるさいのは電工屋さん向けということなのか。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B00CWWS7OU">https://www.amazon.co.jp/dp/B00CWWS7OU</a></p>
+<p>業務用には安心と信頼のフルーク。永久保証の28IIあたりを狙いたい。87Vと比較して電池回りの設計も洗練されている。</p>
+<p>ちなみにフルーク10x、11xシリーズは保証の体系が異なるので注意。それらを買うなら国内メーカ品を狙ったほうがいい、というのは単なる個人の意見。</p>
+</li>
+</ul>
+<h4 id="ベンチトップテスタ">ベンチトップテスタ</h4>
+<p>よくわからない。34401Aをちょっと使ったことあるくらい。これかその後継を選んでおけば間違いはないだろうけど、高価い。</p>
+<h4 id="その他-1">その他</h4>
+<ul>
+<li>
+<p>M328/LCR-T4</p>
+<p>定量的な測定には全く適さないが、案外便利。安いので買って損はないはず。</p>
+<p>Shigezoneでカラー版が出てます。</p>
+<p><a href="https://www.shigezone.com/?product=multi_tester_tc1">https://www.shigezone.com/?product=multi_tester_tc1</a></p>
+</li>
+</ul>
+<h3 id="電源">電源</h3>
+<ul>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B0152P9PG2">https://www.amazon.co.jp/dp/B0152P9PG2</a></p>
+<p>一般的なアドバイスとして、電源ボタンと出力ボタンが独立しているものを選ぶのをおすすめする。</p>
+<p>急いで目的の電圧にセットしなきゃ、とか、ダイヤルを戻さずに電源を入れて焼損、とかを防げる。</p>
+</li>
+</ul>
+<h3 id="ベンチトップオシロスコープ">ベンチトップオシロスコープ</h3>
+<ul>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B011E8DY40">https://www.amazon.co.jp/dp/B011E8DY40</a></p>
+<p>ド定番のディジタルオシロスコープ。100k JPY以下で階調表示が行える数少ない製品のうちの一つ。
+国内代理店もあり、保証も効く。下手に個人輸入したりせずAmazon等から買うのがよし。
+<s>全オプションを解放コードを生成するサイトがわるいインターネットの検索結果上位に出てくるけど保証をvoidするので使ってはだめ。</s>
+MSOモデルや任意波形発生器付モデルもあるので、予算が許すなら考えよう。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B06X9C9D6H">https://www.amazon.co.jp/dp/B06X9C9D6H</a></p>
+<p>4ch品のDSOX1204Gもある。Keysightのオシロが10万円台で買える！
+メモリ長とBode線図機能からぜひともDSOX1204GかDSOX1102Gを選びたい。
+注意事項としては、諧調表示がないこと、単体で50Ω終端にできないこと、波形発生器は任意波形発生機能がないこと。</p>
+</li>
+</ul>
+<h3 id="pcオシロスコープdaqロジックアナライザ">PCオシロスコープ/DAQ/ロジックアナライザ</h3>
+<ul>
+<li>
+<p><a href="https://store.digilentinc.com/analog-discovery-2-100msps-usb-oscilloscope-logic-analyzer-and-variable-power-supply/">https://store.digilentinc.com/analog-discovery-2-100msps-usb-oscilloscope-logic-analyzer-and-variable-power-supply/</a></p>
+<p>USB接続の多機能デバイス。トランジスタ技術などでも定番品として扱われているようだ。</p>
+<ul>
+<li>オシロ</li>
+<li>FG</li>
+<li>ロジアナ</li>
+<li>パターン生成</li>
+<li>電圧計</li>
+<li>ネットアナ</li>
+<li>スペアナ</li>
+<li>プロトコルアナライザ</li>
+<li>電源</li>
+</ul>
+<p>秋月でも買える。</p>
+<p><a href="http://akizukidenshi.com/catalog/g/gM-10135/">http://akizukidenshi.com/catalog/g/gM-10135/</a></p>
+<p>アクセサリもいろいろある。</p>
+<ul>
+<li><a href="http://akizukidenshi.com/catalog/g/gM-07743/">http://akizukidenshi.com/catalog/g/gM-07743/</a></li>
+<li><a href="http://akizukidenshi.com/catalog/g/gM-13450/">http://akizukidenshi.com/catalog/g/gM-13450/</a></li>
+<li><a href="http://akizukidenshi.com/catalog/g/gM-13451/">http://akizukidenshi.com/catalog/g/gM-13451/</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B074TNNGS8">https://www.amazon.co.jp/dp/B074TNNGS8</a></p>
+<p>ロジックアナライザ。高速で動作するし、対応プロトコルが多く、作りもよい。</p>
+<p>公式通販を使う場合、非商用目的であれば問い合わせすることでかなり値段が安くなるので問い合わせよう。</p>
+<p><a href="https://blog.saleae.com/saleae-discounts/">https://blog.saleae.com/saleae-discounts/</a></p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B01N0KMLHX">https://www.amazon.co.jp/dp/B01N0KMLHX</a></p>
+<p>Saleaeの旧製品のコピーらしい。Saleae Logicのアプリが使えるけど、間違いなく海賊行為なのでFree/Open Sourceのsigrokあたりを使うのが適切。
+これもカードテスタと同じく気軽に使う目的で持っておいてもいいのかもしれない。値段が値段だし。</p>
+</li>
+<li>
+<p><a href="https://www.analog.com/jp/design-center/evaluation-hardware-and-software/evaluation-boards-kits/adalm2000.html">https://www.analog.com/jp/design-center/evaluation-hardware-and-software/evaluation-boards-kits/adalm2000.html</a></p>
+<p>Analog Devices社が作っている、Analog Disocveryに似たデバイス。こちらの方が安い？　ソフトはまったく別のものを使う。</p>
+<p>こちらも秋月で買える。</p>
+<p><a href="http://akizukidenshi.com/catalog/g/gM-14068/">http://akizukidenshi.com/catalog/g/gM-14068/</a></p>
+</li>
+</ul>
+<h3 id="pcペリフェラル">PCペリフェラル</h3>
+<ul>
+<li>
+<p><a href="https://www.switch-science.com/catalog/1032/">https://www.switch-science.com/catalog/1032/</a></p>
+<p>デファクトスタンダードの地位にあるFTDIのICを使ったUSBシリアル変換器は世にたくさんあるけど、スイッチサイエンスなどが販売している、5V-3.3V間で電圧切り替え可能な、6ピンヘッダの付いたボードが便利。</p>
+</li>
+<li>
+<p>VGA to HDMIアダプタ</p>
+<p>基板にVGA出力があってもVGAがつなげるディスプレイなんてない！　というときにあると便利。
+ちゃんとしたものを買うと高く付くので安物でいいと思う。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B011DT3MIS">https://www.amazon.co.jp/dp/B011DT3MIS</a></p>
+<p>USBaspと呼ばれるAVRライタ。ArduinoのBootloaderを吹っ飛ばしたときなんかにあると助かる。</p>
+<p>aitendoでも類似商品を売っている。</p>
+<p><a href="https://www.aitendo.com/product/18027">https://www.aitendo.com/product/18027</a></p>
+<p>10ピン-6ピン変換があるとArduinoのICSP端子に直結できて便利。</p>
+<p><a href="https://www.amazon.co.jp/dp/B014KJ0Z5G">https://www.amazon.co.jp/dp/B014KJ0Z5G</a></p>
+<p>Arduino IDEがうまく認識してくれないときがあるので、そういうときは<a href="https://zadig.akeo.ie/">Zadig</a>を使う。</p>
+<p>本当は<s>Atmel……じゃもうなかった、</s>Microchipが出してる、<s>AVRISPmk2……も生産終了してるな、</s>ATMEL-ICE-BASICを買うのが筋だろうけどまずはここからでもいいのではないか。</p>
+<p><a href="http://akizukidenshi.com/catalog/g/gM-08285/">http://akizukidenshi.com/catalog/g/gM-08285/</a></p>
+</li>
+</ul>
+<h3 id="アプリケーション">アプリケーション</h3>
+<ul>
+<li>
+<p><a href="https://jp.mathworks.com/academia/student_version.html">https://jp.mathworks.com/academia/student_version.html</a></p>
+<p>分野によっては未だ唯一無二の存在。一応はScilabにXCosというのがあるけど、それでも制御屋さんはもうMatlab/Simulinkなしでは生きていけないだろう（偏見）。</p>
+<p>学生版は99 USDでMatlab、Simulinkの他いくつかのToolboxのバンドルが破格値で購入可能。
+若い内に味を覚えさせてこれなしでは生きられない身体にしてしまう周到な作戦である。</p>
+<p>なお、非商用限定のHomeで同じ内容を揃えると600 USDくらいする。
+アップグレードを受けるためには保守料（新品価格の50%という未確認情報あり）がかかるので注意。</p>
+</li>
+<li>
+<p>National Instruments LabVIEW</p>
+<p><s>フルライセンスは高価であるが、個人用途であれば<strong>バージョンが2014と古い</strong>点、<strong>Windowsの32bit版のみ</strong>という制約はあれど、LabViEW Home Bundleが50 USD弱で利用可能。</s></p>
+<p>時代は変わりました。非商用なら無料で使えます。ただし、FPGAモジュールやRealtimeモジュールは使えないので、myRIOを使いたい人は注意が必要。</p>
+<p><a href="https://note.com/hoshinao/n/n4ebe71902147">https://note.com/hoshinao/n/n4ebe71902147</a></p>
+</li>
+<li>
+<p>LTSpice/TI-TINA</p>
+<p><a href="http://www.analog.com/jp/design-center/design-tools-and-calculators/ltspice-simulator.html">http://www.analog.com/jp/design-center/design-tools-and-calculators/ltspice-simulator.html</a></p>
+<p><a href="https://www.tij.co.jp/tool/jp/TINA-TI">https://www.tij.co.jp/tool/jp/TINA-TI</a></p>
+<p>無償で利用可能なアナログ回路シミュレータ。とてもありがたい。</p>
+</li>
+<li>
+<p>KiCAD</p>
+<p><a href="https://kicad-pcb.org/">https://kicad-pcb.org/</a></p>
+<p>基板CADがFLOSSで提供されるなんて、なんていい時代なんでしょうね。ほんとうにありがたい。</p>
+</li>
+</ul>
+<h3 id="プロトタイピング">プロトタイピング</h3>
+<ul>
+<li>
+<p><a href="http://akizukidenshi.com/catalog/g/gC-09831/">http://akizukidenshi.com/catalog/g/gC-09831/</a></p>
+<p><a href="http://akizukidenshi.com/catalog/g/gC-09830/">http://akizukidenshi.com/catalog/g/gC-09830/</a></p>
+<p>スルーホールに直接刺せる電線。</p>
+</li>
+<li>
+<p><a href="https://www.amazon.co.jp/dp/B00DSKCS68">https://www.amazon.co.jp/dp/B00DSKCS68</a></p>
+<p><a href="https://www.amazon.co.jp/dp/B00J2QP2BK">https://www.amazon.co.jp/dp/B00J2QP2BK</a></p>
+<p>ちょっと高価だけど、サンハヤトのニューブレッドボードがおすすめ。なぜならESP32-DevKitCを刺しても両側にジャンパワイヤを刺せるので。</p>
+<p><a href="https://www.amazon.co.jp/gp/customer-reviews/R3CR422I18AWTS/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&amp;ASIN=B00DSKCS68">https://www.amazon.co.jp/gp/customer-reviews/R3CR422I18AWTS/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&amp;ASIN=B00DSKCS68</a></p>
+</li>
+</ul>
+<h3 id="おわりに">おわりに</h3>
+<p>せっかく道具を揃えたのならエアプばかりしてないでちゃんと活用しましょう。はい。</p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: May 18, 2018. Published at: 2018-05-18.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>

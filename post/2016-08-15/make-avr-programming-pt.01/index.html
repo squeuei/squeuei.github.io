@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="ja-jp"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="Make: AVR Programming pt.01" />
+<meta property="og:site_name" content="Constellation" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://squeuei.github.io/post/2016-08-15/make-avr-programming-pt.01/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2016-08-15
+" /> <meta property="article:modified_time" content="2016-08-15
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@squeuei" />
+<meta name="twitter:creator" content="@squeuei" />
+<meta
+  name="twitter:title"
+  content="Make: AVR Programming pt.01 | Constellation"
+/>
+<meta
+  name="twitter:description"
+  content="買ってから優に一年間放置していた“Make: AVR Programming”を夏休みに読んでしまおう計画。
+http://squeuei.hatenablog.com/entry/2015/08/11/212000
+Chapter 1 　AVRISPmk2を入手しておいたのだけど、こいつは自分で&#43;5Vを供給してくれないので、ACアダプタでブレッドボードに5Vを給電するとかしないといけない。かつ、私の環境ではavrdudeでうまくmake flashしてくれないので、Arduino ISPを活用することにする。ISP買った意味がない。
+　システムやユーザの環境変数を通すのが嫌だったので、PATHを通すバッチファイルを書いて、そこから操作することにする。
+PATH=%PATH%;foo\bar\avr8-gnu-toolchain\bin;hoge\fuga\avrdude_utilities; cd mado\homu\AVR-Programming  といった内容の.batファイル（ここでは安易にavr.batとした）を作成した後、エクスプローラから
+C:\Windows\System32\cmd.exe /k &quot;yui\azu\avr&quot;  というショートカットを作る。フォルダやファイルの場所は各自修正のこと。ショートカットがリンクする先の最後にあるavrは.batファイルのファイル名にする。拡張子を付けないのが個人的にポイントだった。
+　このショートカットを開けば、コンパイラとユーティリティへのPATHが通ったコマンドプロンプトが開く。
+　サンプルコードを書き込む際には、Makefileで
+PROGRAMMER_TYPE = avrisp PROGRAMMER_ARGS = -b 19200 -P com3  などとして、PATHが通ったコマンドプロンプトからmake flashする。
+Chapter 2 　RAMに変数をつくることと、ピンへの書き込みやピンの入出力設定は同じインタフェース（代入）で行われるけど、これは実際に同じ事をレジスタに対して行っているから。そのレジスタの情報はio.hに格納されてる。
+重要なハードウェアレジスタ   DDRx : data-direction registers port x
+インプットかアウトプットかを決める。
+  PORTx port x data registers
+ アウトプットに設定したとき：high or lowを設定 インプットに設定したとき：pull-upするかどうか(chapter 6参照)を設定    PINx port x input pins address|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://squeuei.github.io/post/2016-08-15/make-avr-programming-pt.01/" />
+
+
+
+    <title>Make: AVR Programming pt.01</title>
+    <link rel="canonical" href="https://squeuei.github.io/post/2016-08-15/make-avr-programming-pt.01/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://squeuei.github.io/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="ja-jp"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://squeuei.github.io/" class="b bb bw1 pb1 no-underline black">Constellation</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">Make: AVR Programming pt.01</h1>
+    <span class="f6 gray">August 15, 2016</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <p>　買ってから優に一年間放置していた“<a href="http://shop.oreilly.com/product/0636920028161.do">Make: AVR Programming</a>”を夏休みに読んでしまおう計画。</p>
+<p><a href="http://squeuei.hatenablog.com/entry/2015/08/11/212000">http://squeuei.hatenablog.com/entry/2015/08/11/212000</a></p>
+<h3 id="chapter-1">Chapter 1</h3>
+<p>　AVRISPmk2を入手しておいたのだけど、こいつは自分で+5Vを供給してくれないので、ACアダプタでブレッドボードに5Vを給電するとかしないといけない。かつ、私の環境ではavrdudeでうまく<code>make flash</code>してくれないので、Arduino ISPを活用することにする。ISP買った意味がない。</p>
+<p>　システムやユーザの環境変数を通すのが嫌だったので、PATHを通すバッチファイルを書いて、そこから操作することにする。</p>
+<pre><code>PATH=%PATH%;foo\bar\avr8-gnu-toolchain\bin;hoge\fuga\avrdude_utilities;
+cd mado\homu\AVR-Programming
+</code></pre>
+<p>といった内容の.batファイル（ここでは安易にavr.batとした）を作成した後、エクスプローラから</p>
+<pre><code>C:\Windows\System32\cmd.exe /k &quot;yui\azu\avr&quot;
+</code></pre>
+<p>というショートカットを作る。フォルダやファイルの場所は各自修正のこと。ショートカットがリンクする先の最後にある<code>avr</code>は.batファイルのファイル名にする。拡張子を付けないのが個人的にポイントだった。</p>
+<p>　このショートカットを開けば、コンパイラとユーティリティへのPATHが通ったコマンドプロンプトが開く。</p>
+<p>　サンプルコードを書き込む際には、Makefileで</p>
+<pre><code>PROGRAMMER_TYPE = avrisp
+PROGRAMMER_ARGS = -b 19200 -P com3
+</code></pre>
+<p>などとして、PATHが通ったコマンドプロンプトから<code>make flash</code>する。</p>
+<h3 id="chapter-2">Chapter 2</h3>
+<p>　RAMに変数をつくることと、ピンへの書き込みやピンの入出力設定は同じインタフェース（代入）で行われるけど、これは実際に同じ事をレジスタに対して行っているから。そのレジスタの情報は<code>io.h</code>に格納されてる。</p>
+<h4 id="重要なハードウェアレジスタ">重要なハードウェアレジスタ</h4>
+<ul>
+<li>
+<p>DDRx : data-direction registers port x</p>
+<p>インプットかアウトプットかを決める。</p>
+</li>
+<li>
+<p>PORTx port x data registers</p>
+<ul>
+<li>アウトプットに設定したとき：high or lowを設定</li>
+<li>インプットに設定したとき：pull-upするかどうか(chapter 6参照)を設定</li>
+</ul>
+</li>
+<li>
+<p>PINx port x input pins address</p>
+<ul>
+<li>インプットに設定したピンのhigh or lowを読んだ結果が格納される。</li>
+</ul>
+</li>
+</ul>
+<p>　デフォルトで全部のピンはインプット。</p>
+<p>　DDRの設定をせずにPORTを設定してしまうパティーンが多いので気をつけよう。</p>
+<h3 id="chapter-3">Chapter 3</h3>
+<p>　MOSFETはLEDのGNDとプログラマのGNDをいちいち手で接続したり外したりするのがめんどうなので使う、とのこと。</p>
+<p>　正直肉眼で見ても全然わからなかったので写真に撮る。</p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/squeuei/20160815/20160815001430.jpg" alt=""></p>
+<p>　<a href="http://akizukidenshi.com/catalog/g/gM-10135/">Analog Discovery2</a>のロジアナで見るとこんな感じ。ありがとうAD2。</p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/squeuei/20160815/20160815001520.jpg" alt=""></p>
+<h3 id="chapter-4">Chapter 4</h3>
+<blockquote>
+<p>サイロン (<strong>Cylon</strong>) は、SFテレビドラマ『宇宙空母ギャラクティカ』に登場する架空のキャラクター。<br>
+<A href='https://ja.wikipedia.org/w/index.php?title=%E3%82%B5%E3%82%A4%E3%83%AD%E3%83%B3&oldid=52803542'>サイロン - Wikipedia</A></p>
+</blockquote>
+<p>　さすがにわからん。</p>
+<p>　プリアンプルの#defineは大文字をアンダースコアで区切って書くのが慣例。</p>
+<ul>
+<li>ビットの設定：OR</li>
+</ul>
+<ul>
+<li>ビットの消去：AND</li>
+</ul>
+<ul>
+<li>ビットの反転：XOR</li>
+</ul>
+<h3 id="chapter-5">Chapter 5</h3>
+<p>　UARTのRT/TXの関係はSPIとは違って送り手と受け手で逆になるから気をつけよう。</p>
+<p>　以下はこの本の著者が用意した便利関数の数々。</p>
+<p>　initUSARTは、ボードレートの設定、2Xモードの設定、RXTXの有効化、データ長とストップビットの設定を行う。</p>
+<pre><code>void initUSART(void) {
+  UBRR0H = UBRRH_VALUE;
+  UBRR0L = UBRRL_VALUE;
+#if USE_2X
+  UCSR0A |= (1 &lt;&lt; U2X0);
+#else
+  UCSR0A &amp;= ~(1 &lt;&lt; U2X0);
+#endif
+  UCSR0B = (1 &lt;&lt; TXEN0) | (1 &lt;&lt; RXEN0);
+  UCSR0C = (1 &lt;&lt; UCSZ01) | (1 &lt;&lt; UCSZ00);
+}
+</code></pre>
+<p>　送信時はUCSR0A(USART Control and Status Register 0 A)レジスタのUDRE0(USART Data Register Empty)が1になるまで待って、それからUDR0(USART Data Register)に送信したいデータを格納する。</p>
+<pre><code>void transmitByte(uint8_t data) {
+  loop_until_bit_is_set(UCSR0A, UDRE0);
+  UDR0 = data;
+}
+</code></pre>
+<p>　受信時はUCSR0AレジスタのRCX0(receive-complete bit)が1になるまで待って、それからUDR0の値を読みに行く。</p>
+<pre><code>uint8_t receiveByte(void) {
+  loop_until_bit_is_set(UCSR0A, RXC0); 
+  return UDR0;
+}
+</code></pre>
+<p>　私が持っていた<a href="http://akizukidenshi.com/catalog/g/gM-08343/">USB-RS232C変換ケーブル</a>だと、PCで入力した文字と送信された文字が食い違う現象が発生した。</p>
+<p>　これもAnalog Discovery 2のロジアナが無ければ、何が起きているのかわからないままだった。ありがとうAD2（2回目）。</p>
+<p>　そういえばRaspberry Pi2Bを買ったまま死蔵していたなという事を思い出したので、下記サイトを参考に、シリアルコンソールによるログインを無効に設定してから</p>
+<ul>
+<li>RPi2B Pin 5 &lt;-&gt; AVR GND</li>
+<li>RPi2B Pin 7 &lt;-&gt; AVR Pin 2</li>
+<li>RPi2B Pin 9 &lt;-&gt; AVR Pin 3</li>
+</ul>
+<p>で接続し、<code>cu -s 9600 -l /dev/ttyAMA0</code>すると、ちゃんと動作した。</p>
+<p><A href='http://nanicananica.blog.fc2.com/blog-entry-14.html'>備忘録 Raspberry PiでUART、シリアル通信</A></p>
+<p><A href='http://qiita.com/ryugyoku/items/bf5fd10512c84a55d030'>Raspberry PIのGPIO上シリアルとArduinoの通信 - Qiita</A></p>
+<p><A href='http://www.raspberry-projects.com/pi/pi-hardware/raspberry-pi-2-model-b/rpi2-model-b-io-pins'>RPi2 Model B IO Pins – Raspberry Pi Projects</A></p>
+<p>　意外なところで意外なものが役に立つものだなあと、感心することしきりである。</p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: August 15, 2016. Published at: 2016-08-15.">
+        
+      </span>
+
+      
+        <section class="mt4">
+          
+          
+          <h3>👋 Related posts in the <a href="/series/make-avr-programming" class="b bb bw1 pb1 no-underline black">Make: AVR Programming</a> series...</h3>
+      
+          
+         
+          
+            <ul class="list pl0">
+              
+                <li class="list pl0 lh-copy">
+                  <a
+                    class="f4 b dib black no-underline"
+                    href="https://squeuei.github.io/post/2016-08-19/make-avr-programming-pt.04/"
+                    >Make: AVR Programming pt.04</a
+                  >
+                  <span class="f6 gray">August 19, 2016</span>
+                </li>
+              
+                <li class="list pl0 lh-copy">
+                  <a
+                    class="f4 b dib black no-underline"
+                    href="https://squeuei.github.io/post/2016-08-18/make-avr-programming-pt.03/"
+                    >Make: AVR Programming pt.03</a
+                  >
+                  <span class="f6 gray">August 18, 2016</span>
+                </li>
+              
+                <li class="list pl0 lh-copy">
+                  <a
+                    class="f4 b dib black no-underline"
+                    href="https://squeuei.github.io/post/2016-08-16/make-avr-programming-pt.02/"
+                    >Make: AVR Programming pt.02</a
+                  >
+                  <span class="f6 gray">August 16, 2016</span>
+                </li>
+              
+                <li class="list pl0 lh-copy">
+                  <a
+                    class="f4 b dib black no-underline"
+                    href="https://squeuei.github.io/post/2015-08-11/make-avr-programming-pt.00/"
+                    >Make: AVR Programming pt.00</a
+                  >
+                  <span class="f6 gray">August 11, 2015</span>
+                </li>
+              
+            </ul>  
+          
+        </section>
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>

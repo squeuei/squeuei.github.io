@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="ja-jp"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="Make: AVR Programming pt.03" />
+<meta property="og:site_name" content="Constellation" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://squeuei.github.io/post/2016-08-18/make-avr-programming-pt.03/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2016-08-18
+" /> <meta property="article:modified_time" content="2016-08-18
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@squeuei" />
+<meta name="twitter:creator" content="@squeuei" />
+<meta
+  name="twitter:title"
+  content="Make: AVR Programming pt.03 | Constellation"
+/>
+<meta
+  name="twitter:description"
+  content="http://squeuei.hatenablog.com/entry/2016/08/16/201654
+Chapter 8 　割り込みを扱うときはISR()を使う。厳密に言うところは関数じゃなくてマクロ。 引数として割り込みベクタを与える。割り込みベクタの定義はio.hに書いてある。
+外部割り込み 　外部割り込みを有効化するときは、2段階ある事を忘れないようにする。
+ 使いたい割り込みベクタを有効化する 割り込みシステム全体をsei()で有効化する。  　普通は割り込みに入るときにglobal interrupt enableがオフになるので、割り込み中に更なる割り込みが発生することは無い。それを許可したい場合は、ISRのなかでsei()を呼ぶか、ISR_NOBLOCKでISRを定義するかのどっちかにする。
+　割り込みを生じさせたくない場合はcli()を使ってglobal interrupt enableをオフにする。再開したいときはsei()を。
+ピン変化割り込み 　Pin-Change InterruptではPxyPCINTxが対応する。ただしxはアルファベットと数字で対応してるのでややこしい。PByはPCINT0,PCyはPCINT1、PDyはPCINT2みたいに。 割り込みベクタは全部のピンで共通なので、ISRの中でどのピンからの割り込みなのかを判定して処理しないといけない。
+ 制御レジスタ(PCICR)で使いたい割り込みを有効化する。 使いたいピンをピンマスクレジスタで設定する。 global interrupt enableをsei()で有効化する。  　割り込みを受けるときは
+ 同じバンクの複数のピンからトリガを受ける場合にはbit_is_clear(BUTTON_IN, BUTTON)のようにどのピンからの割り込みなのかを調べる。 同じバンクに一つしかトリガを受けない場合には、立ち上がりと立ち下がりの両方に反応することに注意。どちらなのかを確認する必要がある。  ISRで変数を操作したいとき 　ISRは引数を取れないので、mainからもISRからもアクセスできるグローバル変数を宣言する。 ただし、その変数はvolataileを付けること。つけないと、一度もmain内で変更されない変数とみなされて、コンパイラが定数に変更してしまうことがある。 空のforループを回すときにも同じ事をする。
+Chapter 9 タイマ 　タイマにはノーマルモードとCTCモードがある。 ノーマルモードではカウンタがオーバフローするまで動作する。タイマの種類にもよるが255あるいは65535。 CTCモードではOCRnAレジスタで指定した値までカウントする。 ATMega168の場合はTimer1が16bit、そのほかは8bit。現在のタイマーの値はTCNTxに格納されている。
+　CTCモードの場合はTCCRxAレジスタでWGM01を設定する。また、outputモードにする場合はTCCRxAレジスタでCOMxA0を設定する。また、outputモードにする場合は Output Compare Resister OCRxAビットに
+　どのモードにせよ、プリスケーラを設定しなければ、タイマは動作しない。CSx2、CSx1、CSx0の値を、データシートの表にしたがって設定する。
+CPUスピード 　CPUスピードを変える方法には“ヒューズ”を書き換える方法と、ソースコードの中で設定する方法の2つがある。
+　この本のサンプルコードに付属するMakefileではmake set_fast_fuseすることで8MHz動作に変更される。戻すときはmake set_default_fuses。
+　そのほかにもAVRDUDEで設定変更ができるけど、例えばSPIEN-enable fuse bitを変更してしまうとSPIでのプログラミングができなくなったり（設定を戻すこともSPIではできない！）、CPUクロックソースを外部クロックに設定してしまったり（こっちはクロックや他のマイコンから1MHzの信号を印可してやればよいので、まだ対処しやすい）するので、注意が必要。|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://squeuei.github.io/post/2016-08-18/make-avr-programming-pt.03/" />
+
+
+
+    <title>Make: AVR Programming pt.03</title>
+    <link rel="canonical" href="https://squeuei.github.io/post/2016-08-18/make-avr-programming-pt.03/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://squeuei.github.io/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="ja-jp"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://squeuei.github.io/" class="b bb bw1 pb1 no-underline black">Constellation</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">Make: AVR Programming pt.03</h1>
+    <span class="f6 gray">August 18, 2016</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <p><a href="http://squeuei.hatenablog.com/entry/2016/08/16/201654">http://squeuei.hatenablog.com/entry/2016/08/16/201654</a></p>
+<h3 id="chapter-8">Chapter 8</h3>
+<p>　割り込みを扱うときは<code>ISR()</code>を使う。厳密に言うところは関数じゃなくてマクロ。
+引数として割り込みベクタを与える。割り込みベクタの定義はio.hに書いてある。</p>
+<h4 id="外部割り込み">外部割り込み</h4>
+<p>　外部割り込みを有効化するときは、2段階ある事を忘れないようにする。</p>
+<ol>
+<li>使いたい割り込みベクタを有効化する</li>
+<li>割り込みシステム全体を<code>sei()</code>で有効化する。</li>
+</ol>
+<p>　普通は割り込みに入るときにglobal interrupt enableがオフになるので、割り込み中に更なる割り込みが発生することは無い。それを許可したい場合は、ISRのなかで<code>sei()</code>を呼ぶか、<code>ISR_NOBLOCK</code>でISRを定義するかのどっちかにする。</p>
+<p>　割り込みを生じさせたくない場合は<code>cli()</code>を使ってglobal interrupt enableをオフにする。再開したいときは<code>sei()</code>を。</p>
+<h4 id="ピン変化割り込み">ピン変化割り込み</h4>
+<p>　Pin-Change InterruptではPxyPCINTxが対応する。ただしxはアルファベットと数字で対応してるのでややこしい。PByはPCINT0,PCyはPCINT1、PDyはPCINT2みたいに。
+割り込みベクタは全部のピンで共通なので、ISRの中でどのピンからの割り込みなのかを判定して処理しないといけない。</p>
+<ol>
+<li>制御レジスタ(PCICR)で使いたい割り込みを有効化する。</li>
+<li>使いたいピンをピンマスクレジスタで設定する。</li>
+<li>global interrupt enableを<code>sei()</code>で有効化する。</li>
+</ol>
+<p>　割り込みを受けるときは</p>
+<ol>
+<li>同じバンクの複数のピンからトリガを受ける場合には<code>bit_is_clear(BUTTON_IN, BUTTON)</code>のようにどのピンからの割り込みなのかを調べる。</li>
+<li>同じバンクに一つしかトリガを受けない場合には、立ち上がりと立ち下がりの両方に反応することに注意。どちらなのかを確認する必要がある。</li>
+</ol>
+<h4 id="isrで変数を操作したいとき">ISRで変数を操作したいとき</h4>
+<p>　ISRは引数を取れないので、mainからもISRからもアクセスできるグローバル変数を宣言する。
+ただし、その変数はvolataileを付けること。つけないと、一度もmain内で変更されない変数とみなされて、コンパイラが定数に変更してしまうことがある。
+空のforループを回すときにも同じ事をする。</p>
+<h3 id="chapter-9">Chapter 9</h3>
+<h4 id="タイマ">タイマ</h4>
+<p>　タイマにはノーマルモードとCTCモードがある。
+ノーマルモードではカウンタがオーバフローするまで動作する。タイマの種類にもよるが255あるいは65535。
+CTCモードではOCRnAレジスタで指定した値までカウントする。
+ATMega168の場合はTimer1が16bit、そのほかは8bit。現在のタイマーの値はTCNTxに格納されている。</p>
+<p>　CTCモードの場合は<code>TCCRxA</code>レジスタで<code>WGM01</code>を設定する。また、outputモードにする場合は<code>TCCRxA</code>レジスタで<code>COMxA0</code>を設定する。また、outputモードにする場合は
+Output Compare Resister <code>OCRxA</code>ビットに</p>
+<p>　どのモードにせよ、プリスケーラを設定しなければ、タイマは動作しない。<code>CSx2</code>、<code>CSx1</code>、<code>CSx0</code>の値を、データシートの表にしたがって設定する。</p>
+<h4 id="cpuスピード">CPUスピード</h4>
+<p>　CPUスピードを変える方法には“ヒューズ”を書き換える方法と、ソースコードの中で設定する方法の2つがある。</p>
+<p>　この本のサンプルコードに付属するMakefileでは<code>make set_fast_fuse</code>することで8MHz動作に変更される。戻すときは<code>make set_default_fuses</code>。</p>
+<p>　そのほかにもAVRDUDEで設定変更ができるけど、例えばSPIEN-enable fuse bitを変更してしまうとSPIでのプログラミングができなくなったり（設定を戻すこともSPIではできない！）、CPUクロックソースを外部クロックに設定してしまったり（こっちはクロックや他のマイコンから1MHzの信号を印可してやればよいので、まだ対処しやすい）するので、注意が必要。</p>
+<p>　ソースコードで設定する場合には、Clock Prescalar Change Enableビットをセットしてから4クロック以内にプレスケーラの値を変更しないと行けない。これはけっこうやっかいなので、<code>avr/power.h</code>にクロック変更用のマクロがすでに用意されている。</p>
+<pre><code>#include &lt;avr/power.h&gt;
+clock_prescale_set(clock_div_1);
+</code></pre>
+<p>などとすればよい。</p>
+<p>　<code>power.h</code>にはAVRに内蔵されている特定のモジュールの電源を落とすマクロなども用意されているので、省電力化したい場合には活用すると良い。</p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: August 18, 2016. Published at: 2016-08-18.">
+        
+      </span>
+
+      
+        <section class="mt4">
+          
+          
+          <h3>👋 Related posts in the <a href="/series/make-avr-programming" class="b bb bw1 pb1 no-underline black">Make: AVR Programming</a> series...</h3>
+      
+          
+         
+          
+            <ul class="list pl0">
+              
+                <li class="list pl0 lh-copy">
+                  <a
+                    class="f4 b dib black no-underline"
+                    href="https://squeuei.github.io/post/2016-08-19/make-avr-programming-pt.04/"
+                    >Make: AVR Programming pt.04</a
+                  >
+                  <span class="f6 gray">August 19, 2016</span>
+                </li>
+              
+                <li class="list pl0 lh-copy">
+                  <a
+                    class="f4 b dib black no-underline"
+                    href="https://squeuei.github.io/post/2016-08-16/make-avr-programming-pt.02/"
+                    >Make: AVR Programming pt.02</a
+                  >
+                  <span class="f6 gray">August 16, 2016</span>
+                </li>
+              
+                <li class="list pl0 lh-copy">
+                  <a
+                    class="f4 b dib black no-underline"
+                    href="https://squeuei.github.io/post/2016-08-15/make-avr-programming-pt.01/"
+                    >Make: AVR Programming pt.01</a
+                  >
+                  <span class="f6 gray">August 15, 2016</span>
+                </li>
+              
+                <li class="list pl0 lh-copy">
+                  <a
+                    class="f4 b dib black no-underline"
+                    href="https://squeuei.github.io/post/2015-08-11/make-avr-programming-pt.00/"
+                    >Make: AVR Programming pt.00</a
+                  >
+                  <span class="f6 gray">August 11, 2015</span>
+                </li>
+              
+            </ul>  
+          
+        </section>
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>

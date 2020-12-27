@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="ja-jp"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="Linux環境整備備忘録" />
+<meta property="og:site_name" content="Constellation" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://squeuei.github.io/post/2019-02-10/linux%E7%92%B0%E5%A2%83%E6%95%B4%E5%82%99%E5%82%99%E5%BF%98%E9%8C%B2/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2019-02-10
+" /> <meta property="article:modified_time" content="2019-02-10
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@squeuei" />
+<meta name="twitter:creator" content="@squeuei" />
+<meta
+  name="twitter:title"
+  content="Linux環境整備備忘録 | Constellation"
+/>
+<meta
+  name="twitter:description"
+  content="Latitude E7270にDebianをインストールしたのでそのログ。
+このPCにLinuxをインストールするのは二回目で、今回はLXQtを入れてみた。
+インストール いつもどおりにUSBスティックにインストールメディアを用意して、今回はDesktop環境なしでインストール。
+初期設定 sudo 最初のログイン後、端末で
+$ su # apt install sudo vim # gpasswd -a hogefuga sudo  してsudoできるようにしておく。
+一度ログアウトしてから作業スタート。
+インフラ系 なにはともあれaptのソースを編集。
+$ sudo apt vim /etc/apt/sources.list  私は邪道なので%s/main/main non-free contrib/gしてしまいます。stretch-backportsも入れる。stable-backportsみたいな指定ができたら良かったのにね。
+$ sudo apt install network-manager network-manager-gnome task-lxqt-desktop tlp-rdw xsensors  このPCにはIntelのWi-Fiが入っているのでドライバをインストール。上でmainだけにしたときはこの手は使えないので自由人のためのWi-Fiドングルを使うかおとなしく有線接続してください。あとmicrocodeも。
+$ sudo apt insatll firmware-iwlwifi intel-microcode  http://squeuei.hatenablog.com/entry/2018/10/20/203613
+素のままだとトラックパッドのタップクリックが効かないし、LXQt上からは設定できないのでファイルを編集。
+$ sudo mkdir /etc/X11/xorg.conf.d/ $ sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf  30-touchpad.confの中身はこんな感じ。というかArchwikiのほぼまんまですねこれ。
+Section &quot;InputClass&quot; Identifier &quot;touchpad&quot; Driver &quot;libinput&quot; MatchIsTouchpad &quot;on&quot; Option &quot;Tapping&quot; &quot;on&quot; Option &quot;TappingButtonMap&quot; &quot;lrm&quot; Option &quot;NaturalScrolling&quot; &quot;true&quot; Option &quot;ClickMethod&quot; &quot;clickfinger&quot; EndSection  NTPとかssh鍵とかもやっておく。NTP鯖はNICTに。|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://squeuei.github.io/post/2019-02-10/linux%E7%92%B0%E5%A2%83%E6%95%B4%E5%82%99%E5%82%99%E5%BF%98%E9%8C%B2/" />
+
+
+
+    <title>Linux環境整備備忘録</title>
+    <link rel="canonical" href="https://squeuei.github.io/post/2019-02-10/linux%E7%92%B0%E5%A2%83%E6%95%B4%E5%82%99%E5%82%99%E5%BF%98%E9%8C%B2/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://squeuei.github.io/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="ja-jp"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://squeuei.github.io/" class="b bb bw1 pb1 no-underline black">Constellation</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">Linux環境整備備忘録</h1>
+    <span class="f6 gray">February 10, 2019</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <p>Latitude E7270にDebianをインストールしたのでそのログ。<br>
+このPCにLinuxをインストールするのは二回目で、今回はLXQtを入れてみた。</p>
+<h3 id="インストール">インストール</h3>
+<p>いつもどおりにUSBスティックにインストールメディアを用意して、今回はDesktop環境なしでインストール。</p>
+<h3 id="初期設定">初期設定</h3>
+<h4 id="sudo">sudo</h4>
+<p>最初のログイン後、端末で</p>
+<pre><code>$ su
+# apt install sudo vim
+# gpasswd -a hogefuga sudo
+</code></pre>
+<p>して<code>sudo</code>できるようにしておく。</p>
+<p>一度ログアウトしてから作業スタート。</p>
+<h4 id="インフラ系">インフラ系</h4>
+<p>なにはともあれaptのソースを編集。</p>
+<pre><code>$ sudo apt vim /etc/apt/sources.list
+</code></pre>
+<p>私は邪道なので<code>%s/main/main non-free contrib/g</code>してしまいます。<code>stretch-backports</code>も入れる。<code>stable-backports</code>みたいな指定ができたら良かったのにね。</p>
+<pre><code>$ sudo apt install network-manager network-manager-gnome task-lxqt-desktop tlp-rdw xsensors 
+</code></pre>
+<p>このPCにはIntelのWi-Fiが入っているのでドライバをインストール。上で<code>main</code>だけにしたときはこの手は使えないので自由人のためのWi-Fiドングルを使うかおとなしく有線接続してください。あとmicrocodeも。</p>
+<pre><code>$ sudo apt insatll firmware-iwlwifi intel-microcode
+</code></pre>
+<p><a href="http://squeuei.hatenablog.com/entry/2018/10/20/203613">http://squeuei.hatenablog.com/entry/2018/10/20/203613</a></p>
+<p>素のままだとトラックパッドのタップクリックが効かないし、LXQt上からは設定できないのでファイルを編集。</p>
+<pre><code>$ sudo mkdir /etc/X11/xorg.conf.d/
+$ sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf
+</code></pre>
+<p><code>30-touchpad.conf</code>の中身はこんな感じ。というかArchwikiのほぼまんまですねこれ。</p>
+<pre><code>Section &quot;InputClass&quot;
+    Identifier &quot;touchpad&quot;
+    Driver &quot;libinput&quot;
+    MatchIsTouchpad &quot;on&quot;
+    Option &quot;Tapping&quot; &quot;on&quot;
+    Option &quot;TappingButtonMap&quot; &quot;lrm&quot;
+    Option &quot;NaturalScrolling&quot; &quot;true&quot;
+    Option &quot;ClickMethod&quot; &quot;clickfinger&quot;
+EndSection
+</code></pre>
+<p>NTPとかssh鍵とかもやっておく。NTP鯖はNICTに。</p>
+<pre><code>$ sudo apt install ntp
+$ sudo systemctl enable ntp
+$ sudo systemctl restart ntp
+
+$ ssh-keygen
+</code></pre>
+<h4 id="日本語環境">日本語環境</h4>
+<p><code>fcitx-mozc</code>派なのでそのようにやっていきます。</p>
+<pre><code>$ sudo apt install fcitx-mozc fcitx fonts-ipamj* fonts-vlgothic  fonts-ipaexfont.* fonts-ipafont-mincho fonts-ipafont-gothic fonts-ipafont fonts-takao.* fonts-mig.* -y
+</code></pre>
+<p>localeはen_US.UTF-8のままにしてる。</p>
+<h4 id="開発環境">開発環境</h4>
+<pre><code>$ sudo apt install vim-gtk git default-jre default-jdk cmake gauche python-pip python3-pip python3-venv build-essential linux-headers-amd64 curl neovim octave opam
+$ sudo pip3 install neovim
+$ sudo pip install neovim
+$ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh &gt; ~/Downloads/installer.sh &amp;&amp; sh ~/Downloads/installer.sh ~/.cache/dein
+$ firefox https://code.visualstudio.com/docs/?dv=linux64_deb &amp; 
+$ firefox https://www.dropbox.com/ja/install &amp; 
+$ cd ~/Downloads &amp;&amp; sudo apt install ./*.deb
+</code></pre>
+<h4 id="python">Python</h4>
+<pre><code>$ sudo pip3 install ipython[notebook] spyder matplotlib pandas numpy sympy scipy cython
+</code></pre>
+<h4 id="ocaml">OCaml</h4>
+<p>絶賛積んでいる“Real World OCaml”の環境を作っておく。</p>
+<pre><code>$ opam init
+$ eval `opam config env`
+$ opam switch 4.06.1
+$ eval `opam config env`
+$ opam install depext core utop async yojson core_extended core_bench cohttp async_graphics cryptokit menhir
+$ echo 'eval `opam config env`' &gt;&gt; ~/.bashrc
+$ . ~/.bashrc
+</code></pre>
+<h4 id="golang">Golang</h4>
+<p>memoというアプリで日記を書いているのでそれをビルドするための環境を作る。</p>
+<pre><code>$ sudo vim /etc/apt/sources.list
+$ sudo apt install -t stretch-backports golang
+$ echo 'export GOPATH=$HOME/.go' &gt;&gt; ~/.bashrc
+$ echo 'export PATH=$PATH:$GOPATH/bin' &gt;&gt; ~/.bashrc
+$ . ~/.bashrc
+
+$ go get github.com/mattn/memo
+$ memo c
+$ sudo apt install peco
+</code></pre>
+<h4 id="その他">その他</h4>
+<p>パッケージ化されていないフォントは<code>~/.local/share/fonts</code>にコピーすると使える。</p>
+<p>Debian stableだとbackportsを入れてもTeXLiveが2016なので公式のやり方でインストールするほうが無難そう。めちゃくちゃ時間かかるけど。</p>
+<p>Lightdmを使う場合で、ユーザー名のリストを出したい場合はこれ。</p>
+<p>sudo vim /usr/share/lightdm/lightdm.conf.d/01_myconf</p>
+<pre><code>[Seat:*%*]
+greeter-hide-users=false
+</code></pre>
+<h3 id="雑感">雑感</h3>
+<p>最近思うのは、Linuxの環境はWindowsより快適なんじゃないかってこと。</p>
+<p>ふつうのひとはブラウザの上くらいしかいないはずで、だからこそChromebookなんてものが市場として成り立っている。<br>
+テキストエディタならクロスプラットフォームのものがいくらでもある。vimもcodeも大丈夫。<br>
+MS Officeなりゲームなり専用アプリなり特殊ハードウェアなりを扱うにはやはりWindowsが強いけど、そうでなければ案外どうにかなってしまう。</p>
+<p>Debianのいいところは、システムコンポーネントからユーザアプリケーションまでパッケージ管理が一元で行われていること。このおかげで、<code>sudo apt update &amp;&amp; sudo apt upgrade</code>だけしてればそれなりに使える。それが正しいやり方かどうかはよくわかってないけど……</p>
+<p>Fedoraもいいと思うけど、真剣に使ってないから安定性とかはよくわかってない。あとfcitx-mozcが使えないのも痛い。<br>
+ヌルい人間なのでGentooとかはぜんぜんわからない。<code>USE</code>に何を指定すればいいのかとかさっぱり。<br>
+ArchLinuxはLUKS環境を作ろうとして失敗しました。暗号化とか入れなければ（ArchWikiを参照しながらであれば）それなりに楽しい。<br>
+Linuxじゃないけど、BSD系にも興味はあれど全然触れたことがない。BeagleBone BlackにOpenBSDを入れてバイナリブロブのないプライバシー環境〜みたいなのも一度やってみたくはあるんだけど。</p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: February 10, 2019. Published at: 2019-02-10.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="ja-jp"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="Microsoft Wordで.docxファイルから追加費用なしでOpenTypeフォントを埋め込んだPDFを作成できるか" />
+<meta property="og:site_name" content="Constellation" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://squeuei.github.io/post/2020-12-18/microsoft-word%E3%81%A7.docx%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8B%E3%82%89%E8%BF%BD%E5%8A%A0%E8%B2%BB%E7%94%A8%E3%81%AA%E3%81%97%E3%81%A7opentype%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%82%92%E5%9F%8B%E3%82%81%E8%BE%BC%E3%82%93%E3%81%A0pdf%E3%82%92%E4%BD%9C%E6%88%90%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2020-12-18
+" /> <meta property="article:modified_time" content="2020-12-18
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@squeuei" />
+<meta name="twitter:creator" content="@squeuei" />
+<meta
+  name="twitter:title"
+  content="Microsoft Wordで.docxファイルから追加費用なしでOpenTypeフォントを埋め込んだPDFを作成できるか | Constellation"
+/>
+<meta
+  name="twitter:description"
+  content="TL;DR 少なくともこの記事を書いている時点では無理っぽい。
+序論 MS OfficeはPDFを作成できるが、その際にOpenTypeフォントを埋め込むことはできない。
+https://docs.microsoft.com/en-us/office/troubleshoot/office-suite-issues/fails-embedding-adobe-opentype-font
+PDF/Aで出力してもラスタ化されてしまい、フォントが埋め込まれることはない。
+もちろん、Adobe Acrobatを持っていればできる。今はクラウド版しかないから、必要になった時だけひと月単位で契約もできる。
+https://acrobat.adobe.com/jp/ja/acrobat.html
+しかもAdobe Fontsの使用権までついてくる。商用非商用問わずPDFへの埋め込み全部オーケー。すごい。
+https://helpx.adobe.com/fonts/user-guide.html/fonts/using/font-licensing.ug.html
+しかしながら、無料ではない。いや、もちろんMS Wordだって不自由で邪悪なプロプライエタリ・ソフトウェアであるのだが……。
+Microsoft Print to PDF 何を試したか Windows 10に標準？　で入っている仮想PDFプリンタ。Wordの印刷画面からPDF出力。
+結果 あらゆるフォントはラスタ化されます。慈悲はない。
+clawPDF 何を試したか clawPDFはAGPLでライセンスされたフリーソフトウェアの仮想PDFプリンタである。Wordの印刷画面からPDF出力した。
+https://github.com/clawsoftware/clawPDF
+結果 すべてのOpenTypeフォントは埋め込めているが、日本語の文章では一部の文字が消えてしまい、使い物にならない。
+JUST PDF 2 何を試したか ヒラギノフォントについてきた一太郎プレミアムのインストールメディアから、JUST PDF 2をインストールした。このアプリケーションもまた、仮想PDFプリンタとして動作する。Wordの印刷画面からPDF出力した。
+https://www.justsystems.com/jp/products/ichitaro_2012/
+https://www.justsystems.com/jp/products/justpdf_2/
+なお、最新版はJUST PDF 4である。最新版での動作は未確認である。また、4からはプリフライトチェック機能が付いたようだ。
+https://www.justsystems.com/jp/products/justpdf/
+結果 一部のOpenTypeフォントは埋め込まれた。が、Source Han Sans/Serifは埋め込まれなかった。Super OTC版を使っているからかもしれない。
+Libreoffice Writer 何を試したか LibreOffice Writerで.docxファイルを開き、PDFとしてエクスポートした。
+https://ja.libreoffice.org/
+結果 すべてのOpenTypeフォントは埋め込まれた。日本語も適切に扱われている。しかし、.docxファイルを開いた時点でレイアウトが崩れている。
+結論 人生は厳しい。Adobe税の脱税はできない。
+正しくて快適なAdobe Creative Cloudをご利用ください。
+Postscript いつのまにか無償で使用可能なPDF/AおよびPDF/Xのプリフライトチェックツールが登場している。
+これらのドキュメントが作れる身分になったら試したい（でもそれってAdobe Acrobatが使える状態なのでは？）。
+veraPDF EU fundedのプロジェクトからfundされている、PDF/A Validation アプリケーション。|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://squeuei.github.io/post/2020-12-18/microsoft-word%E3%81%A7.docx%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8B%E3%82%89%E8%BF%BD%E5%8A%A0%E8%B2%BB%E7%94%A8%E3%81%AA%E3%81%97%E3%81%A7opentype%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%82%92%E5%9F%8B%E3%82%81%E8%BE%BC%E3%82%93%E3%81%A0pdf%E3%82%92%E4%BD%9C%E6%88%90%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/" />
+
+
+
+    <title>Microsoft Wordで.docxファイルから追加費用なしでOpenTypeフォントを埋め込んだPDFを作成できるか</title>
+    <link rel="canonical" href="https://squeuei.github.io/post/2020-12-18/microsoft-word%E3%81%A7.docx%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8B%E3%82%89%E8%BF%BD%E5%8A%A0%E8%B2%BB%E7%94%A8%E3%81%AA%E3%81%97%E3%81%A7opentype%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%82%92%E5%9F%8B%E3%82%81%E8%BE%BC%E3%82%93%E3%81%A0pdf%E3%82%92%E4%BD%9C%E6%88%90%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://squeuei.github.io/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="ja-jp"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://squeuei.github.io/" class="b bb bw1 pb1 no-underline black">Constellation</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">Microsoft Wordで.docxファイルから追加費用なしでOpenTypeフォントを埋め込んだPDFを作成できるか</h1>
+    <span class="f6 gray">December 18, 2020</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <h3 id="tldr">TL;DR</h3>
+<p>少なくともこの記事を書いている時点では無理っぽい。</p>
+<h3 id="序論">序論</h3>
+<p>MS OfficeはPDFを作成できるが、その際にOpenTypeフォントを埋め込むことはできない。</p>
+<p><a href="https://docs.microsoft.com/en-us/office/troubleshoot/office-suite-issues/fails-embedding-adobe-opentype-font">https://docs.microsoft.com/en-us/office/troubleshoot/office-suite-issues/fails-embedding-adobe-opentype-font</a></p>
+<p>PDF/Aで出力してもラスタ化されてしまい、フォントが埋め込まれることはない。</p>
+<p>もちろん、Adobe Acrobatを持っていればできる。今はクラウド版しかないから、必要になった時だけひと月単位で契約もできる。</p>
+<p><a href="https://acrobat.adobe.com/jp/ja/acrobat.html">https://acrobat.adobe.com/jp/ja/acrobat.html</a></p>
+<p>しかもAdobe Fontsの使用権までついてくる。商用非商用問わずPDFへの埋め込み全部オーケー。すごい。</p>
+<p><a href="https://helpx.adobe.com/fonts/user-guide.html/fonts/using/font-licensing.ug.html">https://helpx.adobe.com/fonts/user-guide.html/fonts/using/font-licensing.ug.html</a></p>
+<p>しかしながら、無料ではない。いや、もちろんMS Wordだって不自由で邪悪なプロプライエタリ・ソフトウェアであるのだが……。</p>
+<h3 id="microsoft-print-to-pdf">Microsoft Print to PDF</h3>
+<h4 id="何を試したか">何を試したか</h4>
+<p>Windows 10に標準？　で入っている仮想PDFプリンタ。Wordの印刷画面からPDF出力。</p>
+<h4 id="結果">結果</h4>
+<p>あらゆるフォントはラスタ化されます。慈悲はない。</p>
+<h3 id="clawpdf">clawPDF</h3>
+<h4 id="何を試したか-1">何を試したか</h4>
+<p>clawPDFはAGPLでライセンスされたフリーソフトウェアの仮想PDFプリンタである。Wordの印刷画面からPDF出力した。</p>
+<p><a href="https://github.com/clawsoftware/clawPDF">https://github.com/clawsoftware/clawPDF</a></p>
+<h4 id="結果-1">結果</h4>
+<p>すべてのOpenTypeフォントは埋め込めているが、日本語の文章では一部の文字が消えてしまい、使い物にならない。</p>
+<h3 id="just-pdf-2">JUST PDF 2</h3>
+<h4 id="何を試したか-2">何を試したか</h4>
+<p>ヒラギノフォントについてきた一太郎プレミアムのインストールメディアから、JUST PDF 2をインストールした。このアプリケーションもまた、仮想PDFプリンタとして動作する。Wordの印刷画面からPDF出力した。</p>
+<p><a href="https://www.justsystems.com/jp/products/ichitaro_2012/">https://www.justsystems.com/jp/products/ichitaro_2012/</a></p>
+<p><a href="https://www.justsystems.com/jp/products/justpdf_2/">https://www.justsystems.com/jp/products/justpdf_2/</a></p>
+<p>なお、最新版はJUST PDF 4である。最新版での動作は未確認である。また、4からはプリフライトチェック機能が付いたようだ。</p>
+<p><a href="https://www.justsystems.com/jp/products/justpdf/">https://www.justsystems.com/jp/products/justpdf/</a></p>
+<h4 id="結果-2">結果</h4>
+<p>一部のOpenTypeフォントは埋め込まれた。が、Source Han Sans/Serifは埋め込まれなかった。Super OTC版を使っているからかもしれない。</p>
+<h3 id="libreoffice-writer">Libreoffice Writer</h3>
+<h4 id="何を試したか-3">何を試したか</h4>
+<p>LibreOffice Writerで.docxファイルを開き、PDFとしてエクスポートした。</p>
+<p><a href="https://ja.libreoffice.org/">https://ja.libreoffice.org/</a></p>
+<h4 id="結果-3">結果</h4>
+<p>すべてのOpenTypeフォントは埋め込まれた。日本語も適切に扱われている。しかし、.docxファイルを開いた時点でレイアウトが崩れている。</p>
+<h3 id="結論">結論</h3>
+<p>人生は厳しい。Adobe税の脱税はできない。</p>
+<p>正しくて快適なAdobe Creative Cloudをご利用ください。</p>
+<h3 id="postscript">Postscript</h3>
+<p>いつのまにか無償で使用可能なPDF/AおよびPDF/Xのプリフライトチェックツールが登場している。</p>
+<p>これらのドキュメントが作れる身分になったら試したい（でもそれってAdobe Acrobatが使える状態なのでは？）。</p>
+<h4 id="verapdf">veraPDF</h4>
+<p>EU fundedのプロジェクトからfundされている、PDF/A Validation アプリケーション。</p>
+<p>PDF/Aの存在意義である長期保存性が活きる領域といえば、公文書なのだろうし、納得のいく話ではある。</p>
+<p><a href="https://verapdf.org/">https://verapdf.org/</a></p>
+<h4 id="jhove">JHOVE</h4>
+<p>様々なフォーマットのvalidationができるJava API。そのPDFモジュールではPDF/AやPDF/XのValidationが行える。</p>
+<p>こちらはStanford Univ. Libraryがからんでいるようだ。</p>
+<p><a href="https://jhove.openpreservation.org/">https://jhove.openpreservation.org/</a></p>
+<h3 id="qa">Q&amp;A</h3>
+<h4 id="qてtexを使ってみては頼もしいものなんですが">Q「て、TeXを使ってみては？　頼もしいものなんですが」</h4>
+<p>テフの問題は解決されないので……</p>
+<p><a href="http://kaoriha.org/dtp/formula1.htm">http://kaoriha.org/dtp/formula1.htm</a></p>
+<h4 id="何かopentypeフォントを埋め込んだpdfドキュメントを作成する必要があるの">何かOpenTypeフォントを埋め込んだPDFドキュメントを作成する必要があるの？</h4>
+<p>いいえ、特に同人出版等の予定はございません。</p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: December 18, 2020. Published at: 2020-12-18.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>

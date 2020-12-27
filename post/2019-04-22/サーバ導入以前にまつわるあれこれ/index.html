@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="ja-jp"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="サーバ導入以前にまつわるあれこれ" />
+<meta property="og:site_name" content="Constellation" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://squeuei.github.io/post/2019-04-22/%E3%82%B5%E3%83%BC%E3%83%90%E5%B0%8E%E5%85%A5%E4%BB%A5%E5%89%8D%E3%81%AB%E3%81%BE%E3%81%A4%E3%82%8F%E3%82%8B%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2019-04-22
+" /> <meta property="article:modified_time" content="2019-04-22
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@squeuei" />
+<meta name="twitter:creator" content="@squeuei" />
+<meta
+  name="twitter:title"
+  content="サーバ導入以前にまつわるあれこれ | Constellation"
+/>
+<meta
+  name="twitter:description"
+  content="自宅サーバ、それは永遠の憧れ。
+今までのあらすじ 既報の通り、Dropboxの無料プランは同期する端末を3台までに制限した。これは大きな問題である。我が家にはPCが複数台存在し、さらにタブレットとスマートフォンを加えればあっという間に3台など超過してしまう。急いでストレージ方策を検討しなければ！
+――と思っていたところ、ソースネクストがDropbox Plus 3年版の販売を再開した。これは、Dropbox公式から契約するよりも安価に契約することが可能なバウチャーである。ここ数ヶ月はずっと売り切れで、購入する機会を逃した私が悔しく思っていたものだ。マネタイズが苦しいということは3年持たないのでは？　というリスクが脳裏をよぎりつつも、これを逃す手はない！　と私は即座に購入。ストレージ問題はこれにて解決した。
+のであるが。
+問題は自宅にも何らかのサーバが欲しくなってしまったという点にある。
+もともとの計画では、SynologyのIntel CPU搭載NASを購入する計画であった。この製品は高機能なため、単体で仮想マシンを動作させることが可能なのだ！　仮想マシンで何をするって？　わからん！　でもなんかかっこいいじゃん！！
+じゃあサーバ何買うのよ HP Enterprise ProLiant Microserver Gen 10 世間一般的にも、TLでも評価の高いサーバ。昔流行ったキューブ型PCにも似たスタイルにHDDが4本搭載可能。コストはそこそこかかるけど、ECCメモリのちゃんとしたサーバが手に入ると考えれば悪くない。問題は、HPEのポリシー上、保守契約を結ばなければドライバ等のアップデートができないことにある。さすがにこれはきつい。そこまでして動かすようなマシンではないはずなのだ。
+FUJITSU PRIMERGY T1310 M3 各種通販サイトにてかつてのNEC Express5800サーバの位置にあるサーバ。安い。とにかく安い。なんてったってNASを買うより安い。CPU次第だけど一番安いモデルでは2万円を切るのだ。騒音もそんなに大きくないらしい。けど、デスクトップ然としたケースは私の用途に対して大きくて大げさな気がしてくる。
+とまで考えたところでそもそもの話として 自宅でサーバを立てていったい何をするんですか、ということを考えなければならない。
+私はラップトップにLinuxを入れて日常的に使っているので、その点で目新しさはない。もちろんサーバとしての運用はしていないわけだから、その点で学びはあるだろう。というか公開サーバを作るのが怖い。 ストレージサーバも、ストレージ自体はすでにDropboxで実現できてる。オンプレミスでNextcloudを立てればプライバシー万全ですよという話くらいで、セキュリティに関しては自分で管理しなければならない分逆に不安。
+そもそも現状部屋の配置から言ってサーバは枕元に設置しなければならず、この距離だとハードディスクが回っているだけでも真夜中には気になってしまう。
+まずはRPi2Bで様子を見つつ、最大でもNUCあたりを導入する、という方針で行こうかねという結論に至った次第。|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://squeuei.github.io/post/2019-04-22/%E3%82%B5%E3%83%BC%E3%83%90%E5%B0%8E%E5%85%A5%E4%BB%A5%E5%89%8D%E3%81%AB%E3%81%BE%E3%81%A4%E3%82%8F%E3%82%8B%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C/" />
+
+
+
+    <title>サーバ導入以前にまつわるあれこれ</title>
+    <link rel="canonical" href="https://squeuei.github.io/post/2019-04-22/%E3%82%B5%E3%83%BC%E3%83%90%E5%B0%8E%E5%85%A5%E4%BB%A5%E5%89%8D%E3%81%AB%E3%81%BE%E3%81%A4%E3%82%8F%E3%82%8B%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://squeuei.github.io/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="ja-jp"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://squeuei.github.io/" class="b bb bw1 pb1 no-underline black">Constellation</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">サーバ導入以前にまつわるあれこれ</h1>
+    <span class="f6 gray">April 22, 2019</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <p>自宅サーバ、それは永遠の憧れ。</p>
+<h4 id="今までのあらすじ">今までのあらすじ</h4>
+<p>既報の通り、Dropboxの無料プランは同期する端末を3台までに制限した。これは大きな問題である。我が家にはPCが複数台存在し、さらにタブレットとスマートフォンを加えればあっという間に3台など超過してしまう。急いでストレージ方策を検討しなければ！</p>
+<p>――と思っていたところ、ソースネクストがDropbox Plus 3年版の販売を再開した。これは、Dropbox公式から契約するよりも安価に契約することが可能なバウチャーである。ここ数ヶ月はずっと売り切れで、購入する機会を逃した私が悔しく思っていたものだ。マネタイズが苦しいということは3年持たないのでは？　というリスクが脳裏をよぎりつつも、これを逃す手はない！　と私は即座に購入。ストレージ問題はこれにて解決した。</p>
+<p>のであるが。</p>
+<p>問題は自宅にも何らかのサーバが欲しくなってしまったという点にある。</p>
+<p>もともとの計画では、SynologyのIntel CPU搭載NASを購入する計画であった。この製品は高機能なため、単体で仮想マシンを動作させることが可能なのだ！　仮想マシンで何をするって？　わからん！　でもなんかかっこいいじゃん！！</p>
+<h4 id="じゃあサーバ何買うのよ">じゃあサーバ何買うのよ</h4>
+<h5 id="hp-enterprise-proliant-microserver-gen-10">HP Enterprise ProLiant Microserver Gen 10</h5>
+<p>世間一般的にも、TLでも評価の高いサーバ。昔流行ったキューブ型PCにも似たスタイルにHDDが4本搭載可能。コストはそこそこかかるけど、ECCメモリのちゃんとしたサーバが手に入ると考えれば悪くない。問題は、HPEのポリシー上、保守契約を結ばなければドライバ等のアップデートができないことにある。さすがにこれはきつい。そこまでして動かすようなマシンではないはずなのだ。</p>
+<h5 id="fujitsu-primergy-t1310-m3">FUJITSU PRIMERGY T1310 M3</h5>
+<p>各種通販サイトにてかつてのNEC Express5800サーバの位置にあるサーバ。安い。とにかく安い。なんてったってNASを買うより安い。CPU次第だけど一番安いモデルでは2万円を切るのだ。騒音もそんなに大きくないらしい。けど、デスクトップ然としたケースは私の用途に対して大きくて大げさな気がしてくる。</p>
+<h4 id="とまで考えたところでそもそもの話として">とまで考えたところでそもそもの話として</h4>
+<p>自宅でサーバを立てていったい何をするんですか、ということを考えなければならない。</p>
+<p>私はラップトップにLinuxを入れて日常的に使っているので、その点で目新しさはない。もちろんサーバとしての運用はしていないわけだから、その点で学びはあるだろう。というか公開サーバを作るのが怖い。
+ストレージサーバも、ストレージ自体はすでにDropboxで実現できてる。オンプレミスでNextcloudを立てればプライバシー万全ですよという話くらいで、セキュリティに関しては自分で管理しなければならない分逆に不安。</p>
+<p>そもそも現状部屋の配置から言ってサーバは枕元に設置しなければならず、この距離だとハードディスクが回っているだけでも真夜中には気になってしまう。</p>
+<p>まずはRPi2Bで様子を見つつ、最大でもNUCあたりを導入する、という方針で行こうかねという結論に至った次第。</p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: April 22, 2019. Published at: 2019-04-22.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>
