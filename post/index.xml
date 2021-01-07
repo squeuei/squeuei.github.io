@@ -7,14 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Except where otherwise noted, content on this site is licensed under a &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by/4.0/&#34;&gt;Creative Commons Attribution 4.0 International License&lt;/a&gt;.</copyright>
-    <lastBuildDate>Thu, 07 Jan 2021 21:00:00 +0900</lastBuildDate><atom:link href="https://squeuei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://squeuei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CC BY-SAの作品をShareAlikeでない文書に利用することは可能か</title>
+      <link>https://squeuei.github.io/post/2021-01-08/cc-by-sa%E3%81%AE%E4%BD%9C%E5%93%81%E3%82%92sharealike%E3%81%A7%E3%81%AA%E3%81%84%E6%96%87%E6%9B%B8%E3%81%AB%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E5%8F%AF%E8%83%BD%E3%81%8B/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0900</pubDate>
+      
+      <guid>https://squeuei.github.io/post/2021-01-08/cc-by-sa%E3%81%AE%E4%BD%9C%E5%93%81%E3%82%92sharealike%E3%81%A7%E3%81%AA%E3%81%84%E6%96%87%E6%9B%B8%E3%81%AB%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E5%8F%AF%E8%83%BD%E3%81%8B/</guid>
+      <description>Disclaimer 私は法律家ではなく、本記事は法的助言ではありません。
+TL;DR 調べた限りだとセーフっぽい。
+Official Statement  Key points about the ShareAlike licenses The ShareAlike condition applies only for works considered adaptations under copyright law, not simply in collections with other works (also referred to as mere aggregations). When a ShareAlike work is remixed and shared, any Adapted Material must be licensed compatibly—but not all reuse of SA works creates Adapted Material.[2] Simply including an SA work unmodified alongside unrelated materials does not produce an adaptation.</description>
+    </item>
+    
     <item>
       <title>文書の二つの顔 (The Two Faces of Documents)</title>
       <link>https://squeuei.github.io/post/2021-01-07/%E6%96%87%E6%9B%B8%E3%81%AE%E4%BA%8C%E3%81%A4%E3%81%AE%E9%A1%94-the-two-faces-of-documents/</link>
       <pubDate>Thu, 07 Jan 2021 21:00:00 +0900</pubDate>
       
       <guid>https://squeuei.github.io/post/2021-01-07/%E6%96%87%E6%9B%B8%E3%81%AE%E4%BA%8C%E3%81%A4%E3%81%AE%E9%A1%94-the-two-faces-of-documents/</guid>
-      <description>Plain Endian vs Rich Endian 文書を作成するとき、人々の中には二つのメンタルモデルが存在している。
+      <description>前回の続き。
+Plain Endian vs Rich Endian 文書を作成するとき、人々の中には二つのメンタルモデルが存在している。
   文書とはプレーンテキストで表現される情報が主であり、見た目を持った文書はその派生物に過ぎない。
 この世界の住人は、記述された文字の情報に価値を置いている。あるRepresentationはありうる一つの形でしかない。だから、リッチなメディアを生成するのに十分な情報を埋め込んで、出力形態に応じて変換するのが効率的だ。
   文書とはレイアウトを持ったリッチメディアが主であり、マークアップ言語による記述はそれを実現するためにしかたなく作る従属物である
@@ -1392,8 +1404,8 @@ Image by squeuei. All rights reserved.
 インストール 　相変わらず親切な公式ガイドの通りにインストールすれば特に詰まるところはない。
 　ちなみに、Wi-Fiにさえ接続してしまえば、Ctrl-Alt-→(=Ctrl-Alt-F2）で入れるコンソールからrootユーザでログインすることで、Googleアカウントを用意せずともGoogleの利用規約に同意することなくArch Linux ARMのダウンロードおよびインストールをすることができる。USBスティックなどで別途アーカイブを用意すればWi-Fiへの接続も不要である。
 初期設定 　インストール後、新しいユーザを作る前に、rootでいる間にやったこと。
-locale vi /etc/locale.gen # Uncomment: # en_US.UTF-8 # ja_JP.UTF-8 # locale-gen echo LANG=en_US.UTF-8 &amp;gt; /etc/locale.conf export LANG=en_US.UTF-8  hostname vi /etc/hostname  時刻 timedatectl set-timezone Asia/Tokyo  pacman初期化 https://archlinuxarm.org/forum/viewtopic.php?f=3&amp;amp;t=12797
-pacman-key --init &amp;amp;&amp;amp; pacman-key --populate archlinuxarm pacman -Syu  ユーザ追加 # Root Password passwd # New User useradd -m -G wheel username passwd username pacman -S sudo visudo # Uncomment: # Defaults env_keep += &amp;quot;HOME&amp;quot; # %wheel ALL=(ALL) ALL #  　一般ユーザalarmは好みで消してよさそう。</description>
+locale vi /etc/locale.gen# Uncomment:# en_US.UTF-8# ja_JP.UTF-8# locale-genecho LANG=en_US.UTF-8 &amp;gt; /etc/locale.confexport LANG=en_US.UTF-8 hostname vi /etc/hostname 時刻 timedatectl set-timezone Asia/Tokyo pacman初期化 https://archlinuxarm.org/forum/viewtopic.php?f=3&amp;amp;t=12797
+pacman-key --init &amp;amp;&amp;amp; pacman-key --populate archlinuxarmpacman -Syu ユーザ追加 # Root Passwordpasswd# New Useruseradd -m -G wheel usernamepasswd usernamepacman -S sudovisudo# Uncomment:# Defaults env_keep += &amp;quot;HOME&amp;quot;# %wheel ALL=(ALL) ALL# 　一般ユーザalarmは好みで消してよさそう。</description>
     </item>
     
     <item>
@@ -1421,7 +1433,7 @@ https://wiki.archlinux.org/index.php/Metric-compatible_fonts
 TrueTypeフォントパーフェクトコレクション [asin:4844333615:detail]
 　買いましょう。わずか3000円強で問題の大部分は解決する……と思っていたら！！
 @kei_monokoto こんにちは、「TTフォント〜」は、フォントの版権をもっていたBitstream社がMonotype社へ買収されたため、改訂版を出すことができなくなりました。在庫限りで絶版となりますので、よろしくお願いします。どうもありがとうございました。
-&amp;mdash; 深沢英次 (@pictex) 2017年2月23日  　ｳﾜｰｯ!
+&amp;mdash; 深沢英次 (@pictex) 2017年2月23日　ｳﾜｰｯ!
 　マジでか……超ショックだ……。
 　既に丸善ジュンク堂では店頭在庫もないので、見つけたら極力確保しましょう。
 TeX Gyre  TeX Gyre フォントは，Times や Helvetica などの Adobe 基本 35 書体に対応する，高品質でオープンなフォントです．PostScript Type 1 形式と OpenType 形式で配布されています．</description>
@@ -1438,18 +1450,18 @@ W32TeXからTex Live 2016への移行 　前回はTeXインストーラ3で環�
 　なお、Tex Live 2017が2017-05-01にリリース予定であり、そちらではLuaTeXが1.0になるようなので、急ぎでないならそちらを待ってからインストールするのがいいかもしれない。
 　ここ からinstall-tl-windows.exeをダウンロードしてインストール。時間はかかるけど詰まるところはない。
 LuaTeXでの日本語環境 　pTeXと同等（互換ではない）の環境を目指して、LuaTeX-ja環境が整備されつつある。
-\usepackage{luatexja}  https://ja.osdn.net/projects/luatex-ja/wiki/LuaTeX-ja%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9
+\usepackage{luatexja} https://ja.osdn.net/projects/luatex-ja/wiki/LuaTeX-ja%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9
 　LuaTeXではjsclasses文書クラスは利用できないので、代替としてltjsclassesが利用できる。
 　また、確認していないがBXjscls（https://texwiki.texjp.org/?BXjscls）も利用できるようだ。
 　フォントについてはluatexja-fontspecを利用して、英文、和文のそれぞれについて指定できる。
-\usepackage{luatexja-fontspec} \setmainfont[Ligatures=TeX]{TeXGyreTermes} \setsansfont[Ligatures=TeX]{TeXGyreHeros} \setmainjfont[BoldFont=IPAexGothic]{IPAexMincho} \setsansjfont{IPAexGothic}  　プリセットも用意されていて、latexja-presetから利用できる。
-\usepackage[ipa]{luatexja-preset}  　ルビ、傍点はluatexja-rubyパッケージ。
-\usepackage{luatexja-ruby}  LuaTeX-ja環境での縦書き 　縦書きの文書クラスとして、ltjtarticle.cls、ltjtreport.cls、ltjtbook.clsが利用できる。
+\usepackage{luatexja-fontspec}\setmainfont[Ligatures=TeX]{TeXGyreTermes}\setsansfont[Ligatures=TeX]{TeXGyreHeros}\setmainjfont[BoldFont=IPAexGothic]{IPAexMincho}\setsansjfont{IPAexGothic} 　プリセットも用意されていて、latexja-presetから利用できる。
+\usepackage[ipa]{luatexja-preset} 　ルビ、傍点はluatexja-rubyパッケージ。
+\usepackage{luatexja-ruby} LuaTeX-ja環境での縦書き 　縦書きの文書クラスとして、ltjtarticle.cls、ltjtreport.cls、ltjtbook.clsが利用できる。
 http://fugenji.org/~thomas/diary/index.php?no=r1238
 　ところでluatexja-presetでexpertオプションを設定してもダブルクオーテーションはダブルミニュートにならないのだけど、これはどうすればいいのだろうか。
 PDF出力時の見開き方向 　Acrobat Readerで見開き表示をするときの綴じ方向を指定するためにはhyperrefパッケージを使う。
-\usepackage[pdfdirection=R2L]{hyperref}  個人的な規約 　バックノウハウ感しかない。
------- %ダーシ \vspace{1em} %空行 % 上下余白調整 \usepackage[top=20truemm,bottom=10truemm]{geometry} % openright時用の綴じ側余白調整 \setlength{\oddsidemargin}{-1in} % set real left margin 0pt \setlength{\evensidemargin}{-1in} % do \addtolength{\oddsidemargin}{15mm} % odd page 25mm left margin \addtolength{\evensidemargin}{25mm}% even page 15mm left margin \noindent「行頭の括弧はnoindentで対処する」  『TrueTypeフォントパーフェクトコレクション』 https://www.</description>
+\usepackage[pdfdirection=R2L]{hyperref} 個人的な規約 　バックノウハウ感しかない。
+------ %ダーシ\vspace{1em} %空行% 上下余白調整\usepackage[top=20truemm,bottom=10truemm]{geometry}% openright時用の綴じ側余白調整\setlength{\oddsidemargin}{-1in} % set real left margin 0pt\setlength{\evensidemargin}{-1in} % do\addtolength{\oddsidemargin}{15mm} % odd page 25mm left margin \addtolength{\evensidemargin}{25mm}% even page 15mm left margin\noindent「行頭の括弧はnoindentで対処する」 『TrueTypeフォントパーフェクトコレクション』 https://www.</description>
     </item>
     
     <item>
