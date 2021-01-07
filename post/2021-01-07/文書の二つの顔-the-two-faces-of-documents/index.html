@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="ja-jp"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="文書の二つの顔 (The Two Faces of Documents)" />
+<meta property="og:site_name" content="Constellation" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://squeuei.github.io/post/2021-01-07/%E6%96%87%E6%9B%B8%E3%81%AE%E4%BA%8C%E3%81%A4%E3%81%AE%E9%A1%94-the-two-faces-of-documents/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2021-01-07
+" /> <meta property="article:modified_time" content="2021-01-07
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@squeuei" />
+<meta name="twitter:creator" content="@squeuei" />
+<meta
+  name="twitter:title"
+  content="文書の二つの顔 (The Two Faces of Documents) | Constellation"
+/>
+<meta
+  name="twitter:description"
+  content="Plain Endian vs Rich Endian 文書を作成するとき、人々の中には二つのメンタルモデルが存在している。
+  文書とはプレーンテキストで表現される情報が主であり、見た目を持った文書はその派生物に過ぎない。
+この世界の住人は、記述された文字の情報に価値を置いている。あるRepresentationはありうる一つの形でしかない。だから、リッチなメディアを生成するのに十分な情報を埋め込んで、出力形態に応じて変換するのが効率的だ。
+  文書とはレイアウトを持ったリッチメディアが主であり、マークアップ言語による記述はそれを実現するためにしかたなく作る従属物である
+この世界の住人は、見た目、レイアウトを持ったメディアこそが価値を持っているのであって、ただでさえマークアップは面倒なのだから、その意味論なんて余計に記述したくない。なぜならお金にならないから。文書構造化とは「そんなものは機械に勝手に推論できるようにさせておけよ、そうでなければ別にいらんわ」程度のものでしかない。
+  これからは前者をPlain Endian、後者をRich Endianと呼ぶことにしよう（しない）。
+Rich Endianの人々は、クソほどにも役に立たない再利用性なんてお題目は捨ててしまえと思っている。結局、銭稼ぐのに必要なのはWebページや印刷された/PDF化されたリッチメディアなんだ。望んだ通りの見た目がどれだけスピーディに実現できるか、ビジネスではそれが重要なのだ。Plain Endianは使いもしない可能性のために必死こいて徒労に終わっている実用性のないやつらだ。
+Plain Endianの人々は、文書は体裁ではなくその構造と内容に本質があると思っている。論理立てて記述することが尊ばれるから、そのことを整理する上でも、論理構造の意味をマークアップすることは理にかなっている。スタイルやレイアウトは変換の際に任意で決められれば良い。それは本質ではないからだ。論理構造のマークアップはそれを可能にする。Rich Endianは目の前の問題だけにとらわれて、中身の統合性、意味論、当人が思っている以外の表現のされ方を軽視する軽薄な奴らだ。
+みんな、なかよく。
+人はなぜテンプレートから逸脱するのか どちらかというと文書の成立過程に近い話として、ここでもまた二つのメンタルモデルが存在している。
+  自分の思想をテンプレートの中で表現する。
+たとえ内部文書であったとしても、物事をこう作りたい、こう表現したいという作成者の思想が強くある。たいていの場合は、承認者も同じ思想を持ち、かつ作成者のそれとは異なるヴィジョンを持っている。ここで、もし承認者が作成者のことを自分の代理人として捉えていると、自分のビジョン通りになるまで、修正が繰り返されることになる。
+  テンプレートで問われていることに自分の思考を変換する。
+入力フォームへ記入するように自分の思考を変形させる。この作業を基本としている。その反対側には、求めたことだけしか答えられないような仕組みを構築する必要がある。何故、どうしてその文書を作らなければならないのか、そのために何を示さなければならないのか、それをどうやって示すか。この説明を徹底して納得してもらう。
+  業務で行うことと前提すれば、効率的なのは2であるだろう。もちろん、あまりにテンプレートが硬直的であれば運用が破綻してしまうが、不毛な往復を繰り返すことはない。 しかし、これは実現が難しい。それはなぜか。
+実際の業務の行われ方を考えながら、想像してみよう。
+まず、何らかの形で文書やチェックリストなどを作らなければならなくなったとする。おそらくその成り立ちは自律分散的で、各々が自分で発明した枠組みを使って、管理し始める。これを現場力の高さと呼ぶのかもしれない。
+さて、たいていの場合、ある部署におけるニーズというのは組織内のほかの部分でも共通するものであるから、各部署が似たようなことを管理するために、別々の仕組みを導入することになる。
+当然、これでは非効率なわけで、全体最適を目指して共通の仕組みを作っていきたい、と思うのは道理であろう。
+しかし、これはめちゃくちゃに難しい。
+なぜなら、その成り立ちから各々の枠組みには互換性がなく、またそれを変えていくことへの抵抗が強い。 現場力 の強さは権力や責任があいまいに分散してしまっていることと表裏一体だ。
+共通の仕組みを導入しようとするなら、その要件を定義する必要があるが、この能力が欠如しているため、何故その枠組みを構築するのか、その目的達成のためには何が必要なのか、ということを判断できない。結果として、現状を維持しようとするあまりスーパセットを構築してしまいがちなのであろう。仕様が肥大化し、誰にも作りにくく、管理しにくく、使いにくいものになる。
+ではどうするのがいいのか。多分銀の弾丸はない。
+これも実際的でない夢想でしかないけれど、専任者を指名し、時間と協力体制と仕様決定に対する権限・裁量を与える。各担当者にヒアリングを行い、また仕組みとして何を目的としているのか、そのために何が必要なのかを考える。フィードバックを受けつつ、いいなりにはならないように留意しながら、仕様を作っていく。協力関係は不可欠で、また、相手に納得してもらうだけの理由と論理を構築することが重要になる、んじゃないかなあ……。|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://squeuei.github.io/post/2021-01-07/%E6%96%87%E6%9B%B8%E3%81%AE%E4%BA%8C%E3%81%A4%E3%81%AE%E9%A1%94-the-two-faces-of-documents/" />
+
+
+
+    <title>文書の二つの顔 (The Two Faces of Documents)</title>
+    <link rel="canonical" href="https://squeuei.github.io/post/2021-01-07/%E6%96%87%E6%9B%B8%E3%81%AE%E4%BA%8C%E3%81%A4%E3%81%AE%E9%A1%94-the-two-faces-of-documents/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://squeuei.github.iocss/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'G-N32N2YD1GB', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="ja-jp"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://squeuei.github.io" class="b bb bw1 pb1 no-underline black">Constellation</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">文書の二つの顔 (The Two Faces of Documents)</h1>
+    <span class="f6 gray">January 7, 2021</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <h3 id="plain-endian-vs-rich-endian">Plain Endian vs Rich Endian</h3>
+<p>文書を作成するとき、人々の中には二つのメンタルモデルが存在している。</p>
+<ol>
+<li>
+<p>文書とはプレーンテキストで表現される情報が主であり、見た目を持った文書はその派生物に過ぎない。</p>
+<p>この世界の住人は、記述された文字の情報に価値を置いている。あるRepresentationはありうる一つの形でしかない。だから、リッチなメディアを生成するのに十分な情報を埋め込んで、出力形態に応じて変換するのが効率的だ。</p>
+</li>
+<li>
+<p>文書とはレイアウトを持ったリッチメディアが主であり、マークアップ言語による記述はそれを実現するためにしかたなく作る従属物である</p>
+<p>この世界の住人は、見た目、レイアウトを持ったメディアこそが価値を持っているのであって、ただでさえマークアップは面倒なのだから、その意味論なんて余計に記述したくない。なぜならお金にならないから。文書構造化とは「そんなものは機械に勝手に推論できるようにさせておけよ、そうでなければ別にいらんわ」程度のものでしかない。</p>
+</li>
+</ol>
+<p>これからは前者をPlain Endian、後者をRich Endianと呼ぶことにしよう（しない）。<br>
+Rich Endianの人々は、クソほどにも役に立たない再利用性なんてお題目は捨ててしまえと思っている。結局、銭稼ぐのに必要なのはWebページや印刷された/PDF化されたリッチメディアなんだ。望んだ通りの見た目がどれだけスピーディに実現できるか、ビジネスではそれが重要なのだ。Plain Endianは使いもしない可能性のために必死こいて徒労に終わっている実用性のないやつらだ。<br>
+Plain Endianの人々は、文書は体裁ではなくその構造と内容に本質があると思っている。論理立てて記述することが尊ばれるから、そのことを整理する上でも、論理構造の意味をマークアップすることは理にかなっている。スタイルやレイアウトは変換の際に任意で決められれば良い。それは本質ではないからだ。論理構造のマークアップはそれを可能にする。Rich Endianは目の前の問題だけにとらわれて、中身の統合性、意味論、当人が思っている以外の表現のされ方を軽視する軽薄な奴らだ。</p>
+<p>みんな、なかよく。</p>
+<h3 id="人はなぜテンプレートから逸脱するのか">人はなぜテンプレートから逸脱するのか</h3>
+<p>どちらかというと文書の成立過程に近い話として、ここでもまた二つのメンタルモデルが存在している。</p>
+<ol>
+<li>
+<p>自分の思想をテンプレートの中で表現する。</p>
+<p>たとえ内部文書であったとしても、物事をこう作りたい、こう表現したいという作成者の思想が強くある。たいていの場合は、承認者も同じ思想を持ち、かつ作成者のそれとは異なるヴィジョンを持っている。ここで、もし承認者が作成者のことを自分の代理人として捉えていると、自分のビジョン通りになるまで、修正が繰り返されることになる。</p>
+</li>
+<li>
+<p>テンプレートで問われていることに自分の思考を変換する。</p>
+<p>入力フォームへ記入するように自分の思考を変形させる。この作業を基本としている。その反対側には、求めたことだけしか答えられないような仕組みを構築する必要がある。何故、どうしてその文書を作らなければならないのか、そのために何を示さなければならないのか、それをどうやって示すか。この説明を徹底して納得してもらう。</p>
+</li>
+</ol>
+<p>業務で行うことと前提すれば、効率的なのは2であるだろう。もちろん、あまりにテンプレートが硬直的であれば運用が破綻してしまうが、不毛な往復を繰り返すことはない。
+しかし、これは実現が難しい。それはなぜか。<br>
+実際の業務の行われ方を考えながら、想像してみよう。<br>
+まず、何らかの形で文書やチェックリストなどを作らなければならなくなったとする。おそらくその成り立ちは自律分散的で、各々が自分で発明した枠組みを使って、管理し始める。これを現場力の高さと呼ぶのかもしれない。<br>
+さて、たいていの場合、ある部署におけるニーズというのは組織内のほかの部分でも共通するものであるから、各部署が似たようなことを管理するために、別々の仕組みを導入することになる。<br>
+当然、これでは非効率なわけで、全体最適を目指して共通の仕組みを作っていきたい、と思うのは道理であろう。<br>
+しかし、これはめちゃくちゃに難しい。<br>
+なぜなら、その成り立ちから各々の枠組みには互換性がなく、またそれを変えていくことへの抵抗が強い。 <em>現場力</em> の強さは権力や責任があいまいに分散してしまっていることと表裏一体だ。<br>
+共通の仕組みを導入しようとするなら、その要件を定義する必要があるが、この能力が欠如しているため、何故その枠組みを構築するのか、その目的達成のためには何が必要なのか、ということを判断できない。結果として、現状を維持しようとするあまりスーパセットを構築してしまいがちなのであろう。仕様が肥大化し、誰にも作りにくく、管理しにくく、使いにくいものになる。</p>
+<p>ではどうするのがいいのか。多分銀の弾丸はない。<br>
+これも実際的でない夢想でしかないけれど、専任者を指名し、時間と協力体制と仕様決定に対する権限・裁量を与える。各担当者にヒアリングを行い、また仕組みとして何を目的としているのか、そのために何が必要なのかを考える。フィードバックを受けつつ、いいなりにはならないように留意しながら、仕様を作っていく。協力関係は不可欠で、また、相手に納得してもらうだけの理由と論理を構築することが重要になる、んじゃないかなあ……。</p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: January 7, 2021. Published at: 2021-01-07.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>
