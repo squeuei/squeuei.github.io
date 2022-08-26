@@ -7,7 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;Except where otherwise noted, content on this site is licensed under a &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by/4.0/&#34;&gt;Creative Commons Attribution 4.0 International License&lt;/a&gt;.</copyright>
-    <lastBuildDate>Sat, 09 Jan 2021 22:00:00 +0900</lastBuildDate><atom:link href="https://squeuei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Aug 2022 20:23:28 +0900</lastBuildDate><atom:link href="https://squeuei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>stable diffusionをローカルでcondaを使わずに動かす</title>
+      <link>https://squeuei.github.io/post/2022-08-26/stable-diffusion%E3%82%92%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%A7conda%E3%82%92%E4%BD%BF%E3%82%8F%E3%81%9A%E3%81%AB%E5%8B%95%E3%81%8B%E3%81%99/</link>
+      <pubDate>Fri, 26 Aug 2022 20:23:28 +0900</pubDate>
+      
+      <guid>https://squeuei.github.io/post/2022-08-26/stable-diffusion%E3%82%92%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%A7conda%E3%82%92%E4%BD%BF%E3%82%8F%E3%81%9A%E3%81%AB%E5%8B%95%E3%81%8B%E3%81%99/</guid>
+      <description>もう百万回言われてますよ！
+ColabもDockerもcondaも使わず、ローカルで動くstable diffusionをpipとvenvで環境構築したいめんどくさい人向け手順書。
+Prerequisites  Nvidiaグラボ搭載のWindowsマシンにPython 3とpipとgitとcudatoolkit (11.6) が入っている。 hugging faceからstable-diffusion-v-1-4-originalをダウンロードしてある  Git LFSがないとgit cloneした時に.ckptファイルがダウンロードされないかもしれない    stable diffusionのセットアップ ファイルを置きたい場所に移動してから以下のコマンドを実行する。
+git clone git@github.com:CompVis/stable-diffusion python -m venv ldm .\ldm\Scripts\activate pip install wheel pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu116 pip install numpy albumentations diffusers opencv-python pudb invisible-watermark imageio imageio-ffmpeg pytorch-lightning omegaconf test-tube streamlit einops torch-fidelity transformers torchmetrics kornia pip install -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip pip install -e ./stable-diffusion/ mkdir .</description>
+    </item>
+    
+    <item>
+      <title>皆月蒼葉. 中労委令36.10.16三光インテック事件（判レビ1357.82）. びびび文庫, 2020. </title>
+      <link>https://squeuei.github.io/post/2021-12-13/%E7%9A%86%E6%9C%88%E8%92%BC%E8%91%89.-%E4%B8%AD%E5%8A%B4%E5%A7%94%E4%BB%A436.10.16%E4%B8%89%E5%85%89%E3%82%A4%E3%83%B3%E3%83%86%E3%83%83%E3%82%AF%E4%BA%8B%E4%BB%B6%E5%88%A4%E3%83%AC%E3%83%931357.82.-%E3%81%B3%E3%81%B3%E3%81%B3%E6%96%87%E5%BA%AB-2020./</link>
+      <pubDate>Mon, 13 Dec 2021 23:22:48 +0900</pubDate>
+      
+      <guid>https://squeuei.github.io/post/2021-12-13/%E7%9A%86%E6%9C%88%E8%92%BC%E8%91%89.-%E4%B8%AD%E5%8A%B4%E5%A7%94%E4%BB%A436.10.16%E4%B8%89%E5%85%89%E3%82%A4%E3%83%B3%E3%83%86%E3%83%83%E3%82%AF%E4%BA%8B%E4%BB%B6%E5%88%A4%E3%83%AC%E3%83%931357.82.-%E3%81%B3%E3%81%B3%E3%81%B3%E6%96%87%E5%BA%AB-2020./</guid>
+      <description>【50%OFF】中労委令36.10.16三光インテック事件(判レビ1357.82) [びびび文庫] | DLsite 同人
+紙魚はまだ死なない: リフロー型電子書籍化不可能小説合同誌 | cydonianbanana |本 | 通販 | Amazon
+で、なんでこんなものを書いたんですか？　――「三光インテック事件」についての総論的言い訳 - 皆月蒼葉 - Ci-en（シエン）
+ハードSFが書きたい――「三光インテック事件」についての解説各論② - 皆月蒼葉 - Ci-en（シエン）
+なんかメモ出てきた――「三光インテック事件」についての解説おまけ - 皆月蒼葉 - Ci-en（シエン）
+本編の謎が自力で解けなかったのが悔しくて甲第11号証　32年１月27日臨時大会議事録（抜粋）の解読をした。
+結果は以下のふせったーにあります。
+@squeueiさんの伏せ字ツイート | fusetter(ふせったー)
+さて、参考文献一覧に記載されている通り、当該文章はShavian Scriptによって記載されている。
+ショー文字 - Wikipedia
+冒頭の単語が読めた時点で英語であることはわかったものの、当該文章はアウトライン化された文字であるため、単純にコピーペーストして置き換えするという手が使えない（Monotype製フォントにありがちなライセンスの制約？）。個々の文字のサンプル画像はWikipediaにある。ただし完全に同一の字体ではない。文書はアウトライン化されており、ノイズも少ない。さて、どうやって処理しよう。
+機械学習をバリバリ活用した、のではなく、単純に手で解きました。やろうと思えば誰でもやれる機械的な単純作業。図らずも機械学習モデルを訓練するより人を使う方が早くて安いということを証明してしまった。
+二号主体たちも「我々のアツいクミアイ活動！　アイカツ！　始まります！！　ﾌﾌｯﾋ」してｶﾞﾝﾊﾞﾛｰ! (ｶﾞﾝﾊﾞﾛｰ!)するんだなあ……。
+
+www.youtube.com  本編について、ネタバレを読んだうえで、意図があり、その意図にもとづいた描写がなされていることは理解した。が、いまいちピンとこない。意図が、読者に対するトリックとして有効に働くものだったかは、ちょっとわかっていない。これは私の法学ドメインの知識が不足しているせいかもしれないし、単純に日本語の読解力がないからかもしれない。
+私の主張としては、トリックのパワーがフリーハンド過ぎてそれできちゃうの？　という納得のいかなさと、そもそもあのような社会情勢にあるなかでどうして本文や引用が固定レイアウトばかりなのかという疑問、2つの体裁が異なっているし説明されても「んん？」となってしまう、あたり。まあ負け惜しみです。
+面白かったです。</description>
+    </item>
+    
     <item>
       <title>March of the Irrational</title>
       <link>https://squeuei.github.io/post/2021-01-09/march-of-the-irrational/</link>
@@ -1453,8 +1490,8 @@ Image by squeuei. All rights reserved.
 インストール 　相変わらず親切な公式ガイドの通りにインストールすれば特に詰まるところはない。
 　ちなみに、Wi-Fiにさえ接続してしまえば、Ctrl-Alt-→(=Ctrl-Alt-F2）で入れるコンソールからrootユーザでログインすることで、Googleアカウントを用意せずともGoogleの利用規約に同意することなくArch Linux ARMのダウンロードおよびインストールをすることができる。USBスティックなどで別途アーカイブを用意すればWi-Fiへの接続も不要である。
 初期設定 　インストール後、新しいユーザを作る前に、rootでいる間にやったこと。
-locale vi /etc/locale.gen# Uncomment:# en_US.UTF-8# ja_JP.UTF-8# locale-genecho LANG=en_US.UTF-8 &amp;gt; /etc/locale.confexport LANG=en_US.UTF-8 hostname vi /etc/hostname 時刻 timedatectl set-timezone Asia/Tokyo pacman初期化 https://archlinuxarm.org/forum/viewtopic.php?f=3&amp;amp;t=12797
-pacman-key --init &amp;amp;&amp;amp; pacman-key --populate archlinuxarmpacman -Syu ユーザ追加 # Root Passwordpasswd# New Useruseradd -m -G wheel usernamepasswd usernamepacman -S sudovisudo# Uncomment:# Defaults env_keep += &amp;quot;HOME&amp;quot;# %wheel ALL=(ALL) ALL# 　一般ユーザalarmは好みで消してよさそう。</description>
+locale vi /etc/locale.gen # Uncomment: # en_US.UTF-8 # ja_JP.UTF-8 # locale-gen echo LANG=en_US.UTF-8 &amp;gt; /etc/locale.conf export LANG=en_US.UTF-8  hostname vi /etc/hostname  時刻 timedatectl set-timezone Asia/Tokyo  pacman初期化 https://archlinuxarm.org/forum/viewtopic.php?f=3&amp;amp;t=12797
+pacman-key --init &amp;amp;&amp;amp; pacman-key --populate archlinuxarm pacman -Syu  ユーザ追加 # Root Password passwd # New User useradd -m -G wheel username passwd username pacman -S sudo visudo # Uncomment: # Defaults env_keep += &amp;quot;HOME&amp;quot; # %wheel ALL=(ALL) ALL #  　一般ユーザalarmは好みで消してよさそう。</description>
     </item>
     
     <item>
@@ -1482,7 +1519,7 @@ https://wiki.archlinux.org/index.php/Metric-compatible_fonts
 TrueTypeフォントパーフェクトコレクション [asin:4844333615:detail]
 　買いましょう。わずか3000円強で問題の大部分は解決する……と思っていたら！！
 @kei_monokoto こんにちは、「TTフォント〜」は、フォントの版権をもっていたBitstream社がMonotype社へ買収されたため、改訂版を出すことができなくなりました。在庫限りで絶版となりますので、よろしくお願いします。どうもありがとうございました。
-&amp;mdash; 深沢英次 (@pictex) 2017年2月23日　ｳﾜｰｯ!
+&amp;mdash; 深沢英次 (@pictex) 2017年2月23日  　ｳﾜｰｯ!
 　マジでか……超ショックだ……。
 　既に丸善ジュンク堂では店頭在庫もないので、見つけたら極力確保しましょう。
 TeX Gyre  TeX Gyre フォントは，Times や Helvetica などの Adobe 基本 35 書体に対応する，高品質でオープンなフォントです．PostScript Type 1 形式と OpenType 形式で配布されています．</description>
@@ -1499,18 +1536,18 @@ W32TeXからTex Live 2016への移行 　前回はTeXインストーラ3で環�
 　なお、Tex Live 2017が2017-05-01にリリース予定であり、そちらではLuaTeXが1.0になるようなので、急ぎでないならそちらを待ってからインストールするのがいいかもしれない。
 　ここ からinstall-tl-windows.exeをダウンロードしてインストール。時間はかかるけど詰まるところはない。
 LuaTeXでの日本語環境 　pTeXと同等（互換ではない）の環境を目指して、LuaTeX-ja環境が整備されつつある。
-\usepackage{luatexja} https://ja.osdn.net/projects/luatex-ja/wiki/LuaTeX-ja%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9
+\usepackage{luatexja}  https://ja.osdn.net/projects/luatex-ja/wiki/LuaTeX-ja%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9
 　LuaTeXではjsclasses文書クラスは利用できないので、代替としてltjsclassesが利用できる。
 　また、確認していないがBXjscls（https://texwiki.texjp.org/?BXjscls）も利用できるようだ。
 　フォントについてはluatexja-fontspecを利用して、英文、和文のそれぞれについて指定できる。
-\usepackage{luatexja-fontspec}\setmainfont[Ligatures=TeX]{TeXGyreTermes}\setsansfont[Ligatures=TeX]{TeXGyreHeros}\setmainjfont[BoldFont=IPAexGothic]{IPAexMincho}\setsansjfont{IPAexGothic} 　プリセットも用意されていて、latexja-presetから利用できる。
-\usepackage[ipa]{luatexja-preset} 　ルビ、傍点はluatexja-rubyパッケージ。
-\usepackage{luatexja-ruby} LuaTeX-ja環境での縦書き 　縦書きの文書クラスとして、ltjtarticle.cls、ltjtreport.cls、ltjtbook.clsが利用できる。
+\usepackage{luatexja-fontspec} \setmainfont[Ligatures=TeX]{TeXGyreTermes} \setsansfont[Ligatures=TeX]{TeXGyreHeros} \setmainjfont[BoldFont=IPAexGothic]{IPAexMincho} \setsansjfont{IPAexGothic}  　プリセットも用意されていて、latexja-presetから利用できる。
+\usepackage[ipa]{luatexja-preset}  　ルビ、傍点はluatexja-rubyパッケージ。
+\usepackage{luatexja-ruby}  LuaTeX-ja環境での縦書き 　縦書きの文書クラスとして、ltjtarticle.cls、ltjtreport.cls、ltjtbook.clsが利用できる。
 http://fugenji.org/~thomas/diary/index.php?no=r1238
 　ところでluatexja-presetでexpertオプションを設定してもダブルクオーテーションはダブルミニュートにならないのだけど、これはどうすればいいのだろうか。
 PDF出力時の見開き方向 　Acrobat Readerで見開き表示をするときの綴じ方向を指定するためにはhyperrefパッケージを使う。
-\usepackage[pdfdirection=R2L]{hyperref} 個人的な規約 　バックノウハウ感しかない。
------- %ダーシ\vspace{1em} %空行% 上下余白調整\usepackage[top=20truemm,bottom=10truemm]{geometry}% openright時用の綴じ側余白調整\setlength{\oddsidemargin}{-1in} % set real left margin 0pt\setlength{\evensidemargin}{-1in} % do\addtolength{\oddsidemargin}{15mm} % odd page 25mm left margin \addtolength{\evensidemargin}{25mm}% even page 15mm left margin\noindent「行頭の括弧はnoindentで対処する」 『TrueTypeフォントパーフェクトコレクション』 https://www.</description>
+\usepackage[pdfdirection=R2L]{hyperref}  個人的な規約 　バックノウハウ感しかない。
+------ %ダーシ \vspace{1em} %空行 % 上下余白調整 \usepackage[top=20truemm,bottom=10truemm]{geometry} % openright時用の綴じ側余白調整 \setlength{\oddsidemargin}{-1in} % set real left margin 0pt \setlength{\evensidemargin}{-1in} % do \addtolength{\oddsidemargin}{15mm} % odd page 25mm left margin \addtolength{\evensidemargin}{25mm}% even page 15mm left margin \noindent「行頭の括弧はnoindentで対処する」  『TrueTypeフォントパーフェクトコレクション』 https://www.</description>
     </item>
     
     <item>
