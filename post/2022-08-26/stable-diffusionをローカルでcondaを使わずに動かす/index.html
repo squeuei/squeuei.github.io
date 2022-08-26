@@ -142,7 +142,7 @@ if (!doNotTrack) {
 <h4 id="シンボリックリンクを作る">シンボリックリンクを作る</h4>
 <p>管理者権限で実行しないとリンクを作成できないので注意する。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cd ./stable-diffusion/models/ldm/stable-diffusion-v1/
-</span></span><span style="display:flex;"><span>cmd /c <span style="color:#e6db74">&#34;mklink&#34;</span> .\model.ckpt D:\Documents\stable-diffusion-v-1-4-original\sd-v1-4.ckpt
+</span></span><span style="display:flex;"><span>cmd /c <span style="color:#e6db74">&#34;mklink&#34;</span> .\model.ckpt ..\..\..\..\..\stable-diffusion-v-1-4-original\sd-v1-4.ckpt
 </span></span></code></pre></div><h3 id="8gbのvramで動かす">8GBのVRAMで動かす</h3>
 <p>節約のために涙ぐましい努力をします。</p>
 <h4 id="txt2imgpyを編集してモデル精度を下げる"><code>txt2img.py</code>を編集してモデル精度を下げる。</h4>
