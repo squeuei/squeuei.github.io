@@ -44,7 +44,7 @@
 <meta
   name="twitter:description"
   content="もう百万回言われてますよ！
-ColabもDockerもcondaも使わず、ローカルで動くstable diffusionをpipとvenvで環境構築したいめんどくさい人向け手順書。
+ColabもDockerもcondaも使わず、ローカルで動くstable diffusionをpipとvenvで環境構築したいめんどくさい人向けのめんどくさい手順書。
 Prerequisites  Nvidiaグラボ搭載のWindowsマシンにPython 3とpipとgitとcudatoolkit (11.6) が入っている。 hugging faceからstable-diffusion-v-1-4-originalをダウンロードしてある  Git LFSがないとgit cloneした時に.ckptファイルがダウンロードされないかもしれない    stable diffusionのセットアップ ファイルを置きたい場所に移動してから以下のコマンドを実行する。
 git clone git@github.com:CompVis/stable-diffusion python -m venv ldm .\ldm\Scripts\activate pip install wheel pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu116 pip install numpy albumentations diffusers opencv-python pudb invisible-watermark imageio imageio-ffmpeg pytorch-lightning omegaconf test-tube streamlit einops torch-fidelity transformers torchmetrics kornia pip install -e git&#43;https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers pip install -e git&#43;https://github.com/openai/CLIP.git@main#egg=clip pip install -e ./stable-diffusion/ mkdir -p .|"
 />
@@ -115,7 +115,7 @@ if (!doNotTrack) {
 
       <article itemprop="articleBody" id="content" class="w-90 lh-copy">
         <p>もう百万回言われてますよ！</p>
-<p>ColabもDockerもcondaも使わず、ローカルで動くstable diffusionをpipとvenvで環境構築したいめんどくさい人向け手順書。</p>
+<p>ColabもDockerもcondaも使わず、ローカルで動くstable diffusionをpipとvenvで環境構築したいめんどくさい人向けのめんどくさい手順書。</p>
 <!-- more -->
 <h3 id="prerequisites">Prerequisites</h3>
 <ul>
@@ -163,7 +163,7 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p>その次の行に以下を追加。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>to(torch<span style="color:#f92672">.</span>float16)
 </span></span></code></pre></div><h3 id="画像出力を試す">画像出力を試す</h3>
-<p>stable-diffusionのフォルダに<code>cd</code>した後で以下を実行する。</p>
+<p><code>ldm</code>環境をactivateし、stable-diffusionのフォルダに<code>cd</code>した後で以下を実行する。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>python scripts/txt2img.py --prompt <span style="color:#e6db74">&#34;a photograph of an astronaut riding a horse&#34;</span> --plms --n_samples 2
 </span></span></code></pre></div><p><code>txt2img.py</code>、<code>img2img.py</code>共に、<code>--n_samples 2</code>を追加しないとVRAM不足で動かない。</p>
 <p>加えて、<code>img2img.py</code>は512x512の画像を入力とする必要がある。</p>

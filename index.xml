@@ -15,7 +15,7 @@
       
       <guid>https://squeuei.github.io/post/2022-08-26/stable-diffusion%E3%82%92%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%A7conda%E3%82%92%E4%BD%BF%E3%82%8F%E3%81%9A%E3%81%AB%E5%8B%95%E3%81%8B%E3%81%99/</guid>
       <description>もう百万回言われてますよ！
-ColabもDockerもcondaも使わず、ローカルで動くstable diffusionをpipとvenvで環境構築したいめんどくさい人向け手順書。
+ColabもDockerもcondaも使わず、ローカルで動くstable diffusionをpipとvenvで環境構築したいめんどくさい人向けのめんどくさい手順書。
 Prerequisites  Nvidiaグラボ搭載のWindowsマシンにPython 3とpipとgitとcudatoolkit (11.6) が入っている。 hugging faceからstable-diffusion-v-1-4-originalをダウンロードしてある  Git LFSがないとgit cloneした時に.ckptファイルがダウンロードされないかもしれない    stable diffusionのセットアップ ファイルを置きたい場所に移動してから以下のコマンドを実行する。
 git clone git@github.com:CompVis/stable-diffusion python -m venv ldm .\ldm\Scripts\activate pip install wheel pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu116 pip install numpy albumentations diffusers opencv-python pudb invisible-watermark imageio imageio-ffmpeg pytorch-lightning omegaconf test-tube streamlit einops torch-fidelity transformers torchmetrics kornia pip install -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip pip install -e ./stable-diffusion/ mkdir -p .</description>
     </item>
