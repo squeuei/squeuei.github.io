@@ -47,14 +47,14 @@
 このPCにLinuxをインストールするのは二回目で、今回はLXQtを入れてみた。
 インストール いつもどおりにUSBスティックにインストールメディアを用意して、今回はDesktop環境なしでインストール。
 初期設定 sudo 最初のログイン後、端末で
-$ su # apt install sudo vim # gpasswd -a hogefuga sudo  してsudoできるようにしておく。
+$ su# apt install sudo vim# gpasswd -a hogefuga sudoしてsudoできるようにしておく。
 一度ログアウトしてから作業スタート。
 インフラ系 なにはともあれaptのソースを編集。
-$ sudo apt vim /etc/apt/sources.list  私は邪道なので%s/main/main non-free contrib/gしてしまいます。stretch-backportsも入れる。stable-backportsみたいな指定ができたら良かったのにね。
-$ sudo apt install network-manager network-manager-gnome task-lxqt-desktop tlp-rdw xsensors  このPCにはIntelのWi-Fiが入っているのでドライバをインストール。上でmainだけにしたときはこの手は使えないので自由人のためのWi-Fiドングルを使うかおとなしく有線接続してください。あとmicrocodeも。
-$ sudo apt insatll firmware-iwlwifi intel-microcode  素のままだとトラックパッドのタップクリックが効かないし、LXQt上からは設定できないのでファイルを編集。
-$ sudo mkdir /etc/X11/xorg.conf.d/ $ sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf  30-touchpad.confの中身はこんな感じ。というかArchwikiのほぼまんまですねこれ。
-Section &quot;InputClass&quot; Identifier &quot;touchpad&quot; Driver &quot;libinput&quot; MatchIsTouchpad &quot;on&quot; Option &quot;Tapping&quot; &quot;on&quot; Option &quot;TappingButtonMap&quot; &quot;lrm&quot; Option &quot;NaturalScrolling&quot; &quot;true&quot; Option &quot;ClickMethod&quot; &quot;clickfinger&quot; EndSection  NTPとかssh鍵とかもやっておく。NTP鯖はNICTに。|"
+$ sudo apt vim /etc/apt/sources.list私は邪道なので%s/main/main non-free contrib/gしてしまいます。stretch-backportsも入れる。stable-backportsみたいな指定ができたら良かったのにね。
+$ sudo apt install network-manager network-manager-gnome task-lxqt-desktop tlp-rdw xsensors このPCにはIntelのWi-Fiが入っているのでドライバをインストール。上でmainだけにしたときはこの手は使えないので自由人のためのWi-Fiドングルを使うかおとなしく有線接続してください。あとmicrocodeも。
+$ sudo apt insatll firmware-iwlwifi intel-microcode素のままだとトラックパッドのタップクリックが効かないし、LXQt上からは設定できないのでファイルを編集。
+$ sudo mkdir /etc/X11/xorg.conf.d/$ sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf30-touchpad.confの中身はこんな感じ。というかArchwikiのほぼまんまですねこれ。
+Section &quot;InputClass&quot;Identifier &quot;touchpad&quot;Driver &quot;libinput&quot;MatchIsTouchpad &quot;on&quot;Option &quot;Tapping&quot; &quot;on&quot;Option &quot;TappingButtonMap&quot; &quot;lrm&quot;Option &quot;NaturalScrolling&quot; &quot;true&quot;Option &quot;ClickMethod&quot; &quot;clickfinger&quot;EndSectionNTPとかssh鍵とかもやっておく。NTP鯖はNICTに。|"
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="https://squeuei.github.io/post/2019-02-10/linux%E7%92%B0%E5%A2%83%E6%95%B4%E5%82%99%E5%82%99%E5%BF%98%E9%8C%B2/" />

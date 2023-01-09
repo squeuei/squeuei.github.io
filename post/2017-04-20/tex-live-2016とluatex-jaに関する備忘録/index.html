@@ -44,22 +44,22 @@
 <meta
   name="twitter:description"
   content="久しぶりにTeXの環境構築を行ったのでそのメモ。
-W32TeXからTex Live 2016への移行 　前回はTeXインストーラ3で環境構築を行ったが、今回はTeX Live 2016を用いることにする。
-　なお、Tex Live 2017が2017-05-01にリリース予定であり、そちらではLuaTeXが1.0になるようなので、急ぎでないならそちらを待ってからインストールするのがいいかもしれない。
-　ここ からinstall-tl-windows.exeをダウンロードしてインストール。時間はかかるけど詰まるところはない。
-LuaTeXでの日本語環境 　pTeXと同等（互換ではない）の環境を目指して、LuaTeX-ja環境が整備されつつある。
-\usepackage{luatexja}  https://ja.osdn.net/projects/luatex-ja/wiki/LuaTeX-ja%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9
-　LuaTeXではjsclasses文書クラスは利用できないので、代替としてltjsclassesが利用できる。
-　また、確認していないがBXjscls（https://texwiki.texjp.org/?BXjscls）も利用できるようだ。
-　フォントについてはluatexja-fontspecを利用して、英文、和文のそれぞれについて指定できる。
-\usepackage{luatexja-fontspec} \setmainfont[Ligatures=TeX]{TeXGyreTermes} \setsansfont[Ligatures=TeX]{TeXGyreHeros} \setmainjfont[BoldFont=IPAexGothic]{IPAexMincho} \setsansjfont{IPAexGothic}  　プリセットも用意されていて、latexja-presetから利用できる。
-\usepackage[ipa]{luatexja-preset}  　ルビ、傍点はluatexja-rubyパッケージ。
-\usepackage{luatexja-ruby}  LuaTeX-ja環境での縦書き 　縦書きの文書クラスとして、ltjtarticle.cls、ltjtreport.cls、ltjtbook.clsが利用できる。
+W32TeXからTex Live 2016への移行 前回はTeXインストーラ3で環境構築を行ったが、今回はTeX Live 2016を用いることにする。
+なお、Tex Live 2017が2017-05-01にリリース予定であり、そちらではLuaTeXが1.0になるようなので、急ぎでないならそちらを待ってからインストールするのがいいかもしれない。
+ここ からinstall-tl-windows.exeをダウンロードしてインストール。時間はかかるけど詰まるところはない。
+LuaTeXでの日本語環境 pTeXと同等（互換ではない）の環境を目指して、LuaTeX-ja環境が整備されつつある。
+\usepackage{luatexja}https://ja.osdn.net/projects/luatex-ja/wiki/LuaTeX-ja%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9
+LuaTeXではjsclasses文書クラスは利用できないので、代替としてltjsclassesが利用できる。
+また、確認していないがBXjscls（https://texwiki.texjp.org/?BXjscls）も利用できるようだ。
+フォントについてはluatexja-fontspecを利用して、英文、和文のそれぞれについて指定できる。
+\usepackage{luatexja-fontspec}\setmainfont[Ligatures=TeX]{TeXGyreTermes}\setsansfont[Ligatures=TeX]{TeXGyreHeros}\setmainjfont[BoldFont=IPAexGothic]{IPAexMincho}\setsansjfont{IPAexGothic}プリセットも用意されていて、latexja-presetから利用できる。
+\usepackage[ipa]{luatexja-preset}ルビ、傍点はluatexja-rubyパッケージ。
+\usepackage{luatexja-ruby}LuaTeX-ja環境での縦書き 縦書きの文書クラスとして、ltjtarticle.cls、ltjtreport.cls、ltjtbook.clsが利用できる。
 http://fugenji.org/~thomas/diary/index.php?no=r1238
-　ところでluatexja-presetでexpertオプションを設定してもダブルクオーテーションはダブルミニュートにならないのだけど、これはどうすればいいのだろうか。
-PDF出力時の見開き方向 　Acrobat Readerで見開き表示をするときの綴じ方向を指定するためにはhyperrefパッケージを使う。
-\usepackage[pdfdirection=R2L]{hyperref}  個人的な規約 　バックノウハウ感しかない。
------- %ダーシ \vspace{1em} %空行 % 上下余白調整 \usepackage[top=20truemm,bottom=10truemm]{geometry} % openright時用の綴じ側余白調整 \setlength{\oddsidemargin}{-1in} % set real left margin 0pt \setlength{\evensidemargin}{-1in} % do \addtolength{\oddsidemargin}{15mm} % odd page 25mm left margin \addtolength{\evensidemargin}{25mm}% even page 15mm left margin \noindent「行頭の括弧はnoindentで対処する」  『TrueTypeフォントパーフェクトコレクション』 https://www.|"
+ところでluatexja-presetでexpertオプションを設定してもダブルクオーテーションはダブルミニュートにならないのだけど、これはどうすればいいのだろうか。
+PDF出力時の見開き方向 Acrobat Readerで見開き表示をするときの綴じ方向を指定するためにはhyperrefパッケージを使う。
+\usepackage[pdfdirection=R2L]{hyperref}個人的な規約 バックノウハウ感しかない。
+------ %ダーシ\vspace{1em} %空行% 上下余白調整\usepackage[top=20truemm,bottom=10truemm]{geometry}% openright時用の綴じ側余白調整\setlength{\oddsidemargin}{-1in} % set real left margin 0pt\setlength{\evensidemargin}{-1in} % do\addtolength{\oddsidemargin}{15mm} % odd page 25mm left margin \addtolength{\evensidemargin}{25mm}% even page 15mm left margin\noindent「行頭の括弧はnoindentで対処する」『TrueTypeフォントパーフェクトコレクション』 https://www.|"
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="https://squeuei.github.io/post/2017-04-20/tex-live-2016%E3%81%A8luatex-ja%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E5%82%99%E5%BF%98%E9%8C%B2/" />

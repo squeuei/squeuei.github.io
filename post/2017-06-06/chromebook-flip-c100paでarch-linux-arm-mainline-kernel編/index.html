@@ -43,15 +43,15 @@
 />
 <meta
   name="twitter:description"
-  content="目的 　約300ドル&#43;税&#43;送料で買える1 kgを切ったラップトップASUS Chromebook flip C100PAは、プレインストールされたChrome OSに加えcroutonやArch Linux ARMによってLinux環境を利用することができる。
-　中でもArch Linux ARMは、Chrome OS上からchrootを用いるcroutonとは異なり、Chrome OSから完全に独立したLinux環境を構築できる利点を有している。しかしながら、かつてはメインラインカーネルにおけるハードウェアのサポートが不足しており、結局はChrome OSにて用いられているカーネルを利用する必要があった。
-　そして現在、無数のコントリビューターの貢献によってメインラインカーネルでのサポートは充実したものとなり、Chrome OS のカーネルを使わずとも実用的になってきたと思われる。以上の経緯から、パワーアップしたCPUやUSB-C給電などを特徴とするASUS Chromebook flip C101がComputexにて展示された今、あえて一年前の記事をアップデートするものである。
+  content="目的 約300ドル&#43;税&#43;送料で買える1 kgを切ったラップトップASUS Chromebook flip C100PAは、プレインストールされたChrome OSに加えcroutonやArch Linux ARMによってLinux環境を利用することができる。
+中でもArch Linux ARMは、Chrome OS上からchrootを用いるcroutonとは異なり、Chrome OSから完全に独立したLinux環境を構築できる利点を有している。しかしながら、かつてはメインラインカーネルにおけるハードウェアのサポートが不足しており、結局はChrome OSにて用いられているカーネルを利用する必要があった。
+そして現在、無数のコントリビューターの貢献によってメインラインカーネルでのサポートは充実したものとなり、Chrome OS のカーネルを使わずとも実用的になってきたと思われる。以上の経緯から、パワーアップしたCPUやUSB-C給電などを特徴とするASUS Chromebook flip C101がComputexにて展示された今、あえて一年前の記事をアップデートするものである。
 Image by squeuei. All rights reserved.
-インストール 　相変わらず親切な公式ガイドの通りにインストールすれば特に詰まるところはない。
-　ちなみに、Wi-Fiにさえ接続してしまえば、Ctrl-Alt-→(=Ctrl-Alt-F2）で入れるコンソールからrootユーザでログインすることで、Googleアカウントを用意せずともGoogleの利用規約に同意することなくArch Linux ARMのダウンロードおよびインストールをすることができる。USBスティックなどで別途アーカイブを用意すればWi-Fiへの接続も不要である。
-初期設定 　インストール後、新しいユーザを作る前に、rootでいる間にやったこと。
-locale vi /etc/locale.gen # Uncomment: # en_US.UTF-8 # ja_JP.UTF-8 # locale-gen echo LANG=en_US.UTF-8 &gt; /etc/locale.conf export LANG=en_US.UTF-8  hostname vi /etc/hostname  時刻 timedatectl set-timezone Asia/Tokyo  pacman初期化 https://archlinuxarm.org/forum/viewtopic.php?f=3&amp;t=12797
-pacman-key --init &amp;&amp; pacman-key --populate archlinuxarm pacman -Syu  ユーザ追加 # Root Password passwd # New User useradd -m -G wheel username passwd username pacman -S sudo visudo # Uncomment: # Defaults env_keep &#43;= &quot;HOME&quot; # %wheel ALL=(ALL) ALL #  　一般ユーザalarmは好みで消してよさそう。|"
+インストール 相変わらず親切な公式ガイドの通りにインストールすれば特に詰まるところはない。
+ちなみに、Wi-Fiにさえ接続してしまえば、Ctrl-Alt-→(=Ctrl-Alt-F2）で入れるコンソールからrootユーザでログインすることで、Googleアカウントを用意せずともGoogleの利用規約に同意することなくArch Linux ARMのダウンロードおよびインストールをすることができる。USBスティックなどで別途アーカイブを用意すればWi-Fiへの接続も不要である。
+初期設定 インストール後、新しいユーザを作る前に、rootでいる間にやったこと。
+locale vi /etc/locale.gen# Uncomment:# en_US.UTF-8# ja_JP.UTF-8# locale-genecho LANG=en_US.UTF-8 &gt; /etc/locale.confexport LANG=en_US.UTF-8hostname vi /etc/hostname時刻 timedatectl set-timezone Asia/Tokyopacman初期化 https://archlinuxarm.org/forum/viewtopic.php?f=3&amp;t=12797
+pacman-key --init &amp;&amp; pacman-key --populate archlinuxarmpacman -Syuユーザ追加 # Root Passwordpasswd# New Useruseradd -m -G wheel usernamepasswd usernamepacman -S sudovisudo# Uncomment:# Defaults env_keep &#43;= &quot;HOME&quot;# %wheel ALL=(ALL) ALL#一般ユーザalarmは好みで消してよさそう。|"
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="https://squeuei.github.io/post/2017-06-06/chromebook-flip-c100pa%E3%81%A7arch-linux-arm-mainline-kernel%E7%B7%A8/" />

@@ -45,18 +45,23 @@
   name="twitter:description"
   content="買ってから優に一年間放置していた“Make: AVR Programming”を夏休みに読んでしまおう計画。
 前回
-Chapter 1 　AVRISPmk2を入手しておいたのだけど、こいつは自分で&#43;5Vを供給してくれないので、ACアダプタでブレッドボードに5Vを給電するとかしないといけない。かつ、私の環境ではavrdudeでうまくmake flashしてくれないので、Arduino ISPを活用することにする。ISP買った意味がない。
-　システムやユーザの環境変数を通すのが嫌だったので、PATHを通すバッチファイルを書いて、そこから操作することにする。
-PATH=%PATH%;foo\bar\avr8-gnu-toolchain\bin;hoge\fuga\avrdude_utilities; cd mado\homu\AVR-Programming  といった内容の.batファイル（ここでは安易にavr.batとした）を作成した後、エクスプローラから
-C:\Windows\System32\cmd.exe /k &quot;yui\azu\avr&quot;  というショートカットを作る。フォルダやファイルの場所は各自修正のこと。ショートカットがリンクする先の最後にあるavrは.batファイルのファイル名にする。拡張子を付けないのが個人的にポイントだった。
-　このショートカットを開けば、コンパイラとユーティリティへのPATHが通ったコマンドプロンプトが開く。
-　サンプルコードを書き込む際には、Makefileで
-PROGRAMMER_TYPE = avrisp PROGRAMMER_ARGS = -b 19200 -P com3  などとして、PATHが通ったコマンドプロンプトからmake flashする。
-Chapter 2 　RAMに変数をつくることと、ピンへの書き込みやピンの入出力設定は同じインタフェース（代入）で行われるけど、これは実際に同じ事をレジスタに対して行っているから。そのレジスタの情報はio.hに格納されてる。
-重要なハードウェアレジスタ   DDRx : data-direction registers port x
+Chapter 1 AVRISPmk2を入手しておいたのだけど、こいつは自分で&#43;5Vを供給してくれないので、ACアダプタでブレッドボードに5Vを給電するとかしないといけない。かつ、私の環境ではavrdudeでうまくmake flashしてくれないので、Arduino ISPを活用することにする。ISP買った意味がない。
+システムやユーザの環境変数を通すのが嫌だったので、PATHを通すバッチファイルを書いて、そこから操作することにする。
+PATH=%PATH%;foo\bar\avr8-gnu-toolchain\bin;hoge\fuga\avrdude_utilities;cd mado\homu\AVR-Programmingといった内容の.batファイル（ここでは安易にavr.batとした）を作成した後、エクスプローラから
+C:\Windows\System32\cmd.exe /k &quot;yui\azu\avr&quot;というショートカットを作る。フォルダやファイルの場所は各自修正のこと。ショートカットがリンクする先の最後にあるavrは.batファイルのファイル名にする。拡張子を付けないのが個人的にポイントだった。
+このショートカットを開けば、コンパイラとユーティリティへのPATHが通ったコマンドプロンプトが開く。
+サンプルコードを書き込む際には、Makefileで
+PROGRAMMER_TYPE = avrispPROGRAMMER_ARGS = -b 19200 -P com3などとして、PATHが通ったコマンドプロンプトからmake flashする。
+Chapter 2 RAMに変数をつくることと、ピンへの書き込みやピンの入出力設定は同じインタフェース（代入）で行われるけど、これは実際に同じ事をレジスタに対して行っているから。そのレジスタの情報はio.hに格納されてる。
+重要なハードウェアレジスタ DDRx : data-direction registers port x
 インプットかアウトプットかを決める。
-  PORTx port x data registers
- アウトプットに設定したとき：high or lowを設定 インプットに設定したとき：pull-upするかどうか(chapter 6参照)を設定    PINx port x input pins address|"
+PORTx port x data registers
+アウトプットに設定したとき：high or lowを設定 インプットに設定したとき：pull-upするかどうか(chapter 6参照)を設定 PINx port x input pins address
+インプットに設定したピンのhigh or lowを読んだ結果が格納される。 デフォルトで全部のピンはインプット。
+DDRの設定をせずにPORTを設定してしまうパティーンが多いので気をつけよう。
+Chapter 3 MOSFETはLEDのGNDとプログラマのGNDをいちいち手で接続したり外したりするのがめんどうなので使う、とのこと。
+正直肉眼で見ても全然わからなかったので写真に撮る。
+Image by squeuei.|"
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="https://squeuei.github.io/post/2016-08-15/make-avr-programming-pt.01/" />

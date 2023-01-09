@@ -45,8 +45,9 @@
   name="twitter:description"
   content="もう百万回言われてますよ！
 ColabもDockerもcondaも使わず、ローカルで動くstable diffusionをpipとvenvで環境構築したいめんどくさい人向けのめんどくさい手順書。
-Prerequisites  Nvidiaグラボ搭載のWindowsマシンにPython 3とpipとgitとcudatoolkit (11.6) が入っている。 hugging faceからstable-diffusion-v-1-4-originalをダウンロードしてある  Git LFSがないとgit cloneした時に.ckptファイルがダウンロードされないかもしれない    stable diffusionのセットアップ ファイルを置きたい場所に移動してから以下のコマンドを実行する。
-git clone git@github.com:CompVis/stable-diffusion python -m venv ldm .\ldm\Scripts\activate pip install wheel pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu116 pip install numpy albumentations diffusers opencv-python pudb invisible-watermark imageio imageio-ffmpeg pytorch-lightning omegaconf test-tube streamlit einops torch-fidelity transformers torchmetrics kornia pip install -e git&#43;https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers pip install -e git&#43;https://github.com/openai/CLIP.git@main#egg=clip pip install -e ./stable-diffusion/ mkdir -p .|"
+Prerequisites Nvidiaグラボ搭載のWindowsマシンにPython 3とpipとgitとcudatoolkit (11.6) が入っている。 hugging faceからstable-diffusion-v-1-4-originalをダウンロードしてある Git LFSがないとgit cloneした時に.ckptファイルがダウンロードされないかもしれない stable diffusionのセットアップ ファイルを置きたい場所に移動してから以下のコマンドを実行する。
+git clone git@github.com:CompVis/stable-diffusion python -m venv ldm .\ldm\Scripts\activate pip install wheel pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu116 pip install numpy albumentations diffusers opencv-python pudb invisible-watermark imageio imageio-ffmpeg pytorch-lightning omegaconf test-tube streamlit einops torch-fidelity transformers torchmetrics kornia pip install -e git&#43;https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers pip install -e git&#43;https://github.com/openai/CLIP.git@main#egg=clip pip install -e ./stable-diffusion/ mkdir -p ./stable-diffusion/models/ldm/stable-diffusion-v1 torchはオプションなしでpipから入れるとCUDAなしのビルドがインストールされてしまうので注意。
+シンボリックリンクを作る 管理者権限で実行しないとリンクを作成できないので注意する。|"
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="https://squeuei.github.io/post/2022-08-26/stable-diffusion%E3%82%92%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%A7conda%E3%82%92%E4%BD%BF%E3%82%8F%E3%81%9A%E3%81%AB%E5%8B%95%E3%81%8B%E3%81%99/" />
@@ -128,52 +129,52 @@ if (!doNotTrack) {
 </ul>
 <h3 id="stable-diffusionのセットアップ">stable diffusionのセットアップ</h3>
 <p>ファイルを置きたい場所に移動してから以下のコマンドを実行する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">git clone git@github.com<span style="color:#960050;background-color:#1e0010">:</span>CompVis/stable-diffusion
-python -m venv ldm
-.\ldm\Scripts\activate
-pip install wheel
-pip install torch torchvision --extra-index-url https<span style="color:#960050;background-color:#1e0010">:</span>//download.pytorch.org/whl/cu116
-pip install numpy albumentations diffusers opencv-python pudb invisible-watermark imageio imageio-ffmpeg pytorch-lightning omegaconf test-tube streamlit einops torch-fidelity transformers torchmetrics kornia
-pip install -e git+https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/CompVis/taming-transformers.git@master<span style="color:#75715e">#egg=taming-transformers</span>
-pip install -e git+https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/openai/CLIP.git@main<span style="color:#75715e">#egg=clip</span>
-pip install -e ./stable-diffusion/
-mkdir -p ./stable-diffusion/models/ldm/stable-diffusion-v1
-</code></pre></div><p>torchはオプションなしでpipから入れるとCUDAなしのビルドがインストールされてしまうので注意。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>git clone git@github.com<span style="color:#960050;background-color:#1e0010">:</span>CompVis/stable-diffusion
+</span></span><span style="display:flex;"><span>python -m venv ldm
+</span></span><span style="display:flex;"><span>.\ldm\Scripts\activate
+</span></span><span style="display:flex;"><span>pip install wheel
+</span></span><span style="display:flex;"><span>pip install torch torchvision --extra-index-url https<span style="color:#960050;background-color:#1e0010">:</span>//download.pytorch.org/whl/cu116
+</span></span><span style="display:flex;"><span>pip install numpy albumentations diffusers opencv-python pudb invisible-watermark imageio imageio-ffmpeg pytorch-lightning omegaconf test-tube streamlit einops torch-fidelity transformers torchmetrics kornia
+</span></span><span style="display:flex;"><span>pip install -e git+https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/CompVis/taming-transformers.git@master<span style="color:#75715e">#egg=taming-transformers</span>
+</span></span><span style="display:flex;"><span>pip install -e git+https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/openai/CLIP.git@main<span style="color:#75715e">#egg=clip</span>
+</span></span><span style="display:flex;"><span>pip install -e ./stable-diffusion/
+</span></span><span style="display:flex;"><span>mkdir -p ./stable-diffusion/models/ldm/stable-diffusion-v1
+</span></span></code></pre></div><p>torchはオプションなしでpipから入れるとCUDAなしのビルドがインストールされてしまうので注意。</p>
 <h4 id="シンボリックリンクを作る">シンボリックリンクを作る</h4>
 <p>管理者権限で実行しないとリンクを作成できないので注意する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">cd ./stable-diffusion/models/ldm/stable-diffusion-v1/
-cmd /c <span style="color:#e6db74">&#34;mklink&#34;</span> .\model.ckpt ..\..\..\..\stable-diffusion-v-1-4-original\sd-v1-4.ckpt
-</code></pre></div><h3 id="8gbのvramで動かす">8GBのVRAMで動かす</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cd ./stable-diffusion/models/ldm/stable-diffusion-v1/
+</span></span><span style="display:flex;"><span>cmd /c <span style="color:#e6db74">&#34;mklink&#34;</span> .\model.ckpt ..\..\..\..\stable-diffusion-v-<span style="color:#ae81ff">1</span>-<span style="color:#ae81ff">4</span>-original\sd-v1-<span style="color:#ae81ff">4</span>.ckpt
+</span></span></code></pre></div><h3 id="8gbのvramで動かす">8GBのVRAMで動かす</h3>
 <p>節約のために涙ぐましい努力をします。</p>
 <h4 id="txt2imgpyを編集してモデル精度を下げる"><code>txt2img.py</code>を編集してモデル精度を下げる。</h4>
 <p>まずは以下の行を見つける。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    model <span style="color:#f92672">=</span> load_model_from_config(config, f<span style="color:#e6db74">&#34;{opt.ckpt}&#34;</span>)
-</code></pre></div><p>その次の行に以下を追加。インデント（行頭の空白数）を揃えないとエラーになるので注意（以下の変更でも同様）。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    model <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>to(torch<span style="color:#f92672">.</span>float16)
-</code></pre></div><h4 id="img2imgpyを編集してモデル精度を下げる"><code>img2img.py</code>を編集してモデル精度を下げる</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> load_model_from_config(config, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>opt<span style="color:#f92672">.</span>ckpt<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p>その次の行に以下を追加。インデント（行頭の空白数）を揃えないとエラーになるので注意（以下の変更でも同様）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>to(torch<span style="color:#f92672">.</span>float16)
+</span></span></code></pre></div><h4 id="img2imgpyを編集してモデル精度を下げる"><code>img2img.py</code>を編集してモデル精度を下げる</h4>
 <p><code>img2img.py</code>ではモデルだけでなく画像についてもfloat16に変換しないといけない。</p>
 <p>最初に画像から。</p>
 <p>まずは以下の行を見つける。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    image <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>from_numpy(image)
-</code></pre></div><p>上の行を以下のように書き換える。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    image <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>from_numpy(image)<span style="color:#f92672">.</span>to(torch<span style="color:#f92672">.</span>float16)
-</code></pre></div><p>続いてモデル。これは<code>txt2img.py</code>と同様。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    image <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>from_numpy(image)
+</span></span></code></pre></div><p>上の行を以下のように書き換える。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    image <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>from_numpy(image)<span style="color:#f92672">.</span>to(torch<span style="color:#f92672">.</span>float16)
+</span></span></code></pre></div><p>続いてモデル。これは<code>txt2img.py</code>と同様。</p>
 <p>まずは以下の行を見つける。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    model <span style="color:#f92672">=</span> load_model_from_config(config, f<span style="color:#e6db74">&#34;{opt.ckpt}&#34;</span>)
-</code></pre></div><p>その次の行に以下を追加。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    model <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>to(torch<span style="color:#f92672">.</span>float16)
-</code></pre></div><h3 id="画像出力を試す">画像出力を試す</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> load_model_from_config(config, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>opt<span style="color:#f92672">.</span>ckpt<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p>その次の行に以下を追加。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>to(torch<span style="color:#f92672">.</span>float16)
+</span></span></code></pre></div><h3 id="画像出力を試す">画像出力を試す</h3>
 <p><code>ldm</code>環境をactivateし、stable-diffusionのフォルダに<code>cd</code>した後で以下を実行する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">python scripts/txt2img.py --prompt <span style="color:#e6db74">&#34;a photograph of an astronaut riding a horse&#34;</span> --plms --n_samples 2
-</code></pre></div><p><code>txt2img.py</code>、<code>img2img.py</code>共に、<code>--n_samples 2</code>を追加しないとVRAM不足で動かない。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>python scripts/txt2img.py --prompt <span style="color:#e6db74">&#34;a photograph of an astronaut riding a horse&#34;</span> --plms --n_samples <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><p><code>txt2img.py</code>、<code>img2img.py</code>共に、<code>--n_samples 2</code>を追加しないとVRAM不足で動かない。</p>
 <p>加えて、<code>img2img.py</code>は512x512の画像を入力とする必要がある。</p>
 <h3 id="安全機構を外す">安全機構を外す</h3>
 <p><strong>注意：自分の足を撃たないように。</strong></p>
 <p>まずは以下の行を見つける。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    x_checked_image, has_nsfw_concept <span style="color:#f92672">=</span> safety_checker(images<span style="color:#f92672">=</span>x_image, clip_input<span style="color:#f92672">=</span>safety_checker_input<span style="color:#f92672">.</span>pixel_values)
-</code></pre></div><p>上の行を以下のように書き換える。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    x_checked_image, has_nsfw_concept <span style="color:#f92672">=</span> x_image, [False <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> enumerate(x_image)]
-</code></pre></div><h3 id="references">References</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    x_checked_image, has_nsfw_concept <span style="color:#f92672">=</span> safety_checker(images<span style="color:#f92672">=</span>x_image, clip_input<span style="color:#f92672">=</span>safety_checker_input<span style="color:#f92672">.</span>pixel_values)
+</span></span></code></pre></div><p>上の行を以下のように書き換える。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    x_checked_image, has_nsfw_concept <span style="color:#f92672">=</span> x_image, [<span style="color:#66d9ef">False</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> enumerate(x_image)]
+</span></span></code></pre></div><h3 id="references">References</h3>
 <ul>
 <li><a href="https://zenn.dev/koyoarai_/articles/02f3ed864c6127bb2049#comment-9b4cb61e8ff1d6">話題のStable Diffusionがオープンソース化されたのでローカルで動かしてみる</a></li>
 <li><a href="https://github.com/CompVis/stable-diffusion/issues/60#issuecomment-1223856992">img2img, · Issue #60 · CompVis/stable-diffusion</a></li>
