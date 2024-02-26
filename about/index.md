@@ -36,7 +36,7 @@ permalink:  /about/
 - Pawoo : [@sqi](https://pawoo.net/@sqi)
 - mastodon.cloud : [@squeuei](https://mastodon.cloud/@squeuei)
 
-### Quotes
+### Favorite Quotes
 
 > _“Keep it simple stupid.”_ - a design principle first noted by the U.S. Navy in 1960.
 
