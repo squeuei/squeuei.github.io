@@ -4,7 +4,7 @@ sakura-jekyll-version: 0.9.0
 title: Constellation # Change this to your site name.
 description:
 url: https://squeuei.github.io
-author: squeuei
+author: "squeuei"
     twitter: # twitter user name here
 
 date_format: "%FT%R%Z"
