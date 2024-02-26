@@ -1,10 +1,10 @@
 permalink: /blog/:title
 sakura-jekyll-version: 0.9.0
 # Information required for feed
-title: "Constellation" # Change this to your site name.
+title: Constellation # Change this to your site name.
 description:
-url: "https://squeuei.github.io"
-author: "squeuei"
+url: https://squeuei.github.io
+author: squeuei
     twitter: # twitter user name here
 
 date_format: "%FT%R%Z"
