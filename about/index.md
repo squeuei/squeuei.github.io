@@ -36,6 +36,16 @@ permalink:  /about/
 - Pawoo : [@sqi](https://pawoo.net/@sqi)
 - mastodon.cloud : [@squeuei](https://mastodon.cloud/@squeuei)
 
+### Quotes
+
+> _“Keep it simple stupid.”_ - a design principle first noted by the U.S. Navy in 1960.
+
+> _“It was not to be a racehorse but a Dienstpferd, a cavalry horse.”_ - Kurt Tank
+
+> _“Simple, few parts, easy to maintain, very strong.”_ - Chuck Yeager
+
+> _“Smaller, Fewer, Lighter, Shorter, Beauty.”_ -  the principle of manufacturing of Suzuki Motor Corp.
+
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/svg-icons.css">
 
 <footer class="profile-icon-wrapper">
