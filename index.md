@@ -3,7 +3,10 @@ title: Constellation
 author: squeuei
 ---
 
-- _Keep it simple stupid._
-- _It's not to be a race horse but a Dienstpferd, a cavelry horse._
-- _Simple, few parts, easy to maintain, very strong._
-- _Smaller, Fewer, Lighter, Shorter, Beauty._
+> _“Keep it simple stupid.”_ - A design principle first noted by the U.S. Navy in 1960.
+
+> _“It was not to be a racehorse but a Dienstpferd, a cavalry horse.”_ - Kurt Tank
+
+> _“Simple, few parts, easy to maintain, very strong.”_ - Chuck Yeager
+
+> _Smaller, Fewer, Lighter, Shorter, Beauty._ -  the principle of manufacturing of Suzuki Motor Corp.
