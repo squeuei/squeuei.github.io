@@ -3,7 +3,7 @@ sakura-jekyll-version: 0.9.0
 # Information required for feed
 title: Constellation # Change this to your site name.
 description:
-url: "https://squeuei.github.io"
+url: 
 author: squeuei
     twitter: # twitter user name here
 
