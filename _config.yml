@@ -7,7 +7,7 @@ url: 'https://squeuei.github.io'
 author:
     twitter: # twitter user name here
 
-date_format: "%FT%R%Z"
+date_format: "%FT%R%:z"
 timezone: Asia/Tokyo
 
 defaults:
