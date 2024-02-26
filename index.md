@@ -9,4 +9,4 @@ author: squeuei
 
 > _“Simple, few parts, easy to maintain, very strong.”_ - Chuck Yeager
 
-> _Smaller, Fewer, Lighter, Shorter, Beauty._ -  the principle of manufacturing of Suzuki Motor Corp.
+> _“Smaller, Fewer, Lighter, Shorter, Beauty.”_ -  the principle of manufacturing of Suzuki Motor Corp.
