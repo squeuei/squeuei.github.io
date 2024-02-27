@@ -19,6 +19,7 @@ defaults:
       layout: "post"
       author: "squeuei" # Set this to default author
 
+license: '<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer" >CC BY 4.0</a></p>'
 
 # Third-party services
 # just leave empty to disable it
