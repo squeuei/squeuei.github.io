@@ -10,7 +10,7 @@ layout: default
     {{ content }}
     <footer>
         <small><em>
-            <address>Posted by {{ post.author }} {% if site.license %}, licensed under {{site.license}}.{% endif %}</address>
+            <address>Posted by {{ post.author }}{% if site.license %}, licensed under {{site.license}}.{% endif %}</address>
             <time datetime="{{ post.date }}">{{ post.date | date: site.date_format }}</time>
         </em></small>
     </footer>
