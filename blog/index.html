@@ -28,11 +28,13 @@ title: "Blog All posts"
         </div>
     {% endif %}
 {% endfor %}
-
+{% if site.footer-links.rss %}
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/svg-icons.css">
 
 <footer class="profile-icon-wrapper">
     <nav class="profile-icons">
-        {% include svg-icons.html %}
-    </nav>
+<a href="{{ site.baseurl }}/feed.xml"><i class="svg-icon rss"></i></a>
+</nav>
 </footer>
+{% endif %}
+
