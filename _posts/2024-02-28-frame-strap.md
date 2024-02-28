@@ -15,11 +15,11 @@ date: 2024-02-28 20:00 +09:00
 
 ## バッグなし
 
-- [ロックバンド｜Granite Design｜Alternative Bicycles](https://www.alternative-bikes.com/item/item.php?page_no=&goods_code=A040&genre_code=&brand_code=&back_page=list%2Cphp)
+- [ロックバンド｜Granite Design｜Alternative Bicycles](https://www.alternative-bikes.com/item/item.php?page_no=&goods_code=A040)
 
     最もシンプルでしかも安い。応用も効きそう。これでいいのでは？
 
-- [Universal Tube Strap | 株式会社フタバ](https://e-ftb.co.jp/item/2898/)
+- [Universal Tube Strap \| 株式会社フタバ](https://e-ftb.co.jp/item/2898/)
 
     タイヤとタイヤレバーを運ぶことに特化したストイックな製品。
 
@@ -33,7 +33,7 @@ date: 2024-02-28 20:00 +09:00
 
     見た目はスタイリッシュでなかなかかっこいい。スキーストラップタイプのストラップがついてくるから固定力も高そう。でも磁石はいらない。外せるかな。
 
-- [GORIX[ゴリックス] サドルバッグ ロードバイク 防水 自転車 サドルロール (GURURIN) 軽量 | GORIX公式オンラインショップ](https://www.gottsuprice.jp/?pid=177211001)
+- [GORIX\[ゴリックス\] サドルバッグ ロードバイク 防水 自転車 サドルロール (GURURIN) 軽量 \| GORIX公式オンラインショップ](https://www.gottsuprice.jp/?pid=177211001)
 
     割と安くて、ロールした状態で固定するラバーバンドとストラップが独立して備わっているのが固定には便利そう。大柄な分、面ファスナーの固定力が足りるかの不安はある。
 
