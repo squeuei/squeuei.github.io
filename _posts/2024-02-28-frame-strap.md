@@ -27,11 +27,15 @@ date: 2024-02-28 20:00 +09:00
 
     むき出しで運ぶタイプの製品では一番システマティックな収納ができる。
 
+- [25666-001 - FOX RACING](https://foxracingjapan.com/25666-001/)
+
+    Muc-offのものに一番近いのはこれだろうか。
+
 ## バッグつき
 
 - [AnyTube Tool Wrap — OFFLAP Brand Site](https://www.offlap.com/anytube-tool-wrap-)
 
-    見た目はスタイリッシュでなかなかかっこいい。スキーストラップタイプのストラップがついてくるから固定力も高そう。でも磁石はいらない。外せるかな。
+    見た目はスタイリッシュでなかなかかっこいい。VOILE製スキーストラップタイプのストラップがついてくるから固定力も高そう。でも磁石はいらない。外せるかな。
 
 - [GORIX\[ゴリックス\] サドルバッグ ロードバイク 防水 自転車 サドルロール (GURURIN) 軽量 \| GORIX公式オンラインショップ](https://www.gottsuprice.jp/?pid=177211001)
 
@@ -41,4 +45,4 @@ date: 2024-02-28 20:00 +09:00
 
     しっかりした作りのようだが、その分高い。在庫がないので現物をみたことがない。
 
-CHROME INDUSTRIESやLEZYNE製品もあるけど、サドルの下にとりつかなさそうだ。
+[CHROME INDUSTRIES](https://www.chromeindustries.jp/products/doubletrack-saddle-roll)や[LEZYNE](https://catalog.diatechproducts.com/shop/g/g57-4902200002/)製品もあるけど、サドルの下にとりつかなさそうだ。
