@@ -12,6 +12,7 @@ hr {
   
   a:hover {
     color: #eb99a1;
+    border-bottom: 2px solid #d9d8dc;
   }
 
   blockquote {
