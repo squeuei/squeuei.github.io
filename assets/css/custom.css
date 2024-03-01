@@ -1,35 +1,35 @@
 hr {
-    color: #DA4453;
+    color: #D0879D;
   }
   
   a {
-    color: #DA4453;
+    color: #D0879D;
   }
   
   a:visited {
-    color: #e26f7a;
+    color: #7C515E;
   }
   
   a:hover {
-    color: #eb99a1;
+    color: #e2b7c4;
     border-bottom: 2px solid #d9d8dc;
   }
 
   blockquote {
-    border-left: 5px solid #DA4453;
+    border-left: 5px solid #D0879D;
   }
 
   input:focus, textarea:focus {
-    border: 1px solid #eb99a1;
+    border: 1px solid #e2b7c4;
   }
 
   .button, button, input[type=submit], input[type=reset], input[type=button], input[type=file]::file-selector-button {
-    background-color: #DA4453;;
-    border: 1px solid #DA4453;;
+    background-color: #D0879D;;
+    border: 1px solid #D0879D;;
   }
 
   .button:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, input[type=file]::file-selector-button:hover {
-    background-color: #eb99a1;
+    background-color: #e2b7c4;
   }
 
 .profile-icon-wrapper {
