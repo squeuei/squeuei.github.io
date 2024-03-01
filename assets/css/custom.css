@@ -1,9 +1,9 @@
 hr {
-    border-color: #eb99a1;
+    color: #DA4453;
   }
   
   a {
-    color: #eb99a1;
+    color: #DA4453;
   }
   
   a:visited {
@@ -11,17 +11,24 @@ hr {
   }
   
   a:hover {
-    color: #DA4453;
-    border-bottom: 2px solid #d9d8dc;
+    color: #eb99a1;
   }
 
-  .button, button, input[type=submit], input[type=reset], input[type=button], input[type=file]::file-selector-button {
-    background-color: #eb99a1;
+  blockquote {
+    border-left: 5px solid #DA4453;
+  }
+
+  input:focus, textarea:focus {
     border: 1px solid #eb99a1;
   }
 
+  .button, button, input[type=submit], input[type=reset], input[type=button], input[type=file]::file-selector-button {
+    background-color: #DA4453;;
+    border: 1px solid #DA4453;;
+  }
+
   .button:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, input[type=file]::file-selector-button:hover {
-    background-color: #DA4453;
+    background-color: #eb99a1;
   }
 
 .profile-icon-wrapper {
