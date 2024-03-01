@@ -1,37 +1,3 @@
-hr {
-    color: #D0879D;
-  }
-  
-  a {
-    color: #D0879D;
-  }
-  
-  a:visited {
-    color: #7C515E;
-  }
-  
-  a:hover {
-    color: #e2b7c4;
-    border-bottom: 2px solid #d9d8dc;
-  }
-
-  blockquote {
-    border-left: 5px solid #D0879D;
-  }
-
-  input:focus, textarea:focus {
-    border: 1px solid #e2b7c4;
-  }
-
-  .button, button, input[type=submit], input[type=reset], input[type=button], input[type=file]::file-selector-button {
-    background-color: #D0879D;;
-    border: 1px solid #D0879D;;
-  }
-
-  .button:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, input[type=file]::file-selector-button:hover {
-    background-color: #e2b7c4;
-  }
-
 .profile-icon-wrapper {
     margin-top: 1em;
     padding: 1em;
