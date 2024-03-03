@@ -13,6 +13,6 @@ date: 2024-03-03 21:00 +09:00
 
 [単体ではまっすぐ動かすことさえ難しい不安定な機体を計算機で補正して制御することは不自然なのか？](https://ja.wikipedia.org/wiki/%E9%81%8B%E5%8B%95%E8%83%BD%E5%8A%9B%E5%90%91%E4%B8%8A%E6%A9%9F)　手振れ補正を用いて描かれた線はズルい？　言語モデルによって修正された文は自分で書いているとは言えない？　[何にしあわせを感じるのかの基準はどこにおくべきなのか？](https://www.hayakawa-onlineco.jp/product/books/11451.html)
 
-[雪風](https://www.hayakawa-online.co.jp/shopdetail/000000002637/author_KAgyo_KA_1018/page1/order/)は何も答えてくれない。
+[雪風](https://www.hayakawa-online.co.jp/shopdetail/000000002637/)は何も答えてくれない。
 
 （でも[最近](https://www.hayakawa-online.co.jp/shopdetail/000000015108/)は割と言語で答えてくれるよね）
