@@ -1,13 +1,13 @@
 ---
 layout: default
+title: Archive
 ---
 
-<h1>Archive of posts with {{ page.type }} '{{ page.title }}'</h1>
-<ul class="posts">
+<h2>Archive of posts with {{ page.type }} '{{ page.title }}'</h2>
+<ul>
   {% for post in page.posts %}
-    <li>
-      <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </li>
+  <li style="padding-bottom:7px;">
+    <a class="no-border" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} </a><small><em><span class="sakura-blossom inline-block"> {{ post.date | date: '%F' }}</span></em></small>
+</li>
   {% endfor %}
 </ul>
