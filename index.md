@@ -1,3 +1,4 @@
 ---
-title: "Index"
+layout: page
+title: "Constellation"
 ---
