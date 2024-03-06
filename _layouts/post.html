@@ -9,16 +9,25 @@ layout: default
     </header>
     {{ content }}
     <footer>
-        {% if page.tags.size > 0 %}
-        <nav>
-            tags:
-            {% for tag in page.tags %}
-                {% assign slugified_tag = tag | slugify %}
-                <a href="{{ site.url}}/tag/{{ slugified_tag }}">#{{ slugified_tag }} </a>
-            {% endfor %}
-        </nav>
-        {% endif %}
         <small><em>
+            {% if page.categories.size > 0 %}
+            <nav>
+                category:
+                {% for category in page.categories %}
+                    {% assign slugified_category = category | slugify %}
+                    <a href="{{ site.url}}/category/{{ slugified_category }}">{{ slugified_category }} </a>
+                {% endfor %}
+            </nav>
+            {% endif %}
+            {% if page.tags.size > 0 %}
+            <nav>
+                tag:
+                {% for tag in page.tags %}
+                    {% assign slugified_tag = tag | slugify %}
+                    <a href="{{ site.url}}/tag/{{ slugified_tag }}">#{{ slugified_tag }} </a>
+                {% endfor %}
+            </nav>
+            {% endif %}
             <address>Posted by {{ post.author }}{% if site.license %}, licensed under {{site.license}} except where otherwise noted.{% endif %}</address>
             <time datetime="{{ post.date }}">{{ post.date | date: site.date_format }}</time>
         </em></small>

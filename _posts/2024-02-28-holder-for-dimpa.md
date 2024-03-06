@@ -3,6 +3,8 @@ title: "DIMPAを自転車のフレームに固定する"
 date: 2024-02-28 21:00 +09:00
 tags: 
     - bicycle
+categories:
+    - tips
 ---
 
 [IKEAのDIMPA](https://www.ikea.com/jp/ja/p/dimpa-storage-bag-transparent-90187753/)という収納バッグは、BromptonやDahon K3など、小型折りたたみ自転車の輪行袋として使えることが知られている。専用の輪行袋と比較して、極めて廉価に調達できるため人気だ。
