@@ -29,7 +29,7 @@ layout: default
             </nav>
             {% endif %}
             <address>Posted by {{ post.author }}{% if site.license %}, licensed under {{site.license}} except where otherwise noted.{% endif %}</address>
-            <time datetime="{{ post.date }}">{{ post.date | date: site.date_format }}</time>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.date_format }}</time>
         </em></small>
     </footer>
     {% include comments.html %}
