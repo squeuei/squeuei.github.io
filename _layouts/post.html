@@ -9,6 +9,15 @@ layout: default
     </header>
     {{ content }}
     <footer>
+        {% if page.tags.size > 0 %}
+        <nav>
+            tags:
+            {% for tag in page.tags %}
+                {% assign slugified_tag = tag | slugify %}
+                <a href="{{ site.url}}/tag/{{ slugified_tag }}">#{{ slugified_tag }} </a>
+            {% endfor %}
+        </nav>
+        {% endif %}
         <small><em>
             <address>Posted by {{ post.author }}{% if site.license %}, licensed under {{site.license}} except where otherwise noted.{% endif %}</address>
             <time datetime="{{ post.date }}">{{ post.date | date: site.date_format }}</time>
