@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<h2>tags</h2>
+<ul>
+  {% for tag in site.tags %}
+  <li style="padding-bottom:7px;">
+    <a class="no-border" href="{{ baseurl }}/tag/{{ tag }}" title="{{ tag }}">{{ tag }} </a>
+</li>
+  {% endfor %}
+</ul>
