@@ -5,7 +5,7 @@ layout: default
 <ul>
   {% for tag_iter in site.tags %}
   <li style="padding-bottom:7px;">
-    <a class="no-border" href="{{ url }}/tag/{{ tag_iter }}" title="{{ tag_iter }}">{{ tag_iter }} </a>
+    <a class="no-border" href="{{ url }}/tag/{{ tag_iter[0] }}" title="{{ tag_iter[0] }}">{{ tag_iter[0] }} </a>
 </li>
   {% endfor %}
 </ul>
