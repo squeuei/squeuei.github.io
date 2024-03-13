@@ -17,6 +17,7 @@ date: 2024-03-07 20:00 +09:00
         - `_config.yml`に項目を追加
         - Github Actionsのworkflowを[github公式のjekyllを実行するもの](https://github.com/squeuei/squeuei.github.io/blob/main/.github/workflows/jekyll.yml)へ変更
     - `archive.html`を作成
+    - `/tag/index.html`、`/category/index.html`を作成
 - 日付をISO8601形式で表示するように変更
 
 シンプルな構成が特徴のテーマでなぜわざわざカスタムしてまでアーカイブ機能を追加したのか。読んだ作品の感想を書くなら、タグで一覧出来るほうが望ましいだろうと思ったからだ。実現できてしまったので、書くか……。
