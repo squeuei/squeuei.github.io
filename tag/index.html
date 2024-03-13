@@ -3,9 +3,9 @@ layout: default
 ---
 <h2>tags</h2>
 <ul>
-  {% for tag in site.tags %}
+  {% for tag_iter in site.tags %}
   <li style="padding-bottom:7px;">
-    <a class="no-border" href="{{ url }}/tag/{{ tag }}" title="{{ tag }}">{{ tag }} </a>
+    <a class="no-border" href="{{ url }}/tag/{{ tag_iter }}" title="{{ tag_iter }}">{{ tag_iter }} </a>
 </li>
   {% endfor %}
 </ul>
