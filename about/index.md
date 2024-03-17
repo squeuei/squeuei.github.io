@@ -4,27 +4,27 @@ title:  about
 permalink:  /about/
 ---
 
-- github : [squeuei](https://github.com/squeuei)
-- gist : [squeuei](https://gist.github.com/squeuei)
-- Twitter : [@squeuei](https://twitter.com/squeuei)
-- Fedibird : [@squeuei](https://fedibird.com/@squeuei)
-- Bluesky : [@squeuei](https://bsky.app/profile/squeuei.bsky.social)
-- Threads : [@squeuei](https://www.threads.net/@squeuei)
+- [github](https://github.com/squeuei)
+- [gist](https://gist.github.com/squeuei)
+- [Twitter](https://twitter.com/squeuei)
+- [Fedibird](https://fedibird.com/@squeuei)
+- [Bluesky](https://bsky.app/profile/squeuei.bsky.social)
+- [Threads](https://www.threads.net/@squeuei)
 - Discord : squeuei
-- Misskey.io : [@squeuei](https://misskey.io/@squeuei)
-- handon.club : [@squeuei](https://handon.club/@squeuei)
-- mikutter : [@squeuei](https://social.mikutter.hachune.net/@squeuei)
-- flickr : [squeuei](http://flickr.com/photos/squeuei/)
-- Instagram : [squeuei](https://www.instagram.com/squeuei/)
-- hatena : [squeuei](https://profile.hatena.ne.jp/squeuei/)
-- kakuyomu : [@squeuei](https://kakuyomu.jp/users/squeuei)
-- 小説家になろう : [sq](https://mypage.syosetu.com/870370/)
+- [Misskey.io](https://misskey.io/@squeuei)
+- [handon.club](https://handon.club/@squeuei)
+- [mikutter](https://social.mikutter.hachune.net/@squeuei)
+- [flickr](http://flickr.com/photos/squeuei/)
+- [Instagram](https://www.instagram.com/squeuei/)
+- [hatena](https://profile.hatena.ne.jp/squeuei/)
+- [kakuyomu](https://kakuyomu.jp/users/squeuei)
+- [小説家になろう](https://mypage.syosetu.com/870370/)
 
 ### Fediverse Servers(Deactivated)
 
-- Mstdn.jp : [@sqi](https://mstdn.jp/@sqi)
-- Pawoo : [@sqi](https://pawoo.net/@sqi)
-- mastodon.cloud : [@squeuei](https://mastodon.cloud/@squeuei)
+- [Mstdn.jp](https://mstdn.jp/@sqi)
+- [Pawoo](https://pawoo.net/@sqi)
+- [mastodon.cloud](https://mastodon.cloud/@squeuei)
 
 ### Favorite Quotes
 
