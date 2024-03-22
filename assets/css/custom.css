@@ -1,28 +1,14 @@
 a{
-    text-decoration: underline dotted #A52A2A;
-    color: #A52A2A;
+    text-decoration: underline dotted 1px;
 }
 a:hover{
-    text-decoration: underline dotted #B85C2A
-    color: #B85C2A;
+    text-decoration: underline dotted 1px;
+
 }
 a:visited{
-    text-decoration: underline dotted #6B3E26;
-    color: #6B3E26;
+    text-decoration: underline dotted 1px;
 }
-blockquote {
-    border-left-color: #A52A2A;
-}
-hr {
-    color:#A52A2A;
-}
-.button, button, input[type=submit], input[type=reset], input[type=button], input[type=file]::file-selector-button {
-    background-color:#A52A2A; 
-    border-color: #6B3E26;
-}
-.button:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, input[type=file]::file-selector-button:hover {
-    background-color: #B85C2A;
-}
+
 
 li ul {
     margin-top: 0.4em;
