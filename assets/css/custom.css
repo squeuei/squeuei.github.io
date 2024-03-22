@@ -1,10 +1,13 @@
 a{
+    text-decoration: underline dotted #A52A2A;
     color: #A52A2A;
 }
 a:hover{
+    text-decoration: underline dotted #B85C2A
     color: #B85C2A;
 }
 a:visited{
+    text-decoration: underline dotted #6B3E26;
     color: #6B3E26;
 }
 blockquote {

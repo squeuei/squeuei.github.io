@@ -40,10 +40,10 @@ layout: default
 <aside>
     <nav class="chrono">
         {% if page.next.url %}
-        <a class="go-left sakura-blossom no-border" href="{{page.next.url}}">&laquo; {{page.next.title}} </a>
+        <a class="go-left no-border" href="{{page.next.url}}">&laquo; {{page.next.title}} </a>
         {% endif %}
         {% if page.previous.url %}
-        <a class="go-right sakura-fade no-border" href="{{page.previous.url}}">{{page.previous.title}} &raquo;</a>
+        <a class="go-right no-border" href="{{page.previous.url}}">{{page.previous.title}} &raquo;</a>
         {% endif %}
     </nav>
     <div style="clear: both;"></div>

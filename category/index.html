@@ -5,7 +5,7 @@ layout: default
 <ul>
   {% for cat_iter in site.categories %}
   <li style="padding-bottom:7px;">
-    <a class="no-border" href="{{ url }}/category/{{ cat_iter[0] }}" title="{{ cat_iter[0] }}">{{ cat_iter[0] }} </a>
+    <a href="{{ url }}/category/{{ cat_iter[0] }}" title="{{ cat_iter[0] }}">{{ cat_iter[0] }} </a>
 </li>
   {% endfor %}
 </ul>
