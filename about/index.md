@@ -36,7 +36,7 @@ permalink:  /about/
 
 > _“Smaller, Fewer, Lighter, Shorter, Beauty.”_ -  a motto of Suzuki Motors Corp.
 
-> _“Efficiency Wins.” - the slogan of NEXPERIA B.V.
+> _“Efficiency Wins.”_ - the slogan of NEXPERIA B.V.
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/svg-icons.css">
 
