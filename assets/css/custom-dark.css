@@ -2,6 +2,10 @@ li ul {
     margin-bottom: 0;
 }
 
+li ol {
+    margin-bottom: 0;
+}
+
 .profile-icon-wrapper {
     margin-top: 1em;
     padding: 1em;
