@@ -1,3 +1,7 @@
+a{
+    text-decoration: underline dotted 1px;
+}
+
 li ul {
     margin-top: 0.4em;
     margin-bottom: 0;

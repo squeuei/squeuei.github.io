@@ -1,14 +1,6 @@
 a{
     text-decoration: underline dotted 1px;
 }
-a:hover{
-    text-decoration: underline dotted 1px;
-
-}
-a:visited{
-    text-decoration: underline dotted 1px;
-}
-
 
 li ul {
     margin-top: 0.4em;
