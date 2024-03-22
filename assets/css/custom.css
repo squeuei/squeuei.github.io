@@ -24,7 +24,7 @@ a{
 }
 a:hover{
     border-bottom: none;
-    text-decoration: underline solid 1px;
+    text-decoration: underline solid 2px;
 }
 
 li ul {
