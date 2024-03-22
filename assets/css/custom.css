@@ -4,7 +4,7 @@ a{
 a:hover{
     color: #B85C2A;
 }
-a{
+a:visited{
     color: #A52A2A;
 }
 li ul {
