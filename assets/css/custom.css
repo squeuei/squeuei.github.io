@@ -1,3 +1,13 @@
+a{
+    color: #FFA500;
+}
+a:hover{
+    color: #954535;
+}
+a:visited{
+    color: #E67E22
+}
+
 li ul {
     margin-top: 0.4em;
     margin-bottom: 0;
