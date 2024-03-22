@@ -1,6 +1,10 @@
 a{
     text-decoration: underline dotted 1px;
 }
+a:hover{
+    border-bottom: none;
+    text-decoration: underline solid 2px;
+}
 
 li ul {
     margin-top: 0.4em;
