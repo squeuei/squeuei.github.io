@@ -34,7 +34,9 @@ permalink:  /about/
 
 > _“Simple, few parts, easy to maintain, very strong.”_ - Chuck Yeager
 
-> _“Smaller, Fewer, Lighter, Shorter, Beauty.”_ -  a motto for the Suzuki Motors Corp.
+> _“Smaller, Fewer, Lighter, Shorter, Beauty.”_ -  a motto of Suzuki Motors Corp.
+
+> _“Efficiency Wins.” - the slogan of NEXPERIA B.V.
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/svg-icons.css">
 
