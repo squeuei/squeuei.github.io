@@ -33,6 +33,10 @@ li ol {
 /*Helper classes*/
 /*============================*/
 
+a.no-decoration{
+    text-decoration: none;    
+}
+
 .left-margin{
     margin-left: 0.5em;
 }
