@@ -2,9 +2,11 @@ a{
     color: #A52A2A;
 }
 a:hover{
-    color: #BA3B3B;
+    color: #B85C2A;
 }
-
+a{
+    color: #A52A2A;
+}
 li ul {
     margin-top: 0.4em;
     margin-bottom: 0;

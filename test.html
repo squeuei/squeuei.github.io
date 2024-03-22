@@ -4,31 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML5 Test Page</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link id="sakura-css" rel="stylesheet" href="css/sakura.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura-earthly.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css"  media="screen"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura-dark.css" media="screen and (prefers-color-scheme: dark)" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom-dark.css"  media="screen and (prefers-color-scheme: dark)" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
   </head>
-  <style>
-    #toggle {
-      color: white;
-      background-color: black;
-      font-size: 18px;
-      position: fixed;
-      left: 0px;
-      top: 0px;
-    }
-    #top {
-      padding-top: 40px;
-    }
-    #toggleButton {
-      align: right;
-    }
-  </style>
   <body>
-    <div id="toggle">
-      <span><button id="toggleButton" onclick="toggleSakura();">Toggle</button> Toggle sakura.css on/off</span><br>
-      <span id="switch"><button id="switchThemeButton" onclick="switchSakuraTheme();">Switch</button>Current theme: <span id="currentTheme">sakura (default)</span></span>
-    </div>
-    <div id="top" class="page" role="document">
+  <div id="top" class="page" role="document">
       <header role="banner">
         <h1>HTML5 Test Page</h1>
         <p>
