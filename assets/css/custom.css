@@ -1,11 +1,8 @@
 a{
-    color: #FFA500;
+    color: #5684d7;
 }
 a:hover{
-    color: #954535;
-}
-a:visited{
-    color: #E67E22
+    color: #3067cb;
 }
 
 li ul {
