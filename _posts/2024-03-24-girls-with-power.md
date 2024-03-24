@@ -18,8 +18,8 @@ date: 2024-03-24 20:00 +09:00
 どれも面白いです。
 
 - [聖女の魔力は万能です｜カドコミ (コミックウォーカー)](https://comic-walker.com/detail/KC_001223_S?episodeType=first)
-- [虫かぶり姫|ゼロサムオンライン](https://zerosumonline.com/detail/musikaburihime)
-- [二度と家には帰りません！ - 遊喜じろう/みりぐらむ/ゆき哉 | コミックガルド](https://comic-gardo.com/episode/3269754496561197697)
-- [凶乱令嬢ニア・リストン 病弱令嬢に転生した神殺しの武人の華麗なる無双録 ｜ マンガUP！ | SQUARE ENIX](https://magazine.jp.square-enix.com/mangaup/original/kyouranreijoh/)
-- [最後にひとつだけお願いしてもよろしいでしょうか | 公式Web漫画 | アルファポリス](https://www.alphapolis.co.jp/manga/official/665000279)
+- [虫かぶり姫\|ゼロサムオンライン](https://zerosumonline.com/detail/musikaburihime)
+- [二度と家には帰りません！ - 遊喜じろう/みりぐらむ/ゆき哉 \| コミックガルド](https://comic-gardo.com/episode/3269754496561197697)
+- [凶乱令嬢ニア・リストン 病弱令嬢に転生した神殺しの武人の華麗なる無双録 ｜ マンガUP！ \| SQUARE ENIX](https://magazine.jp.square-enix.com/mangaup/original/kyouranreijoh/)
+- [最後にひとつだけお願いしてもよろしいでしょうか \| 公式Web漫画 \| アルファポリス](https://www.alphapolis.co.jp/manga/official/665000279)
 - [悪役令嬢レベル99～私は裏ボスですが魔王ではありません～｜カドコミ (コミックウォーカー)](https://comic-walker.com/detail/KC_003695_S?episodeType=first)
