@@ -2,9 +2,9 @@
 title: "モビリティを通して分析する自分自身"
 date: 2024-03-22 22:00 +09:00
 tags:
-    - motorcycle
-    - car
-    - bicycle
+    - motorcycles
+    - cars
+    - bicycles
 ---
 
 私はモビリティを購入するにあたり、どんなものを選んできたかについて振り返った。
