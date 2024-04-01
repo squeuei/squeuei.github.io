@@ -21,7 +21,8 @@ layout: default
             </nav>
             {% endif %}
             <address>
-                <small><em>Posted by {{ post.author }}{% if site.license %}, licensed under {{site.license}} except where otherwise noted.{% endif %}</em></small></address>
+                <small><em>Posted by {{ post.author }}{% if site.license %}, licensed under {{site.license}} except where otherwise noted.{% endif %}</em></small>
+            </address>
             <time datetime="{{ post.date | date_to_xmlschema }}">        <small><em>{{ post.date | date: site.date_format }}</em></small></time>
     </footer>
     {% include comments.html %}
