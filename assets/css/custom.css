@@ -17,7 +17,7 @@ li ol {
 }
 
 p{
-    word-break: keep-all;
+    word-break: break-word;
     line-break: strict;
     word-wrap: break-word;
     overflow-wrap: break-word;
