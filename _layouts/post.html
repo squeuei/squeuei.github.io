@@ -15,8 +15,7 @@ layout: default
                 category:
                 {% for category in page.categories %}
                     {% assign slugified_category = category | slugify %}
-                    <a href="{{ site.url}}/category/{{ slugified_category }}">{{ slugified_category }}</a>
-                    {% if forloop.last %}{% else %}, {% endif %}
+                    <a href="{{ site.url}}/category/{{ slugified_category }}">{{ slugified_category }}</a>{% if forloop.last %}{% else %}, {% endif %}
                 {% endfor %}
                 </em></small>
             </nav>
@@ -26,9 +25,7 @@ layout: default
                 <small><em>
                 tag:
                 {% for tag in page.tags %}
-                    {% assign slugified_tag = tag | slugify %}
-                    <a href="{{ site.url}}/tag/{{ slugified_tag }}">#{{ slugified_tag }}</a>
-                    {% if forloop.last %}{% else %}, {% endif %}
+                    {% assign slugified_tag = tag | slugify %}<a href="{{ site.url}}/tag/{{ slugified_tag }}">#{{ slugified_tag }}</a>{% if forloop.last %}{% else %}, {% endif %}
                 {% endfor %}
                 </em></small>
             </nav>
