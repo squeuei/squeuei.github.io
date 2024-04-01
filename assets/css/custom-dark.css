@@ -1,3 +1,28 @@
+a{
+    text-decoration: underline dotted 1px;
+}
+a:hover{
+    border-bottom: none;
+    text-decoration: underline solid 2px;
+}
+
+li ul {
+    margin-top: 0.4em;
+    margin-bottom: 0;
+}
+
+li ol {
+    margin-top: 0.4em;
+    margin-bottom: 0;
+}
+
+p{
+    word-break: keep-all;
+    line-break: strict;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 .profile-icon-wrapper {
     margin-top: 1em;
     padding: 1em;
@@ -19,23 +44,6 @@
 /*Helper classes*/
 /*============================*/
 
-a{
-    text-decoration: underline dotted 1px;
-}
-a:hover{
-    border-bottom: none;
-    text-decoration: underline solid 2px;
-}
-
-li ul {
-    margin-top: 0.4em;
-    margin-bottom: 0;
-}
-
-li ol {
-    margin-top: 0.4em;
-    margin-bottom: 0;
-}
 
 .left-margin{
     margin-left: 0.5em;
