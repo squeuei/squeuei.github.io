@@ -3,6 +3,8 @@ title: "Cycling is a Sport"
 date: 2024-02-27 20:00 +09:00
 tags:  
     - bicycles
+redirect_from:
+    - /blog/cycling-is-a-sport
 ---
 
 自分で乗り比べてみて初めてわかったことがある。公道を走る存在として、スポーツサイクルと自動車は、乗り手の精神において全く異なるものだ。

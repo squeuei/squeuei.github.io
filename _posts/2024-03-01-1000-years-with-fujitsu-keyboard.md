@@ -4,6 +4,8 @@ date: 2024-03-01 00:00 +09:00
 tags:
     - keyboards
     - tips
+redirect_from:
+    - /blog/1000-years-with-fujitsu-keyboard
 ---
 
 少数派だとはわかっているが、私はメンブレンキーボードが好きだ。次点でパンタグラフキーボード。かつて所有していたREALFORCEは手放してしまったし、メカニカルキーボードは持ったことがない。

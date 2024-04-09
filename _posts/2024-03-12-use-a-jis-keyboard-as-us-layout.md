@@ -4,6 +4,8 @@ date: 2024-03-12 21:30 +09:00
 tags:
     - keyboards
     - tips
+redirect_from:
+    - /blog/use-a-jis-keyboard-as-a-us-layout
 ---
 
 かつての私は、ラップトップはUS配列キーボードのものが一番良いと考えていた。一方、日本で販売されているノートPCの大多数はJISキーボードであり、自分好みの選択肢が少ないことを嘆いていた。しかしながら、最近になって考えを改めた。きっかけはMacbook Airを購入したことだ。

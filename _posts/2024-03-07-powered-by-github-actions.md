@@ -3,6 +3,8 @@ title: "Github Pages / Github Actions / Jekyllでブログを作る"
 date: 2024-03-07 20:00 +09:00
 tags:
     - tips
+redirect_from:
+    - /blog/powered-by-github-actions
 ---
 
 このブログはJekyllで静的にページを生成し、Github Pagesへ公開するようにGithub Actionsを設定している。`.md`ファイルをアップロードするだけで、ブログが更新される。かつて私は`pelican`や`hugo`をローカルで実行してサイトを公開していたが、今のほうが断然楽だ。ローカルに`ruby`環境がなくても問題がない。

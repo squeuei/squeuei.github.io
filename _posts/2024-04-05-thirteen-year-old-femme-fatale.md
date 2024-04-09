@@ -4,6 +4,8 @@ date:  2024-04-05 00:30 +09:00
 tags:
     - comics
     - reviews
+redirect_from:
+    - /blog/thirteen-year-old-femme-fatale
 ---
 
 こんな気持ち悪いことを考えて犯罪にならないのか、失礼に値しないのかと、びくびくしながらこれを書いている。この記事は[“恋文と13歳の<ruby>女優<rp>(</rp><rt>アクトレス</rt><rp>)</rp></ruby>”](https://comic-fuz.com/manga/3149)に関するものだ。

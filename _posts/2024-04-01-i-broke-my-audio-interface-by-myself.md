@@ -1,6 +1,8 @@
 ---
 title: "「私はまがりなりにも動いていたオーディオインタフェース」を壊しましたの札を首から下げる"
 date: 2024-04-01 22:30 +09:00
+redirect_from:
+    - /blog/i-broke-my-audio-interface-by-myself
 ---
 
 実質的に今は亡き[nuForceのICON-uDAC3](https://www.fuhlen.jp/nuforce/desktop/products/icon_udac3.html)を新品購入して以来長きにわたり愛用してきた。Macbookとの相性が悪くまともに動作しないという問題はあったものの、使い勝手が良く重宝してきた。しかしながら、その一方でUSB micro B端子の接触不良に長く悩まされてきたこともまた事実である。そこで、コネクタを自分で交換しようと考えたのだった。それが惨事の引き金になるとも知らず——。

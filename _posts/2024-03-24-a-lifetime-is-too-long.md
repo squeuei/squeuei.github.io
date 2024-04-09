@@ -3,6 +3,8 @@ title: "「一生モノ」というコトバ"
 date: 2024-03-24 00:00 +09:00
 tags:
     - watches
+redirect_from:
+    - /blog/a-lifetime-is-too-long
 ---
 
 私は、高級ブランドを扱う記事でよく目にする _「一生モノ」_ という表現を好ましいものだとは思わない。

@@ -4,6 +4,8 @@ date: 2024-04-01 23:30 +09:00
 tags:
     - reviews
     - comics
+redirect_from:
+    - /blog/behind-the-mask
 ---
 
 [身に覚えのない理由で婚約破棄されましたけれど、仮面の下が醜いだなんて、一体誰が言ったのかしら？ 1／小鳩 ねねこ／猫側 縁 \| 集英社　―　SHUEISHA　―](https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-855220-0)
