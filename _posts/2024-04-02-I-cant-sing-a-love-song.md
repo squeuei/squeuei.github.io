@@ -5,6 +5,7 @@ tags:
     - comics
 redirect_from:
     - /blog/i-cant-sing-a-love-song
+    - /blog/I-cant-sing-a-love-song
 ---
 
 少女漫画（？）を読んでいて特徴的な語彙だと感じるフレーズや概念がいくつかある。たとえば国母。たとえば溺愛。たとえば番、あるいは運命の相手。

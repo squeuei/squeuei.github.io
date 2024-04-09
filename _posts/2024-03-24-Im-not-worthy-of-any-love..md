@@ -3,6 +3,7 @@ title: "恋愛作品を読むのがしんどい"
 date: 2024-03-24 22:00 +09:00
 redirect_from:
     - /blog/im-not-worthy-of-any-love
+    - /blog/Im-not-worthy-of-any-love
 ---
 
 > _死ぬまでピュアピュアやってんのん？_ - [“Rabbit hole feat. Miku Hatsune” by DECO*27](https://www.youtube.com/watch?v=eSW2LVbPThw&vl=ja)

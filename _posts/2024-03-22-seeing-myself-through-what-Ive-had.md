@@ -7,6 +7,7 @@ tags:
     - bicycles
 redirect_from:
     - /blog/seeing-myself-through-what-ive-had
+    - /blog/seeing-myself-through-what-Ive-had
 ---
 
 私はモビリティを購入するにあたり、どんなものを選んできたかについて振り返った。
