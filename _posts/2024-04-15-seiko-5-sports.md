@@ -5,7 +5,7 @@ tags:
     - watches
 ---
 
-[5スポーツ | セイコーウオッチ](https://www.seikowatches.com/jp-ja/products/5sports)
+[5スポーツ \| セイコーウオッチ](https://www.seikowatches.com/jp-ja/products/5sports)
 
 [セイコーファイブ](https://ja.wikipedia.org/wiki/%E3%82%BB%E3%82%A4%E3%82%B3%E3%83%BC%E3%83%95%E3%82%A1%E3%82%A4%E3%83%96)は50年以上続く機械式腕時計のブランドで、昨今の世界情勢から値上がりしてはいるものの、依然として廉価な自動巻きとして親しまれている。そして、5スポーツはその上位グレードだ。
 
