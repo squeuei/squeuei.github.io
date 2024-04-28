@@ -14,10 +14,12 @@ date: 2024-04-29 07:30 +09:00
 
 得られる出力はこのようなものだ。
 
-![ChatGPTによるブログのレビュー1]({{ site.baseurl }}/assets/images/2024-04-29-review-1.png)
+![ChatGPTによるブログのレビュー]({{ site.baseurl }}/assets/images/2024-04-29-review-1.png)
 
-![ChatGPTによるブログのレビュー2]({{ site.baseurl }}/assets/images/2024-04-29-review-2.png)
+他にこんなこともできる。
 
-![ChatGPTによるブログのレビュー3]({{ site.baseurl }}/assets/images/2024-04-29-review-3.png)
+![ChatGPTによるブログのAmazon風レビュー1]({{ site.baseurl }}/assets/images/2024-04-29-review-2.png)
+
+![ChatGPTによるブログのAmazon風レビュー2]({{ site.baseurl }}/assets/images/2024-04-29-review-3.png)
 
 極めて妥当ではないか。基本的にChatGPTは全肯定botになりがちなので、そこにどう対処するかが使いこなしのポイントであると認識している。
