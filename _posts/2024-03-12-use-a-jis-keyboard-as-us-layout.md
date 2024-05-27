@@ -16,7 +16,7 @@ Apple製品は[公式の整備済製品](https://www.apple.com/jp/shop/refurbish
 
 - “CAPS LOCK” -> “Fn”
 - “International 1”（“ろ”・“_”） -> “CAPS LOCK”
-- “International 3”（“”） -> “`”・“~”
+- “International 3”（“￥”） -> “`”・“~”
 
 同じことが他のOSでもできないかと思って調べた結果が以下のリンクだ。
 
