@@ -34,9 +34,11 @@ permalink:  /about/
 
 > _“Simple, few parts, easy to maintain, very strong.”_ - Chuck Yeager
 
-> _“Smaller, Fewer, Lighter, Shorter, Beauty.”_ -  a motto of Suzuki Motors Corp.
+> _“小･少･軽･短･美 (Smaller, Fewer, Lighter, Shorter, Beauty.)”_ -  [a motto of Suzuki Motors Corp.](https://www.globalsuzuki.com/corporate/message/philosophy/index.html)
 
-> _“Efficiency Wins.”_ - the slogan of NEXPERIA B.V.
+> _“Efficiency Wins.”_ - [the slogan of NEXPERIA B.V.](https://efficiencywins.nexperia.com/)
+
+> _“生き汚く生きて何かを創ったら あなたの気持ちが1000年生きられるかもしれないから”_ - [1000年生きてる / いよわ feat.初音ミク（living millennium / Iyowa feat.Hatsune Miku）](https://www.youtube.com/watch?v=3em-J9yYPAo)
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/svg-icons.css">
 
