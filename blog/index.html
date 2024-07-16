@@ -12,13 +12,8 @@ title: "Blog All posts"
     {% endif %}
     {% if forloop.first == false %}
         {% assign previous_index = forloop.index0 | minus: 1 %}
-        {% capture previous_post_year %}{{ site.posts[previous_index].date | date: '%Y' }}{% endcapture %}
         {% capture previous_post_month %}{{ site.posts[previous_index].date | date: '%m' }}{% endcapture %}
-        {% if post_year != previous_post_year %}
-        </ul>
-        <h2>{{ post_year }}-{{ post_month }}</h2>
-        <ul>
-        {% elsif post_month != previous_post_month %}
+        {% if post_month != previous_post_month %}
         </ul>
         <h2>{{ post_year }}-{{ post_month }}</h2>
         <ul>
