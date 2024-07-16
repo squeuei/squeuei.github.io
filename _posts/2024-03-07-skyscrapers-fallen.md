@@ -1,6 +1,8 @@
 ---
 title: "落ちる摩天楼" 
 date: 2024-03-07 20:30 +09:00
+tags:
+    - cities
 redirect_from:
     - /blog/skyscrapers-fallen
 ---
