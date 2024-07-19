@@ -4,7 +4,8 @@ title: "Categories"
 ---
 <h2>categories</h2>
 <ul>
-  {% for cat_iter in site.categories | sort %}
+  {% assign sorted_cats = site.categories | sort_natural %}
+  {% for cat_iter in sorted_cats %}
   <li style="padding-bottom:7px;">
     <a class="no-border" href="{{ url }}/category/{{ cat_iter[0] }}" title="{{ cat_iter[0] }}">{{ cat_iter[0] }}</a><small><em><span class="sakura-blossom inline-block left-margin"> {{ post.date | date: '%F' }}</span></em></small>
 </li>

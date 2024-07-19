@@ -4,7 +4,8 @@ title: "Tags"
 ---
 <h2>tags</h2>
 <ul>
-  {% for tag_iter in site.tags | sort %}
+  {% assign sorted_tags = site.tags | sort_natural %}
+  {% for tag_iter in sorted_tags%}
   <li style="padding-bottom:7px;">
     <a class="no-border" href="{{ url }}/tag/{{ tag_iter[0] }}" title="{{ tag_iter[0] }}">{{ tag_iter[0] }}</a>
 </li>
