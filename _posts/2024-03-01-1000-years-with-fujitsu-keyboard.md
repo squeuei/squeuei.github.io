@@ -4,6 +4,7 @@ date: 2024-03-01 00:00 +09:00
 tags:
     - keyboards
     - tips
+    - computers
 redirect_from:
     - /blog/1000-years-with-fujitsu-keyboard
 ---

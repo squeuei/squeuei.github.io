@@ -4,6 +4,7 @@ date: 2024-03-12 21:30 +09:00
 tags:
     - keyboards
     - tips
+    - computers
 redirect_from:
     - /blog/use-a-jis-keyboard-as-a-us-layout
 ---
