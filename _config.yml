@@ -6,7 +6,7 @@ description:
 url: 'https://squeuei.github.io'
 author:
     twitter: # twitter user name here
-license: '<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer" >CC BY 4.0</a>'
+license: 'licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer" >CC BY 4.0</a> except where otherwise noted.'
 date_format: "%FT%T%:z"
 timezone: Asia/Tokyo
 
