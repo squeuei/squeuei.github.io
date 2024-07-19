@@ -4,6 +4,7 @@ sakura-jekyll-version: 0.9.0
 title: Constellation # Change this to your site name.
 description:
 url: 'https://squeuei.github.io'
+baseurl:  
 author:
     twitter: # twitter user name here
 license: 'licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer" >CC BY 4.0</a> except where otherwise noted.'
