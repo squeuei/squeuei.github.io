@@ -40,6 +40,8 @@ permalink:  /about/
 
 > _“生き汚く生きて何かを創ったら あなたの気持ちが1000年生きられるかもしれないから”_ - [1000年生きてる / いよわ feat.初音ミク（living millennium / Iyowa feat.Hatsune Miku）](https://www.youtube.com/watch?v=3em-J9yYPAo)
 
+> _“For a successful technology, reality must take precedence over public relations, for nature cannot be fooled.”_ - [Feynman, Richard P. "Appendix F: Personal observations on the reliability of the shuttle." Report of the Presidential Commission on the Space Shuttle Challenger Accident 2 (1986): F1-F5.](https://www.nasa.gov/history/rogersrep/v2appf.htm)
+
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/svg-icons.css">
 
 <footer class="profile-icon-wrapper">
