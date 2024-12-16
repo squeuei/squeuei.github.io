@@ -9,6 +9,7 @@ permalink:  /about/
 - [Twitter](https://twitter.com/squeuei)
 - [Fedibird](https://fedibird.com/@squeuei)
 - [Bluesky](https://bsky.app/profile/squeuei.bsky.social)
+- [mixi2](https://mixi.social/@squeuei)
 - [Threads](https://www.threads.net/@squeuei)
 - Discord : squeuei
 - [Misskey.io](https://misskey.io/@squeuei)
