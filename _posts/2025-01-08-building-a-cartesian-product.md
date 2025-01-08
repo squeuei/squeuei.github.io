@@ -10,5 +10,3 @@ tags:
 Excelってすげぇや。
 
 [How to build a cartesian product from vectors in a single formula with spilled array.](https://gist.github.com/squeuei/6fa8ef4ce2783ea7ada4c0a21f0fd394)
-
-<script src="https://gist.github.com/squeuei/6fa8ef4ce2783ea7ada4c0a21f0fd394.js"></script>
