@@ -56,7 +56,7 @@ jekyll-archives:
 feed:
   posts_limit: 50
 
-gems:
+plugins:
     - jekyll-sitemap
     - jekyll-feed
     - jekyll-seo-tag
