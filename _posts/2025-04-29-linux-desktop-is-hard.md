@@ -14,3 +14,5 @@ echo 'gtk-im-module=fcitx' >> $HOME/.config/gtk-3.0/settings.ini
 ```
 
 [Wayland, VSCode, and Fcitx5](https://gist.github.com/squeuei/87334184966dc51946180858552bdbef)
+
+ちなみに、あとでVMにDebianを入れて検証したら、`im-config`をpurgeして`$GTK_IM_MODULE`、`$QT_IM_MODULE`が設定されていない状態を作っても、VSCodeでちゃんと日本語が打てました。
