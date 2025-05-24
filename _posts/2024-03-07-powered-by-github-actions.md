@@ -12,7 +12,7 @@ redirect_from:
 
 テーマには[sakura-jekyll](https://github.com/oxalorg/sakura-jekyll)を選択した。これは[sakura](https://github.com/oxalorg/sakura)というミニマルなCSSフレームワークに基づいたテーマだ。見た目がいいし、複雑な`class`設計をする必要もない。私はこのテーマに対していくつかの変更を加えたうえで使用している。
 
-[squeuei/sakura-jekyll](https://github.com/squeuei/sakura-jekyll)
+[squeuei/sakura-jekyll-modified](https://github.com/squeuei/sakura-jekyll-modified)
 
 - cssをCDNにアップロードされているものへ変更
 - クライアントの設定に合わせてダークモードで表示するように変更
