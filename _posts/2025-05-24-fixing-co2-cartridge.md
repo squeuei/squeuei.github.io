@@ -2,7 +2,7 @@
 title: "CO2インフレータをPulse Z2iに固定したい"
 date: 2025-05-24 22:00 +09:00
 tags: 
-    - bicycles
+    - bicycle
     - tips
 ---
 

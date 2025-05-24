@@ -3,7 +3,7 @@ title: "Fedora 40のFlatpakアプリからmDNSで名前解決できない"
 date: 2024-08-26 21:30 +09:00
 tags:
     - tips
-    - computers
+    - computer
     - linux
 ---
 

@@ -3,7 +3,7 @@ title: "Github Pages / Github Actions / Jekyllでブログを作る"
 date: 2024-03-07 20:00 +09:00
 tags:
     - tips
-    - computers
+    - computer
 redirect_from:
     - /blog/powered-by-github-actions
 ---

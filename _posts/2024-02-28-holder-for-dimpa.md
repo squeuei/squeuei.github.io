@@ -2,8 +2,8 @@
 title: "DIMPAを自転車のフレームに固定する"
 date: 2024-02-28 21:00 +09:00
 tags: 
-    - bicycles
-    - reviews
+    - bicycle
+    - review
     - tips
 redirect_from:
     - /blog/holder-for-dimpa

@@ -2,7 +2,7 @@
 title: "Linuxデスクトップ難しすぎる（Waylandと格闘した回）"
 date: 2025-04-29 01:00 +09:00
 tags:
-    - computers
+    - computer
     - linux
     - tips
 ---

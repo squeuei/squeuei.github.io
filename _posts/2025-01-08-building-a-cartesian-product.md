@@ -3,7 +3,7 @@ title: "スピル配列を使って一つの式でデカルト積を作る on Mi
 date: 2025-01-08 21:30 +09:00
 tags:
     - tips
-    - computers
+    - computer
     - programming
 ---
 

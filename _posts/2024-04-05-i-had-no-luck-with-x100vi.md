@@ -2,7 +2,7 @@
 title: "X100VI買えなかった"
 date: 2024-04-05 00:00 +09:00
 tags:
-    - cameras
+    - camera
 redirect_from:
     - /blog/i-had-no-luck-with-x100vi
 ---

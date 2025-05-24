@@ -2,8 +2,8 @@
 title: "ロードバイクという存在について"
 date: 2024-03-15 23:30 +09:00
 tags:
-    - bicycles
-    - reviews
+    - bicycle
+    - review
 redirect_from:
     - /blog/roadbikes
 ---

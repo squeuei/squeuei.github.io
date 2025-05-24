@@ -2,8 +2,8 @@
 title: "もしも時計を二本だけ持つならば"
 date: 2024-03-23 23:30 +09:00
 tags:
-    - watches
-    - reviews
+    - watch
+    - review
 redirect_from:
     - /blog/the-last-two-watches
 ---

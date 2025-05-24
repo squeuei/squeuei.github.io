@@ -2,8 +2,8 @@
 title: "XOSS G+ 2nd Gen."
 date: 2024-04-15 20:00 +09:00
 tags:
-    - bicycles
-    - reviews
+    - bicycle
+    - review
 ---
 
 [XOSS G 2nd Generation GPS Smart Cycling Computer,Bike Computer](https://xoss.co/ja/products/g-for-great)

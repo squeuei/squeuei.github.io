@@ -2,8 +2,8 @@
 title: "醜い写真こそ良い"
 date: 2024-04-12 22:00 +09:00
 tags:
-    - photos
-    - cameras
+    - photo
+    - camera
 redirect_from:
     - /blog/2024/04/12/ugly-photo-is-better
 ---

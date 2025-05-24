@@ -2,8 +2,8 @@
 title: "PB SWISS TOOLS INSIDER"
 date: 2024-03-10 22:00 +09:00
 tags:
-    - tools
-    - reviews
+    - tool
+    - review
 redirect_from:
     - /blog/pb-swiss-tools-insider
 ---

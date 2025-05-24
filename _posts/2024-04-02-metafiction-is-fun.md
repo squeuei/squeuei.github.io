@@ -2,8 +2,8 @@
 title: "このマンガのメタ展開が面白い（でも面白いのはメタ要素だけじゃないよ）"
 date: 2024-04-02 00:00 +09:00
 tags:
-    - comics
-    - reviews
+    - comic
+    - review
 redirect_from:
     - /blog/metafiction-is-fun
 ---

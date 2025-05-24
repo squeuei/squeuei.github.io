@@ -2,8 +2,8 @@
 title: "“恋文と13歳の女優（アクトレス）”"
 date:  2024-04-05 00:30 +09:00
 tags:
-    - comics
-    - reviews
+    - comic
+    - review
 redirect_from:
     - /blog/thirteen-year-old-femme-fatale
 ---

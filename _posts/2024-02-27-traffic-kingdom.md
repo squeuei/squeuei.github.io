@@ -2,7 +2,7 @@
 title: "道の上を走るために"
 date: 2024-02-27 21:00 +09:00
 tags:
-    - motorcycles
+    - motorcycle
 redirect_from:
     - /blog/traffic-kingdom
 ---
