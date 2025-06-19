@@ -2,7 +2,7 @@
 title:  "SEIKO 5 SPORTSがイケてる"
 date:  2024-04-15 20:30 +09:00
 tags:
-    - watches
+    - watch
 ---
 
 [5スポーツ \| セイコーウオッチ](https://www.seikowatches.com/jp-ja/products/5sports)

@@ -2,8 +2,8 @@
 title: "Bone Bike Tie"
 date:  2024-02-28 20:30 +09:00
 tags:  
-    - bicycles
-    - reviews
+    - bicycle
+    - review
     - tips
 redirect_from:
     - /blog/bone-bike-tie

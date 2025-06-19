@@ -2,7 +2,7 @@
 title: "Cycling is a Sport"
 date: 2024-02-27 20:00 +09:00
 tags:  
-    - bicycles
+    - bicycle
 redirect_from:
     - /blog/cycling-is-a-sport
 ---

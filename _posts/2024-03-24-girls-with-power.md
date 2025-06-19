@@ -2,8 +2,8 @@
 title: "少女漫画における主人公の能力"
 date: 2024-03-24 20:00 +09:00
 tag:
-    - comics
-    - reviews
+    - comic
+    - review
 redirect_from:
     - /blog/girls-with-power
 ---

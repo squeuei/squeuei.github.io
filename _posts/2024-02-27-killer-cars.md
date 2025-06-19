@@ -2,9 +2,9 @@
 title: "Killer Cars"
 date: 2024-02-27 19:30 +09:00
 tags:
-    - motorcycles
-    - cars
-    - bicycles
+    - motorcycle
+    - car
+    - bicycle
 redirect_from:
     - /blog/killer-cars
 ---

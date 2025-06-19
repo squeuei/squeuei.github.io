@@ -2,9 +2,9 @@
 title: "富士通のキーボードと1000年生きたい"
 date: 2024-03-01 00:00 +09:00
 tags:
-    - keyboards
+    - keyboard
     - tips
-    - computers
+    - computer
 redirect_from:
     - /blog/1000-years-with-fujitsu-keyboard
 ---

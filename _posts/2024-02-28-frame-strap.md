@@ -2,8 +2,8 @@
 title: "フレームストラップいろいろ"
 date: 2024-02-28 20:00 +09:00
 tags:  
-    - bicycles
-    - reviews
+    - bicycle
+    - review
 redirect_from:
     - /blog/frame-strap
 ---

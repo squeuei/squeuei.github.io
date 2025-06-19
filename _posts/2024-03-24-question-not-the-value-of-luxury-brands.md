@@ -2,7 +2,7 @@
 title: "ラグジュアリーブランドの価値を問うな"
 date: 2024-03-24 15:00 +09:00    
 tags:
-    - watches
+    - watch
 redirect_from:
     - /blog/question-not-the-value-of-luxuary-brands
 ---

@@ -2,9 +2,9 @@
 title:  "Linuxでキーボードをリマップする"
 date: 2024-05-27 19:00 +09:00
 tags:
-    - keyboards
+    - keyboard
     - tips
-    - computers
+    - computer
     - linux
 ---
 

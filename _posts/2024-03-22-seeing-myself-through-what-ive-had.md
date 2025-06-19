@@ -2,9 +2,9 @@
 title: "モビリティを通して分析する自分自身"
 date: 2024-03-22 22:00 +09:00
 tags:
-    - motorcycles
-    - cars
-    - bicycles
+    - motorcycle
+    - car
+    - bicycle
 redirect_from:
     - /blog/seeing-myself-through-what-ive-had
     - /blog/seeing-myself-through-what-Ive-had

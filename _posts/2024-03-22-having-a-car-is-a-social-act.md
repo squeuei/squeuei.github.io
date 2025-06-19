@@ -2,7 +2,7 @@
 title: "車を持つことはその人に社会性がある証拠"
 date: 2024-03-22 21:00 +09:00
 tags:
-    - cars
+    - car
 redirect_from:
     - /blog/having-a-car-is-a-social-act
 ---

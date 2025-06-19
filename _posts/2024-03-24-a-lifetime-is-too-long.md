@@ -2,7 +2,7 @@
 title: "「一生モノ」というコトバ"
 date: 2024-03-24 00:00 +09:00
 tags:
-    - watches
+    - watch
 redirect_from:
     - /blog/a-lifetime-is-too-long
 ---

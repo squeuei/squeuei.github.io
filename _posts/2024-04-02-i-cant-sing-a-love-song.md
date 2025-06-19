@@ -2,7 +2,7 @@
 title:  "少女漫画がわからない"
 date: 2024-04-02 23:00 +09:00
 tags:
-    - comics
+    - comic
 redirect_from:
     - /blog/i-cant-sing-a-love-song
     - /blog/I-cant-sing-a-love-song

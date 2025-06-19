@@ -2,7 +2,7 @@
 title: "吸血鬼を引き付ける性質とチート"
 date:  2024-04-12 20:30 +09:00
 tags:
-    - comics
+    - comic
 ---
 
 吸血鬼ものの物語、私は結構好きです。しかし、パッと思いつく例が[“制服のヴァンピレスロード”](https://magazine.jp.square-enix.com/joker/series/vampirelady/)なのはちょっと古くない？　いい作品なんだけどさ……。でも、[“となりの吸血鬼さん”](http://kyuketsukisan-anime.com/)は吸血しないし、[“ちゃんと吸えない吸血鬼ちゃん”](https://comic-walker.com/detail/KC_001075_S?episodeType=first)や[“よふかしのうた”](https://www.sunday-webry.com/episode/3269754496548997902)、[“欠けた月のメルセデス”](https://to-corona-ex.com/comics/20000000054621)はちょっと違う、[“学校を出よう！”](https://dengekibunko.jp/product/escape-school/200305000103.html)は2冊分だけだし、うーん。あ、[“Fortune Arterial”](https://august-soft.com/fa/)はそうか。もっと古くなっとる！！
