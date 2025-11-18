@@ -5,7 +5,7 @@ tags:
     - thought
 ---
 
-[シングルスピードバイク調査]({% link _posts/2025-11-18-singlespeedbike.md.md %})の延長として、オールドMTBのスタイルっていいよなあと思っていた。[これ](https://www.thirdbikes.com/products/surfside-e/ "SURFSIDE - THIRDBIKES")とかもいいな。クロモリじゃないスチールフレームだからクソ重だしどちらかというとルック車だけど。[歴史的遠近法の彼方で古典に](https://www.kadokawa.co.jp/product/200108000110/)なったことで得られるClassless感。
+[シングルスピードバイク調査]({% link _posts/2025-11-18-singlespeedbike.md %})の延長として、オールドMTBのスタイルっていいよなあと思っていた。[これ](https://www.thirdbikes.com/products/surfside-e/ "SURFSIDE - THIRDBIKES")とかもいいな。クロモリじゃないスチールフレームだからクソ重だしどちらかというとルック車だけど。[歴史的遠近法の彼方で古典に](https://www.kadokawa.co.jp/product/200108000110/)なったことで得られるClassless感。
 
 でももしかして、こういうオールドスタイルなもの――自転車に限らず――を求めることって、敗北主義なのではないか。スポーツ自転車というのは、その名の通り速く走るためのスポーツ用具なのだから、そこに新しいテクノロジーが投入されるのは当然のことだ。現代を生きる人間なら、最初から最新の[α7](https://www.sony.jp/ichigan/products/ILCE-7RM5/)に行くのがいっちゃんええわけ。最新ムーブメントの[グランドセイコー](https://www.grand-seiko.com/jp-ja/)を買うのがいっちゃんええわけ。カーボンフレームで油圧ディスクブレーキで[Di2](https://bike.shimano.com/ja-JP/technologies/details/di2.html)に乗るのがいっちゃんええわけ。本当に良いものはカネがあればいまでも手に入る。昔のものよりも性能も質も上がっている。*ヴィンテージ*に走るのは、要するに貧乏だからだ。それに――技術にしろ資金にしろ――ついていけないようなヤツは、*レーサ*を求めるライダーではないし、レーシングギアを売るメーカの客でもない。王道から逸れる懐古厨は、能力不足で真正面から戦えない弱虫、資本力の足りない貧乏人なのだ。強いこと優れていること勝ること正しいこと、これらには無条件に降伏するしかない。*「[Sandy Bridgeおじさん](https://pc.watch.impress.co.jp/docs/topic/feature/2058006.html)、リムブレーキおじさん、あとひとつは？」*
 
