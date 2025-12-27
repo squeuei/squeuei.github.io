@@ -6,7 +6,7 @@ tags:
     - comic
 ---
 
-[NO CAT NO LIFE - てぐれ / 第1話 | 一迅プラス](https://ichicomi.com/episode/2551460909960450020)に関する重大なネタバレがあります。
+[NO CAT NO LIFE - てぐれ / 第1話 \| 一迅プラス](https://ichicomi.com/episode/2551460909960450020)に関する重大なネタバレがあります。
 
 ---
 
