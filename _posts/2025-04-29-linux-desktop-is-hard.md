@@ -19,8 +19,8 @@ echo 'export XMODIFIERS=@im=fcitx' >> $HOME/.bash_profile
 echo 'gtk-im-module=fcitx' >> $HOME/.config/gtk-3.0/settings.ini
 echo 'gtk-im-module=fcitx' >> $HOME/.config/gtk-4.0/settings.ini
 vim $HOME/.config/chrome-flags.conf
-ln -s chrome-flags.conf code-flags.conf
-ln -s chrome-flags.conf electron-flags.conf
+ln -s $HOME/.config/chrome-flags.conf $HOME/.config/code-flags.conf
+ln -s $HOME/.config/chrome-flags.conf $HOME/.config/electron-flags.conf
 ```
 
 `chrome-flags.conf`の内容：
