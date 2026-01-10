@@ -1,11 +1,37 @@
 ---
 title: "Linuxデスクトップ難しすぎる（Waylandと格闘した回）"
 date: 2025-04-29 01:00 +09:00
+last_modified_at: 2026-01-10 19:00 +09:00
 tags:
     - computer
     - linux
     - tips
 ---
+
+## 追記 (2026-01-10)
+
+Fedora KDE Plasma Desktop 43での設定
+
+```bash
+sudo dnf install fcitx5-mozc
+sudo dnf remove ibus ibus-anthy ibus-mozc
+echo 'export XMODIFIERS=@im=fcitx' >> $HOME/.bash_profile
+echo 'gtk-im-module=fcitx' >> $HOME/.config/gtk-3.0/settings.ini
+echo 'gtk-im-module=fcitx' >> $HOME/.config/gtk-4.0/settings.ini
+vim $HOME/.config/chrome-flags.conf
+ln -s chrome-flags.conf code-flags.conf
+ln -s chrome-flags.conf electron-flags.conf
+```
+
+`chrome-flags.conf`の内容：
+
+```conf
+--enable-features=UseOzonePlatform
+--ozone-platform=wayland
+--enable-wayland-ime
+```
+
+## 本文 (2025-04-29)
 
 Fedora 42 Workstation KDE Plasma Editionを使い始めたら、VSCodeで日本語入力がうまくいかない。ibusを窓から投げ捨ててfcitx5にして一件落着、と思いきや、大体は大丈夫なのだけど、キーを速く打つと時々最初の一文字が直接入力として認識されてしまう。いろいろ設定をいじくり回して、結局見つけた解決策がこれだった。WaylandにIMを任せるとうまくいかないらしい。わかるか、そんなん。
 
