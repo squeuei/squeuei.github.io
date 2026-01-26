@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1> {{ page.type }} : {{ page.title }}</h1>
+<h1> {{ page.type | capitalize }} : {{ page.title }}</h1>
 <ul>
   {% for post in page.posts %}
   <li style="padding-bottom:7px;">
