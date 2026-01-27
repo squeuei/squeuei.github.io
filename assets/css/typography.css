@@ -1,0 +1,36 @@
+/* Based on https://gist.github.com/tak-dcxi/0f8b924d6dd81aaeb58dc2e287f2ab3a  */
+
+:root {
+  text-spacing-trim: trim-start;
+  text-autospace: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+:root:lang(ja) {
+  font-kerning: none;
+}
+
+:root:lang(en) {
+  font-kerning: normal;
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-kerning: normal;
+  text-wrap: pretty;
+}
+
+h1:lang(ja), h2:lang(ja), h3:lang(ja),
+h4:lang(ja), h5:lang(ja), h6:lang(ja) {
+  font-feature-settings: "palt";
+  word-break: auto-phrase;
+}
+
+pre {
+  text-spacing-trim: space-all;
+}
+
+pre, time, input, textarea, [contenteditable] {
+  text-autospace: no-autospace;
+}

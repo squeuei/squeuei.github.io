@@ -10,6 +10,7 @@ author:
 license: 'licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer" >CC BY 4.0</a> except where otherwise noted.'
 date_format: "%FT%T%:z"
 timezone: Asia/Tokyo
+lang: ja
 
 defaults:
   -
