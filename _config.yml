@@ -29,6 +29,7 @@ google_analytics:
 disqus_shortname:
 twitter:
     username:
+    card: summary
 
 # Includes an icon in the 'ABOUT' page for each username you enter
 footer-links:
