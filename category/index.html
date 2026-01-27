@@ -7,7 +7,7 @@ title: "Categories"
   {% assign sorted_cats = site.categories | sort%}
   {% for cat_iter in sorted_cats %}
   <li style="padding-bottom:7px;">
-    <a class="no-border" href="{{ site.baseurl }}/category/{{ cat_iter[0] }}">{{ cat_iter[0] }}</a>
+    <a href="{{ site.baseurl }}/category/{{ cat_iter[0] }}">{{ cat_iter[0] }}</a>
 </li>
   {% endfor %}
 </ul>
