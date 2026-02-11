@@ -1,11 +1,39 @@
 ---
 title: "スピル配列を使って一つの式でデカルト積を作る on Microsoft Excel"
 date: 2025-01-08 21:30 +09:00
+last_modified_at: 2026-02-11 19:00 +09:00
 tags:
     - tips
     - computer
     - programming
 ---
+
+## Abusing the Power of MS Excel More Aggressively
+
+```Excel
+=LET(
+  data, A1:F5,
+  M, ROWS(data),
+  N, COLUMNS(data),
+  r, SEQUENCE(N^M,,0),
+  c, SEQUENCE(1,M,0),
+  idx, MOD(INT(r / N^(M-1-c)), N),
+  cartesian, INDEX(data, c+1, idx+1),
+  filtered, FILTER(cartesian, BYROW(cartesian, LAMBDA(X, NOT(OR(ISNA(X)))))),
+  p_1, CHOOSECOLS(filtered,1),
+  p_2, CHOOSECOLS(filtered,2),
+  p_3, CHOOSECOLS(filtered,3),
+  p_4, CHOOSECOLS(filtered,4),
+  p_5, CHOOSECOLS(filtered,5),
+  very_smart_calculation, p_1+p_2-p_3/IF(p_4<=0,1,p_4)^p_5,
+  stats, LAMBDA(X, HSTACK(MIN(X), MEDIAN(X), MAX(X)))(very_smart_calculation),
+  stats
+)
+```
+
+[![Microsoft Excel Onlineにおいて与えられたすべてのパラメタの組み合わせからある計算を行い、結果の最小値、中央値、最大値を計算する単一セルの式]({{ site.baseurl }}/assets/images/2025-01-08/abuse_of_power.png)]({{ site.baseurl }}/assets/images/2025-01-08/abuse_of_power.png){:target="_blank"}
+
+## Original Document
 
 > [How to build a cartesian product from vectors in a single formula with spilled array.](https://gist.github.com/squeuei/6fa8ef4ce2783ea7ada4c0a21f0fd394)
 >
