@@ -31,7 +31,7 @@ tags:
 )
 ```
 
-{% picture  ./2025-01-08/abuse_of_power.png -alt Microsoft Excel Onlineにおいて与えられたすべてのパラメタの組み合わせからある計算を行い、結果の最小値、中央値、最大値を計算する単一セルの式 %}
+{% picture  ./2025-01-08/abuse_of_power.png  --alt Microsoft Excel Onlineにおいて与えられたすべてのパラメタの組み合わせからある計算を行い、結果の最小値、中央値、最大値を計算する単一セルの式 %}
 
 ## Original Document
 
