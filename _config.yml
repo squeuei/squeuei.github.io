@@ -21,8 +21,6 @@ defaults:
       layout: "post"
       author: "squeuei" # Set this to default author
 
-
-
 # Third-party services
 # just leave empty to disable it
 google_analytics:
@@ -55,6 +53,11 @@ jekyll-archives:
     tag: '/tag/:name/'
     category: '/category/:name/'
 
+picture:
+  source: "assets/images/"
+  output: "assets/images/resized"
+  suppress_warnings: true
+
 feed:
   posts_limit: 50
 
@@ -64,3 +67,4 @@ plugins:
     - jekyll-seo-tag
     - jekyll-archives
     - jekyll-redirect-from
+    - jekyll-picture-tag

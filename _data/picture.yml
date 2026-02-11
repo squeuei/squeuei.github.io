@@ -1,0 +1,4 @@
+presets:
+  default:
+    formats: [original]
+    link_source: true
