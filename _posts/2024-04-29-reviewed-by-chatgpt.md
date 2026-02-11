@@ -16,12 +16,12 @@ tags:
 
 得られる出力はこのようなものだ。
 
-[![ChatGPTによるブログのレビュー]({{ site.baseurl }}/assets/images/2024-04-29/review-1.png)]({{ site.baseurl }}/assets/images/2024-04-29/review-1.png){:target="_blank"}
+{% picture ./2024-04-29/review-1.png --alt ChatGPTによるブログのレビュー %}
 
 他にこんなこともできる。
 
-[![ChatGPTによるブログのAmazon風レビュー1]({{ site.baseurl }}/assets/images/2024-04-29/review-2.png)]({{ site.baseurl }}/assets/images/2024-04-29/review-2.png){:target="_blank"}
+{% picture ./2024-04-29/review-2.png --alt ChatGPTによるブログのAmazon風レビュー1 %}
 
-[![ChatGPTによるブログのAmazon風レビュー2]({{ site.baseurl }}/assets/images/2024-04-29/review-3.png)]({{ site.baseurl }}/assets/images/2024-04-29/review-3.png){:target="_blank"}
+{% picture ./2024-04-29/review-3.png --alt ChatGPTによるブログのAmazon風レビュー2 %}
 
 極めて妥当ではないか。基本的にChatGPTは全肯定botになりがちなので、そこにどう対処するかが使いこなしのポイントであると認識している。
