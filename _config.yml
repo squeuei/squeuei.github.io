@@ -67,4 +67,4 @@ plugins:
     - jekyll-seo-tag
     - jekyll-archives
     - jekyll-redirect-from
-    - jekyll-picture-tag
+    - jekyll_picture_tag
