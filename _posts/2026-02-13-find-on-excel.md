@@ -17,7 +17,7 @@ Excelで任意の長さの連続したデータをスピルとして取得した
 
 これはMatlabでいうところの論理インデックスとして使える。`NOT(ISBLANK(A:A))`の代わりに`A:A>0`で抽出することもできる。
 
-Matlabでいうところの`find()`、つまり「TRUEとなる行番号を取得」したいならこれ。`SEQUENCE(N,,M,L)`はMatlabの`M:L:M+L*N`と等価。
+Matlabでいうところの`find()`、つまり「TRUEとなる行番号を取得」したいならこれ。`SEQUENCE(N,,M,L)`はMatlabの`M:L:M+L*(N-1)`と等価。
 
 ```Excel
 =FILTER(SEQUENCE(100),NOT(ISBLANK(A1:A100)))
