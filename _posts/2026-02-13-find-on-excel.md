@@ -58,8 +58,8 @@ Matlabでいうところの`find()`、つまり「TRUEとなる行番号を取�
 =LET(
     i, A:A,
     n_header, 2,
-    INDEX(i,SEQUENCE(COUNT(i)-n_header, , 1+n_header))
+    INDEX(i,SEQUENCE(COUNTA(i)-n_header, , 1+n_header))
 )
 ```
 
-一般に適用される注意点として、`INDEX`の代わりに`INDIRECT`や`OFFSET`を使わない方がいいということがある。`INDIRECT`や`OFFSET`は[揮発性関数](https://learn.microsoft.com/ja-jp/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions "Excel の再計算 | Microsoft Learn")に分類される。揮発性関数は引数が変化していなくても常に再計算の対象となる。ということはつまり、全然関係ないセルを編集したときにも余計な処理が走るということ。普通の使い方をする分には問題がないけれど、[Excelを濫用する場合]({% link  _posts/2025-01-08-building-a-cartesian-product.md %})には問題となりうるのだ。動作が重くて使い物にならなくなる。そんな処理をExcelにさせるなって？　本当にそのとおり。
+一般に適用される注意点として、`INDEX`の代わりに`INDIRECT`や`OFFSET`を使わない方がいいということがある。`INDIRECT`や`OFFSET`は[揮発性関数](https://learn.microsoft.com/ja-jp/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions "Excel の再計算 \| Microsoft Learn")に分類される。揮発性関数は引数が変化していなくても常に再計算の対象となる。ということはつまり、全然関係ないセルを編集したときにも余計な処理が走るということ。普通の使い方をする分には問題がないけれど、[Excelを濫用する場合]({% link  _posts/2025-01-08-building-a-cartesian-product.md %})には問題となりうるのだ。動作が重くて使い物にならなくなる。そんな処理をExcelにさせるなって？　本当にそのとおり。
