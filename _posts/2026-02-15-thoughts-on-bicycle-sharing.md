@@ -15,4 +15,4 @@ tags:
 
 最後に。シェアサイクルに限らず、電動アシストによって加速さえスムーズに行えれば、惰性走行での減速が大きくても、ブレーキが全然効かなくても、みんな気にしないものなのかなあ。こんな不安な乗り物を、漕ぐのが楽だからという理由で人々は乗っているのか。でも、みんな生きることに必死だから。なにより大事なのは時間までに送り迎えをして、買い物をして、用事をすませることだから。車検制度のある四輪車だって、エンジンから異音がしてようがベルトが無限軌道みたいな音を立てていようが、乗り続ける人はそのまま何も気にしないわけだし。
 
-> [*I'll take a quiet life / A handshake of carbon monoxide / No alarms and no surprises / No alarms and no surprises / Silent / Silent* - “No Surprises” by Radiohead](https://www.youtube.com/watch?v=LBt60dfwEBY "No Surprises - YouTube")
+>*I'll take a quiet life / A handshake of carbon monoxide / No alarms and no surprises / No alarms and no surprises / Silent / Silent* - [“No Surprises” by Radiohead](https://www.youtube.com/watch?v=LBt60dfwEBY "No Surprises - YouTube")
