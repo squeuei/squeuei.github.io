@@ -1,12 +1,17 @@
 ---
 title:  "Linuxでキーボードをリマップする"
 date: 2024-05-27 19:00 +09:00
+last_modified_at: 2026-02-19 20:00 +09:00
 tags:
     - keyboard
     - tips
     - computer
     - linux
 ---
+
+## Update
+
+[システムとしての設定をいじらずにユーザ単位で設定する方法の記事]({% link _posts/2026-02-19-key-remap-revisited.md %})を書いた。
 
 ## TL;DR
 
