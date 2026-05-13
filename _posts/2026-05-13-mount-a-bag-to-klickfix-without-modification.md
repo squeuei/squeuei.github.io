@@ -16,11 +16,11 @@ tags:
 
 先ほど登場したBasil製アダプタープレートに、汎用金具を組み合わせることでバッグを取り付ける。[フリーポイント金具](https://www.orange-book.com/ja/c/products/index.html?itemCd=11317+++++++++++++++++++++++++1503 "ＯＨＳＡＴＯ　フリーポイント金具　大　プレート　 - オレンジブック.Ｃｏｍ")を上部のネジ穴2つで固定すれば最小限の用は足りるだろう。
 
-{% picture  ./2026-05-13/mount-1b  --alt Basil Klickfix Adapter Plateにストレート形状のフリーポイント金具を組み合わせてバッグを固定する図 %}
+{% picture  ./2026-05-13/mount-1b.jpg  --alt Basil Klickfix Adapter Plateにストレート形状のフリーポイント金具を組み合わせてバッグを固定する図 %}
 
 私の場合は上下のネジ穴両方に荷重がかかるようにL字型の金具[TRUSCO TK24-FL3S](https://www.orange-book.com/ja/c/products/index.html?itemCd=TK24FL3S++++++++++++++++++++++6600 "ＴＲＵＳＣＯ　ジョイント金具２４型フラット　ステン寸法１００Ｘ６５　穴数４　 - オレンジブック.Ｃｏｍ")を選定し、全体がT字型となるように4つのネジ穴全てを使って2つの金具を固定した。とはいえ、ここまでするのは考えすぎで、やる必要はない。
 
-{% picture  ./2026-05-13/mount-1a  --alt Basil Klickfix Adapter PlateにL字形状の金具を組み合わせてバッグを固定する図 %}
+{% picture  ./2026-05-13/mount-1a.jpg  --alt Basil Klickfix Adapter PlateにL字形状の金具を組み合わせてバッグを固定する図 %}
 
 欠点は大袈裟で重いこと。合計で200g弱の重量増になる。アダプタープレートの下部に金具が少しはみ出す。ただしこれはバッグ下方に取り付けベルトがあれば、それを通して姿勢を安定させる目的にも使えるので一長一短。
 
@@ -36,7 +36,7 @@ tags:
 
 アルミなので錆の心配は原則不要だが、自動車用のタッチアップ塗料を塗った上で、怪我防止も兼ねてホームセンタで購入した柔軟性のあるキャップを取り付けた。パイプ径と同じφ8mmのものだとゆるいので、少し小さめのものを選ぶと良いだろう。私は、買い直すのが面倒なので[手持ちの接着剤](https://www.cemedine.co.jp/home/products/superx/superx_hyperwide.html "スーパーXハイパーワイド \| スーパーＸシリーズ \| 家庭用 \| セメダイン株式会社")を使った。
 
-{% picture  ./2026-05-13/mount-2  --alt Mont-bell Frontbag Frameの長さを短縮する加工 %}
+{% picture  ./2026-05-13/mount-2.jpg  --alt Mont-bell Frontbag Frameの長さを短縮する加工 %}
 
 この方式の利点は価格の安さと重量の軽さ。加工後のフレームは重量40g程度に収まっていた。
 
