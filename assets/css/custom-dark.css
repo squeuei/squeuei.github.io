@@ -80,3 +80,13 @@ li ol {
     float: right;
     text-align: right;
 }
+
+/*============================*/
+
+iframe[src*="youtube.com"],
+iframe[src*="youtube-nocookie.com"] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+}
