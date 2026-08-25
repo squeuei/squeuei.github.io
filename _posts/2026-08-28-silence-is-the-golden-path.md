@@ -1,6 +1,6 @@
 ---
 title:  "Help me, Lord"
-date: 2026-08-28 xx:00 +09:00
+date: 2026-08-28 00:00 +09:00
 tags:
     - thought
 ---
