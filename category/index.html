@@ -4,10 +4,10 @@ title: "Categories"
 ---
 <h1>Categories</h1>
 <ul>
-  {% assign sorted_cats = site.categories | sort%}
+  {% assign sorted_cats = site.categories | sort %}
   {% for cat_iter in sorted_cats %}
   <li style="padding-bottom:7px;">
-    <a href="{{ site.baseurl }}/category/{{ cat_iter[0] }}">{{ cat_iter[0] }}</a>
+    <a href="{{ site.baseurl }}/category/{{ cat_iter[0]  | slugify }}">{{ cat_iter[0] }} ({{ cat_iter[1] | size }})</a> 
 </li>
   {% endfor %}
 </ul>

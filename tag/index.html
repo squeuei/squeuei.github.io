@@ -7,7 +7,7 @@ title: "Tags"
   {% assign sorted_tags = site.tags | sort %}
   {% for tag_iter in sorted_tags %}
   <li style="padding-bottom:7px;">
-    <a href="{{ site.baseurl }}/tag/{{ tag_iter[0] }}">{{ tag_iter[0] }}</a>
+    <a href="{{ site.baseurl }}/tag/{{ tag_iter[0] | slugify }}">{{ tag_iter[0] }} ({{ tag_iter[1] | size }})</a> 
 </li>
   {% endfor %}
 </ul>
