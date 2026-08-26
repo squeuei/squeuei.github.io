@@ -3,6 +3,8 @@ title: "Saturday Night Downer"
 date: 2026-08-30 00:00 +09:00
 tags:
     - thought
+    - life
+    - society
 ---
 
 土曜の夜から月曜日からの仕事について考えて憂鬱になっていた。昼になっても何もする気になれないのだろう。でも、[憂鬱でなければ仕事じゃない](https://www.kodansha.co.jp/titles/1000015019 "『憂鬱でなければ、仕事じゃない』既刊・関連作品一覧｜講談社")から。
