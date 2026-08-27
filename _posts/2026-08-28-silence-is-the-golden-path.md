@@ -7,6 +7,8 @@ tags:
     - life
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jucj5-BhxN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jTqwe57ObFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 YouTubeを見ても、家族連れやカップルばかりの外を出歩いても、「男性は劣っている」「男性は能力以上に優遇されている」「女性は脅かされている」「結婚できない人間は彼ら自身が劣っているからそうなっている」「日本人は愚かだ」「日本は負けている」「日本は衰退する」「中国はすごい」「中国製品はすごい」ばかり流れてくるTwitterを見ても、それとは正反対なリベラル的価値観ばかりが流れてくるBskyを見ても、どれをしても気分が塞ぐ。批判が刺さるということは、私もまた差別的で愚かな反知性主義側の人間なのだろう。*効いてる効いてる*。そして、基底現実でなにかやっててインターネット（を見ずにいると自由になった気がするけど、しかしそれはそこに流れてくるような不平不満、つまり私達の社会の問題から目を背けて独善的な愉しみに耽溺していることにほかならない。
