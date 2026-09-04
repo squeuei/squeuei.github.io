@@ -7,7 +7,7 @@ tags:
     - programming
 ---
 
-[悪夢]({% link _posts/2026-02-13-find-on-excel.md%})は終わらない。モダンExcel（ここではMicrosoft 365版Excelを指す）の暗黒面へようこそ。
+[悪夢]({% link _posts/2026-02-13-find-on-excel.md %})は終わらない。モダンExcel（ここではMicrosoft 365版Excelを指す）の暗黒面へようこそ。
 
 ## スピル取得
 
@@ -46,7 +46,7 @@ tags:
 =drop(reduce("", sequence(30),lambda(acc, x, vstack(acc,hstack(average(chooserows(A1:Z30, x)), product(chooserows(A1:Z30, x))^(1/columns(chooserows(A1:Z30, x))))))),1)
 ```
 
-要するに、各行について相加平均と相乗平均を求める表現だ。本来ならば`byrow`を使って書きたいところだが、`byrow`や`bycol`は複数の列/行を返す`lambda`を使えないので、仕方なしに最初に*無*をaccumulateする`reduce`で処理して、最後に*無*を`drop`してる。本当は`let`で`(A1:B30, x)`に名前をつける方が楽だし処理も早い。
+要するに、各行について相加平均と相乗平均を求める表現だ。本来ならば`byrow`を使って書きたいところだが、`byrow`や`bycol`は複数の列/行を返す`lambda`を使えないので、仕方なしに最初に*無*をaccumulateする`reduce`で処理して、最後に*無*を`drop`してる。本当は`let`で`(A1:B30, x)`に名前をつける方が楽だし、行数も可変にできるし、処理も早い。
 
 Matlabのequivalent codeはこう。関数型言語ならもっとExcelに寄せて書くことができるだろう。というか、Excelが関数型言語の考え方に沿って記述できるようになった、という方が正しいのだけど。
 
@@ -106,4 +106,4 @@ Evil | Chuck | Eve | Mallory |
 
 [フハハ、怖かろう！](https://dic.pixiv.net/a/%E3%81%B5%E3%81%AF%E3%81%AF%E6%80%96%E3%81%8B%E3%82%8D%E3%81%86 "ふはは怖かろう (ふははこわかろう)とは【ピクシブ百科事典】")
 
-VBA？　PowerQuery/PowerPivot？　私そういう難しい機能よくわからなくて……。
+`groupby`？　VBA？　PowerQuery/PowerPivot？　私そういう難しい機能よくわからなくて……。
