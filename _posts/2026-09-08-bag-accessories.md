@@ -11,18 +11,21 @@ tags:
 
 [過去記事参照]({% link _posts/2026-08-25-an-adjuster-helps.md %})。
 
+## バッグにボトルホルダがないとき
+
+[マムート](https://www.mammut.jp/items/2810-00280 'リチウム アドオン ボトル ホルダー（Lithium Add-on Bottle Holder）（2810-00280）\|HIKING（ハイキング）\|men（メンズ）\|MAMMUT - マムート - 公式オンラインストア')のものがいちばん好みだ。生地の面積が大きいので保持力が高く、ボトル上部をコードで固定するので逆さまにしても落ちにくい。ホルダ自体についても、縦横どちらのストラップにも取り付けられるよう設計されている。すばらしいね。
+
 ## バッグにアクセサリ装着時の位置規制
 
-バッグにアクセサリをつける際、水平か垂直、どちらか一方にしか固定できず、いい位置から動いてしまうということはよくある。もちろん直接カラビナで留めてもいいのだが、[MoLLE System](https://ja.wikipedia.org/wiki/MoLLE_System "MoLLE System - Wikipedia")用品を使うと既製品で手頃なものがあって便利だ。たとえ[PALSテープ](https://ja.wikipedia.org/wiki/Pouch_Attachment_Ladder_System "Pouch Attachment Ladder System - Wikipedia")がなくても、ハンドストラップやコンプレッションベルトで固定したって構わないのだ。普通の通販で買いやすいのは[ベッセル製品](https://www.vessel.co.jp/new_product/MAC.html "新製品 \| 製品情報 \| 株式会社ベッセル")だろうか。[面ファスナのついたカラビナ](https://www.vessel.co.jp/product/others/148708/ "モールアクセサリー　カラビナ No.MAC-02K \| 製品情報 \| 株式会社ベッセル｜VESSEL こたえる かなえる")とか使いやすいんじゃなかろうか。他にも、折り畳み傘を外付けするのに[荷締めバンド](https://www.vessel.co.jp/product/others/148709/ "モールアクセサリー　荷締めバンド No.MAC-03K \| 製品情報 \| 株式会社ベッセル｜VESSEL こたえる かなえる")とか。
+バッグにボトルホルダやポーチなどのアクセサリをつける際、水平か垂直、どちらか一方にしか固定できず、好ましい位置から動いてしまうということはよくある。もちろん直接カラビナで留めてもいいのだが、[MoLLE System](https://ja.wikipedia.org/wiki/MoLLE_System "MoLLE System - Wikipedia")用品を使うと既製品で手頃なものがあって便利だ。たとえ[PALSテープ](https://ja.wikipedia.org/wiki/Pouch_Attachment_Ladder_System "Pouch Attachment Ladder System - Wikipedia")がなくても、ハンドストラップやコンプレッションベルトで固定したって構わないのだ。生地や縫製が耐えられるかは要注意だけど。普通の通販で買いやすいのは[ベッセル製品](https://www.vessel.co.jp/new_product/MAC.html "新製品 \| 製品情報 \| 株式会社ベッセル")だろうか。[面ファスナのついたカラビナ](https://www.vessel.co.jp/product/others/148708/ "モールアクセサリー　カラビナ No.MAC-02K \| 製品情報 \| 株式会社ベッセル｜VESSEL こたえる かなえる")とか使いやすいんじゃなかろうか。他にも、折り畳み傘を外付けするのに[荷締めバンド](https://www.vessel.co.jp/product/others/148709/ "モールアクセサリー　荷締めバンド No.MAC-03K \| 製品情報 \| 株式会社ベッセル｜VESSEL こたえる かなえる")とか。
 
 ## ヘルメットホルダの流用
 
-
-[Millet](https://www.millet.jp/products/mis0524 "ヘルメットホルダー")や[Deuter](https://www.iwatani-primus.jp/shop/g/gD3922321-7000/ "ヘルメットホルダー(ブラック): deuter")、[モンベル](https://webshop.montbell.jp/goods/disp.php?product_id=1133124 "モンベル ｜ オンラインストア ｜ ヘルメットホルダー")などで用意されている。名前の示唆する通りに本来は山岳用や自転車用のヘルメットを仕舞うための製品なのだが、当然のことながらヘルメット以外のものも挟むことができる。バンジーコードの代わりに、たとえば上着、雨具などを持ち歩くのに使える。小さく軽く折り畳めるものなので、持っておくのもいいかもしれない。
+バックパックに取り付けるタイプのヘルメットホルダが[Millet](https://www.millet.jp/products/mis0524 "ヘルメットホルダー")や[Deuter](https://www.iwatani-primus.jp/shop/g/gD3922321-7000/ "ヘルメットホルダー(ブラック): deuter")、[モンベル](https://webshop.montbell.jp/goods/disp.php?product_id=1133124 "モンベル ｜ オンラインストア ｜ ヘルメットホルダー")などで用意されている。名前の示唆する通りに本来は山岳用や自転車用のヘルメットを仕舞うための製品なのだが、当然のことながらヘルメット以外のものも挟むことができる。バンジーコードの代わりに、たとえば上着、雨具などを持ち歩くのに使える。小さ目のドライバッグやスタッフバッグもいける。小さく軽く折り畳めるものなので、持っておくのもいいかもしれない。
 
 ## ショルダーバッグ/ウエストバッグの耳を活用する
 
-身体へのフィット感を高める目的で、ウエストバッグやショルダーバッグのストラップ基部に[耳がついている](https://mysteryranch.jp/detail/19761098 "詳細 \| Mysteryranch \| ミステリーランチ オフィシャルウェブサイト by エイアンドエフ")設計のものがある。この部分が縫い閉じられていない場合は、小物を詰めることができる。これは案外盲点で、たとえば[スタンダードプロダクツのエコバッグ](https://jp.daisonet.com/collections/standard-products-eco-bag "くしゅっとエコバッグ - 100均 通販 ダイソーネットストア【公式】")、ビニール袋、ポケットティッシュなど。そういう「あって助かった！」な小物を入れておくと、急に必要になったとき時々役に立つ。
+身体へのフィット感を高める目的で、ウエストバッグやショルダーバッグのストラップ基部に[耳がついている](https://mysteryranch.jp/detail/19761098 "詳細 \| Mysteryranch \| ミステリーランチ オフィシャルウェブサイト by エイアンドエフ")設計のものがある。この部分が縫い閉じられていない場合は、メイン気室の容積を犠牲にせずに小物を詰めることができる。これは案外盲点で、たとえば[スタンダードプロダクツのエコバッグ](https://jp.daisonet.com/collections/standard-products-eco-bag "くしゅっとエコバッグ - 100均 通販 ダイソーネットストア【公式】")、スーパーのビニール袋、ポケットティッシュなど。そういう小さくまとめられてかつ「あって助かった！」な小物を入れておくと、急に必要になったとき時々役に立つ。
 
 ## バッグの背面がふにゃふにゃで型崩れするとき
 
@@ -30,4 +33,4 @@ tags:
 
 ## 開いてほしくないファスナを開かないようにする
 
-[最近のドイター製品](https://www.iwatani-primus.co.jp/products/deuter/lp/mountain-012/index.html 'deuter AIRCONTACT CORE series - Deuterドイター公式サイト │ イワタニ・プリムス株式会社')ってフロントアクセスファスナをつけるのが好きなんだけど、不用意に開いてしまうことを恐れる人もいると思う。ダイソーで[ファスナークリップ](https://jp.daisonet.com/products/4550480384832 "ファスナークリップ（ロック付、ブラック） - ダイソー")という製品が売られている。絶対に防犯対策にはならないと思うけど（どういう想定なんだ？）、一方で不用意な開放を防ぐことには有用となる。
+[最近のドイター製品](https://www.iwatani-primus.co.jp/products/deuter/lp/mountain-012/index.html 'deuter AIRCONTACT CORE series - Deuterドイター公式サイト │ イワタニ・プリムス株式会社')ってフロントアクセスファスナをつけるのが好きなんだけど、不用意に開いてしまうことを恐れる人もいると思う。ダイソーで[ファスナークリップ](https://jp.daisonet.com/products/4550480384832 "ファスナークリップ（ロック付、ブラック） - ダイソー")という製品が売られている。防犯対策にはならないと思うけど（鍵もついてないのにどういう想定なんだ？）、一方で不用意な開放を防ぐことには有用となる。
