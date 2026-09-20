@@ -9,7 +9,7 @@ tags:
     - linux
 ---
 
-## The Most Important Thing
+## The Most Important Thing (Revised at 2026-09-20T12:30+09:00)
 
 保証期間に関する記載は誤りだったため削除しました。
 
