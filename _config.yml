@@ -59,7 +59,7 @@ picture:
   suppress_warnings: true
 
 feed:
-  posts_limit: 50
+  posts_limit: 100
 
 plugins:
     - jekyll-sitemap
