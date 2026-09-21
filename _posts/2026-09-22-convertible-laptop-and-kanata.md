@@ -35,7 +35,7 @@ fuser -v /dev/input/eventX
 
 すると、私の環境で出てきたのは`gnome-shell`と`kanata`だった。試しに`kanata`を`systemctl --user stop kanata`で止めると、音量ボタンはタブレットモードでも動作した。
 
-さて、どうするか。`kanata`は[`linux-dev-names-exclude`を使ってデバイス名でgrub対象から外すことができる](https://jtroo.github.io/config.html#linux-only-linux-dev-names-exclude "Kanata Configuration Guide")。これを使うことにした。キーリマップを設定しているファイルに下記の記述を追加する。デバイス名は環境に合わせて変更する。
+さて、どうするか。`kanata`は[`linux-dev-names-exclude`を使ってデバイス名でgrab対象から外すことができる](https://jtroo.github.io/config.html#linux-only-linux-dev-names-exclude "Kanata Configuration Guide")。これを使うことにした。キーリマップを設定しているファイルに下記の記述を追加する。デバイス名は環境に合わせて変更する。
 
 ```kanata
 (defcfg
@@ -45,11 +45,11 @@ fuser -v /dev/input/eventX
 )
 ```
 
-`systemctl`でserviceを再起動して、ついでにどのデバイスをgrubしているかを確認する。
+`systemctl`でserviceを再起動して、ついでにどのデバイスをgrabしているかを確認する。
 
 ```sh
 systemctl --user restart kanata
 journalctl --user -u kanata -e
 ```
 
-これで音量ボタンに関係するデバイスを掴んでいなければ一件落着ってワケ。まだ余計なものをgrubしていたら`linux-dev-names-exclude`に追加しておいてもいいかもしれない。
+これで音量ボタンに関係するデバイスを掴んでいなければ一件落着ってワケ。まだ余計なものをgrabしていたら`linux-dev-names-exclude`に追加しておいてもいいかもしれない。
