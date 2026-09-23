@@ -15,11 +15,11 @@ VersaPro Eシリーズ タイプVRについて、Linuxで運用していると�
 - Fn-F11 :  `ECOモードを切り替えます。`
 - Fn-Space : `タッチパッドのオン／オフ`
 
-`libinput debug-events`だとか`evtest`だとか`wev`だとかを駆使して、色々調査した結果、おなじみの`hwdb`をいじって解決するのが良いということになった。それでも以下のキーは使えそうにない。
+`libinput debug-events`だとか`evtest`だとか`wev`だとかを駆使して、色々調査した結果、おなじみの`hwdb`をいじって解決するのが良いということになった。
 
-- Fn-Spaceはなんか複雑なキーの組み合わせ（Ctrl-Super-無変換？）を送信するようになっているため使えない。
-- Fn-F8は左Metaのコードになってしまうため使えない。
-- Fn-F10はそもそもイベント自体を検出してくれないので使えない。
+- Fn-Spaceはなんか複雑なキーの組み合わせを送信する。
+- Fn-F8は左Meta+Pになる。これでちゃんと動くらしい。変更の必要なし。
+- Fn-F10はそもそもイベント自体を検出してくれないのでどのみち使えない。
 
 Fn-F4とFn-F11の両方がキーストローク全体で一つのイベントしか発生させないので`!`をつける必要がある。あとhwdbで素直にmicmuteキーに割り当ててしまうとなんかうまく動かないらしいのでF20に割り当てる。
 
@@ -28,10 +28,11 @@ sudo tee /etc/udev/hwdb.d/70-nec-versapro-e-vr.hwdb << 'EOF'
 evdev:atkbd:dmi:bvn*:bvr*:bd*:svnNEC:pnPC-VEE11R5GL5LM:pvr*
  KEYBOARD_KEY_d7=!f20
  KEYBOARD_KEY_97=!battery
+ KEYBOARD_KEY_76=f21
 EOF
 ```
 
-`sudo systemd-hwdb update && sudo udevadm trigger --sysname-match="event*"`しただけでは、Linuxシステムとしてはキーを認識しても、GNOMEがそれを反映しないらしいので、上のコマンドの後、**ログアウトしても問題ない状態にしてから**`sudo systemctl restart gdm`するか、あるいは素直にシステムを再起動するかすると、2つのキーが機能するようになる。
+`sudo systemd-hwdb update && sudo udevadm trigger --sysname-match="event*"`しただけでは、Linuxシステムとしてはキーを認識しても、GNOMEがそれを反映しないらしいので、上のコマンドの後、**ログアウトしても問題ない状態にしてから**`sudo systemctl restart gdm`するか、あるいは素直にシステムを再起動するかすると、機内モード以外のショートカットが機能するようになる。
 
 ただし、バッテリボタンについては、ただバッテリの残量を表示するだけなので、そんなに実用性がないのも事実。Windowsと同じように電源モードを切り替えさせるようにしたい。
 
