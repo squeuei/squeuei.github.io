@@ -31,7 +31,7 @@ evdev:atkbd:dmi:bvn*:bvr*:bd*:svnNEC:pnPC-VEE11R5GL5LM:pvr*
 EOF
 ```
 
-`sudo udevadm trigger --sysname-match="event" && sudo systemd-hwdb update`しただけでは、Linuxシステムとしてはキーを認識しても、GNOMEがそれを反映しないらしいので、上のコマンドの後、**ログアウトしても問題ない状態にしてから**`sudo systemctl restart gdm`するか、あるいは素直にシステムを再起動するかすると、2つのキーが機能するようになる。
+`sudo systemd-hwdb update && sudo udevadm trigger --sysname-match="event*"`しただけでは、Linuxシステムとしてはキーを認識しても、GNOMEがそれを反映しないらしいので、上のコマンドの後、**ログアウトしても問題ない状態にしてから**`sudo systemctl restart gdm`するか、あるいは素直にシステムを再起動するかすると、2つのキーが機能するようになる。
 
 ただし、バッテリボタンについては、ただバッテリの残量を表示するだけなので、そんなに実用性がないのも事実。Windowsと同じように電源モードを切り替えさせるようにしたい。
 
@@ -39,12 +39,12 @@ EOF
 
 ```sh
 #!/bin/sh
-#  performance -> balanced -> power-saver→...
+#  performance -> balanced -> power-saver->...
 cur=$(powerprofilesctl get)
 case "$cur" in
   power-saver) order="performance balanced power-saver" ;;
   balanced)    order="power-saver performance balanced" ;;
-  *)           order="balanced power-saver performance " ;;
+  *)           order="balanced power-saver performance" ;;
 esac
 
 for p in $order; do
