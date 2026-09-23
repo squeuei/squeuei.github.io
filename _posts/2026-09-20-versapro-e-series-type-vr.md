@@ -17,7 +17,7 @@ tags:
 
 ## 本文
 
-[VersaPro Eシリーズ タイプVR](https://support.nec-lavie.jp/e-manual/m/nx/vp/202106/html/ve_vr_1.html)は2021年に発売された、教育用途機をベースとする2-in-1ラップトップPCである。Intel Celeron N5100  (4C/4T)、RAM 8GB、eMMC 64GB、重量は11インチクラスにもかかわらず1.3kgほどあり、画面もIPS方式のマルチタッチディスプレイではあるものの1366×768という令和にあるまじき低解像度と、貧弱にも程があるスペック。
+[VersaPro Eシリーズ タイプVR](https://www.bizpc.nec.co.jp/bangai/pcseek/information_menu_smart?KATA=PC-VEE11R5GL5LM)は2021年に発売された、教育用途機をベースとする2-in-1ラップトップPCである。Intel Celeron N5100  (4C/4T)、RAM 8GB、eMMC 64GB、重量は11インチクラスにもかかわらず1.3kgほどあり、画面もIPS方式のマルチタッチディスプレイではあるものの1366×768という令和にあるまじき低解像度と、貧弱にも程があるスペック。
 
 一応、いいとこ探しをすると、最近のChromebookでよくあるIntel N50とほぼトントンのマルチコア性能があり、RAMは多め、ディスプレイも視野角が広い。キーボードは不自然ではないJIS配列で、物理的なフットプリント*は*小さい。教育用途機がベースなので頑丈さには期待できる、あたりだろうか。
 
