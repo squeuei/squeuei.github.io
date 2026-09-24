@@ -1,7 +1,7 @@
 ---
 title: "VersaPro E Series Type VR"
 date: 2026-09-20 00:00 +09:00
-last_modified_at: 2026-09-20 12:30 +09:00
+last_modified_at: 2026-09-23 23:00 +09:00
 tags:
     - tips
     - review

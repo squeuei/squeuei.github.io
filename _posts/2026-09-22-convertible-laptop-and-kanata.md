@@ -1,11 +1,14 @@
 ---
 title: "コンバーチブルPC(2-in-1 ノートPC)とkanata"
 date: 2026-09-22 00:00 +09:00
+last_modified_at: 2026-09-25 07:00 +09:00
 tags:
     - tips
     - computer
     - linux
 ---
+
+**Comment at 2026-09-25 : kanataをuser serviceで起動していたときに書いた記事なのでsystemctlの記述はuser serviceが前提となっている。**
 
 [先日導入したVersaPro Eシリーズ タイプVR]({% link _posts/2026-09-20-versapro-e-series-type-vr.md %})について、タブレットモード時に音量キーが効かなくなることに気づいた。色々調べてみると、どうやら[キーリマップに用いている`kanata`]({% link _posts/2026-02-19-key-remap-revisited.md %})がタブレットモード時に全部のボタンをひとまとめで無効にしてしまっているようだ。
 
