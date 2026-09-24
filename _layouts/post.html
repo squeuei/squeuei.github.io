@@ -23,7 +23,11 @@ layout: default
             <address>
                 <small><em>Posted by {{ post.author }}{% if site.license %}, {{site.license}}{% endif %}</em></small>
             </address>
-            <time datetime="{{ post.date | date_to_xmlschema }}">        <small><em>{{ post.date | date: site.date_format }}</em></small></time>
+            <time datetime="{{ post.date | date_to_xmlschema }}">        <small><em>published: {{ post.date | date: site.date_format }}</em></small></time>
+            {% if page.last_modified_at %}
+            <time datetime="{{ post.last_modified_at | date_to_xmlschema }}">        <small><em>updated: {{ post.last_modified_at | date: site.date_format }}</em></small></time>
+            {% endif %}
+
     </footer>
     {% include comments.html %}
 </article>
